@@ -1,7 +1,7 @@
 import React from 'react';
 
 //方法一
-// import { NamedLayout, NamedCart, PlainList } from 'zero-element-boot/lib/export';
+import { NamedLayout, NamedCart, PlainList } from 'zero-element-boot';
 
 //方法二
 // import NamedLayout from 'zero-element-boot/lib/components/NamedLayout';
