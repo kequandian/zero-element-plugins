@@ -2,6 +2,7 @@
   "name": "zero-element-plugins",
   "version": "1.0.0",
   "description": "",
+  "main": "lib/export.js",
   "scripts": {
     "start": "umi dev",
     "clean": "rimraf lib/",

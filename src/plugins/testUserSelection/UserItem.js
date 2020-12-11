@@ -2,7 +2,7 @@ import React from 'react';
 
 import { AutoComponent } from 'zero-element-boot/lib/export';
 
-const presenter = require('@/components/presenter');
+const presenter = require('@/plugins/testUserSelection/presenter');
 
 export default function UserItem(props) {
 

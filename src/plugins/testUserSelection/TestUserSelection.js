@@ -26,12 +26,8 @@ export default function TestUserSelection(props) {
 
     const { onItemClickHandle } = props;
 
-    // const endpoint = getEndpoint();
-    // const accountToken = getToken();
-
-    const endpoint = 'http://192.168.3.236:8888';
-    const accountToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJvcmdJZCI6IjEwMDAwMDAwMDAwMDAwMDAxMCIsInVzZXJJZCI6Ijg3NjcwODA4MjQzNzE5NzgzMCIsInVzZXJUeXBlIjoxMDEsImJVc2VyVHlwZSI6IlNZU1RFTSIsInRlbmFudE9yZ0lkIjoxMDAwMDAwMDAwMDAwMDAwMTAsImFjY291bnQiOiJhZG1pbiIsImV4dHJhVXNlclR5cGUiOjAsImlhdCI6MTYwNzMwNjU3MywianRpIjoiODc2NzA4MDgyNDM3MTk3ODMwIiwic3ViIjoiYWRtaW4iLCJleHAiOjE2MDc1NjU3NzN9.6J1ozLxN4PO6TpbGPb1-Y77-AyLxWbGY4kmheDiWkksI0w7SyotNSc7rD358bRk9I7pbpCizyBlVbUDbzcIxwQ';
-
+    const endpoint = getEndpoint();
+    const accountToken = getToken();
 
     const callBack = (data) => {
         saveToken(data)
@@ -68,7 +64,8 @@ export default function TestUserSelection(props) {
         <PlainList {...config} onItemClick={onClick}>
             <NamedLayout>
                 <NamedCart>
-                    <UserItem/>
+                    {/* <UserItem/> */}
+                    <div>111</div>
                 </NamedCart>
             </NamedLayout>
         </PlainList>
