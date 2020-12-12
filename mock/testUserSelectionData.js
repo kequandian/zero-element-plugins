@@ -1,5 +1,5 @@
 export default {
-  'GET /api/adm/stat/meta/template/table': {
+  'GET /api/adm/users/testUserList/test': {
     "code": 200,
     "message": "Success",
     "data": {
