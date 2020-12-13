@@ -11,6 +11,7 @@ import { NamedLayout, NamedCart, PlainList } from 'zero-element-boot';
 const useUaasTestUser = require('@/plugins/testUserSelection/hooks/useUaasTestUser');
 
 const { UserItem } = require('@/plugins/testUserSelection');
+const { Seperator } = require('@/plugins/testUserSelection/presenter')
 
 import { get as getEndpoint } from 'zero-element/lib/utils/request/endpoint';
 import { getToken, saveToken } from 'zero-element/lib/utils/request/token';
@@ -48,12 +49,17 @@ export default function TestUserSelection(props) {
             props: {
                 align: 'start',
                 direction: 'column',
+                line: {
+                    Seperator: Seperator,
+                    props:{
+                        lineType:'solid'
+                    }
+                }
             },
         },
         cart: {
             name: 'Cart',
             props: {
-                margin: '0px'
             },
         },
     };
