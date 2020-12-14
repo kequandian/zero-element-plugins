@@ -16,6 +16,9 @@ const { Seperator } = require('@/plugins/testUserSelection/presenter')
 import { get as getEndpoint } from 'zero-element/lib/utils/request/endpoint';
 import { getToken, saveToken } from 'zero-element/lib/utils/request/token';
 
+import { useModel } from 'zero-element/lib/Model';
+
+
 /**
  * hook callback 参考
  * https://stackoverflow.com/questions/54954091/how-to-use-callback-with-usestate-hook-in-react
@@ -25,18 +28,28 @@ import { getToken, saveToken } from 'zero-element/lib/utils/request/token';
 
 export default function TestUserSelection(props) {
 
-    const { onItemClickHandle } = props;
+    const { onItemClickHandle, setPermsHandle } = props;
 
-    const endpoint = getEndpoint();
-    const accountToken = getToken();
+    const model = useModel('global');
 
-    // const endpoint = 'http://192.168.3.236:8888';
-    // const accountToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJvcmdJZCI6IjEwMDAwMDAwMDAwMDAwMDAxMCIsInVzZXJJZCI6Ijg3NjcwODA4MjQzNzE5NzgzMCIsInVzZXJUeXBlIjoxMDEsImJVc2VyVHlwZSI6IlNZU1RFTSIsInRlbmFudE9yZ0lkIjoxMDAwMDAwMDAwMDAwMDAwMTAsImFjY291bnQiOiJhZG1pbiIsImV4dHJhVXNlclR5cGUiOjEsImlhdCI6MTYwNzc0Mzk4MywianRpIjoiODc2NzA4MDgyNDM3MTk3ODMwIiwic3ViIjoiYWRtaW4iLCJleHAiOjE2MDgwMDMxODN9.3Kepm2eitNSyc-Tu2qChzLJK0yrS96DcjveEE2ONs9Va3PgM_v6pHogC3YIUF2zCgFeiSxmmk9falQ5n97rUQA';
+    // const endpoint = getEndpoint();
+    // const accountToken = getToken();
+
+    const endpoint = 'http://192.168.3.236:8888';
+    const accountToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJvcmdJZCI6IjEwMDAwMDAwMDAwMDAwMDAxMCIsInVzZXJJZCI6Ijg3NjcwODA4MjQzNzE5NzgzMCIsInVzZXJUeXBlIjoxMDEsImJVc2VyVHlwZSI6IlNZU1RFTSIsInRlbmFudE9yZ0lkIjoxMDAwMDAwMDAwMDAwMDAwMTAsImFjY291bnQiOiJhZG1pbiIsImV4dHJhVXNlclR5cGUiOjEsImlhdCI6MTYwNzc0Mzk4MywianRpIjoiODc2NzA4MDgyNDM3MTk3ODMwIiwic3ViIjoiYWRtaW4iLCJleHAiOjE2MDgwMDMxODN9.3Kepm2eitNSyc-Tu2qChzLJK0yrS96DcjveEE2ONs9Va3PgM_v6pHogC3YIUF2zCgFeiSxmmk9falQ5n97rUQA';
 
     const callBack = (data) => {
         if(data){
-            saveToken(data)
+            // saveToken({
+            //     userName: data.name,
+            //     token: data.accessToken,
+            //     avatar: data.avatar,
+            //     remember: true,
+            //     extra: data.account,
+            // })
+            // model.queryPerm(true);
         }
+        onItemClickHandle();
     }
 
     const [users, changeUser] = useUaasTestUser({ endpoint, accountToken }, callBack);
@@ -70,7 +83,6 @@ export default function TestUserSelection(props) {
 
     const onClick = (item) => {
         changeUser(item.id)
-        onItemClickHandle();
     }
 
     return (

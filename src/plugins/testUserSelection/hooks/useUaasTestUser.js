@@ -27,7 +27,8 @@ module.exports = function useUaasTestUser({endpoint, accountToken}, callBack) {
                     if (responseData && responseData.code === 200) {
                         // setToken(responseData.accessToken);
                         // setPermissions(responseData.perms);
-                        callBack({ ...responseData.data })
+                        const data = responseData.data;
+                        callBack(data)
                     }
                 })
         }else{
