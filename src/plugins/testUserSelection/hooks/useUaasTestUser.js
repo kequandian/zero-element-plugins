@@ -6,7 +6,7 @@ module.exports = function useUaasTestUser({endpoint, accountToken}, callBack) {
     const [users, setUsers] = useState([]);
     const [userId, setUserId] = useState('');
 
-    //获取用户列表
+    //获取用户列表 / 根据ID获取用户详情
     useEffect(() => {
 
         const API = `${endpoint}/api/adm/users/testUserList`;
@@ -25,18 +25,15 @@ module.exports = function useUaasTestUser({endpoint, accountToken}, callBack) {
                 .then(responseData => {
     
                     if (responseData && responseData.code === 200) {
-
                         // setToken(responseData.accessToken);
                         // setPermissions(responseData.perms);
-                        
-                        callBack({token:responseData.data.accessToken, permissions: responseData.data.perms })
+                        callBack({ ...responseData.data })
                     }
                 })
         }else{
             promiseAjax(API, {}, queryData)
             .then(responseData => {
                 // console.log('request rst: ', responseData);
-
                 if (responseData && responseData.code === 200) {
                     setUsers(responseData.data)
                 }

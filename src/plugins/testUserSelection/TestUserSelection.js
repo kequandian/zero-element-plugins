@@ -27,19 +27,18 @@ export default function TestUserSelection(props) {
 
     const { onItemClickHandle } = props;
 
-    // const endpoint = getEndpoint();
-    // const accountToken = getToken();
+    const endpoint = getEndpoint();
+    const accountToken = getToken();
 
-    const endpoint = 'http://192.168.3.236:8888';
-    const accountToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJvcmdJZCI6IjEwMDAwMDAwMDAwMDAwMDAxMCIsInVzZXJJZCI6Ijg3NjcwODA4MjQzNzE5NzgzMCIsInVzZXJUeXBlIjoxMDEsImJVc2VyVHlwZSI6IlNZU1RFTSIsInRlbmFudE9yZ0lkIjoxMDAwMDAwMDAwMDAwMDAwMTAsImFjY291bnQiOiJhZG1pbiIsImV4dHJhVXNlclR5cGUiOjEsImlhdCI6MTYwNzc0Mzk4MywianRpIjoiODc2NzA4MDgyNDM3MTk3ODMwIiwic3ViIjoiYWRtaW4iLCJleHAiOjE2MDgwMDMxODN9.3Kepm2eitNSyc-Tu2qChzLJK0yrS96DcjveEE2ONs9Va3PgM_v6pHogC3YIUF2zCgFeiSxmmk9falQ5n97rUQA';
+    // const endpoint = 'http://192.168.3.236:8888';
+    // const accountToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJvcmdJZCI6IjEwMDAwMDAwMDAwMDAwMDAxMCIsInVzZXJJZCI6Ijg3NjcwODA4MjQzNzE5NzgzMCIsInVzZXJUeXBlIjoxMDEsImJVc2VyVHlwZSI6IlNZU1RFTSIsInRlbmFudE9yZ0lkIjoxMDAwMDAwMDAwMDAwMDAwMTAsImFjY291bnQiOiJhZG1pbiIsImV4dHJhVXNlclR5cGUiOjEsImlhdCI6MTYwNzc0Mzk4MywianRpIjoiODc2NzA4MDgyNDM3MTk3ODMwIiwic3ViIjoiYWRtaW4iLCJleHAiOjE2MDgwMDMxODN9.3Kepm2eitNSyc-Tu2qChzLJK0yrS96DcjveEE2ONs9Va3PgM_v6pHogC3YIUF2zCgFeiSxmmk9falQ5n97rUQA';
 
     const callBack = (data) => {
-        saveToken(data)
-        // console.log('token = ', data.token)
-        // console.log('permissions = ', data.permissions)
+        if(data){
+            saveToken(data)
+        }
     }
 
-    ///
     const [users, changeUser] = useUaasTestUser({ endpoint, accountToken }, callBack);
 
     const config = {
@@ -54,12 +53,17 @@ export default function TestUserSelection(props) {
                     props:{
                         lineType:'solid'
                     }
+                },
+                itemStyle:{
+                    itemWidth:'width-100'
                 }
             },
         },
         cart: {
             name: 'Cart',
             props: {
+                margin:'',
+                stroke:''
             },
         },
     };

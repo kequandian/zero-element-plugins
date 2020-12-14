@@ -10,9 +10,13 @@ export default function UserItem(props) {
 
   const config = {
     layout: {
-      name: 'Grid',
+      name: 'Flexbox',
       props: {
-        col: 2,
+        align: 'start',
+        direction: 'row',
+        itemStyle:{
+          itemAlign:'v-center'
+        }
       },
       children: [
         {
@@ -41,26 +45,13 @@ export default function UserItem(props) {
             }
           }
         },
-        // {
-        //   name: 'Detailed',
-        //   span: 4,
-        //   gateway: {
-        //     name: 'Gateway',
-        //     props: {
-        //       field: 'subTitle',
-        //       converter: {
-        //         subTitle: 'text'
-        //       }
-        //     }
-        //   }
-        // },
       ]
     },
     ...props,
   };
 
   return (
-    <div style={{ minWidth: '300px' }}>
+    <div>
       <AutoComponent config={config} allComponents={allComponents}  />
     </div>
   )
