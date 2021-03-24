@@ -1,6 +1,7 @@
 import React from 'react';
 
 import TestUserSelection from '../plugins/testUserSelection/TestUserSelection';
+import { AdList } from '@/export';
 
 export default function inxe(props) {
 
@@ -8,5 +9,5 @@ export default function inxe(props) {
       console.log('event to dismiss the component')
   }
 
-  return <TestUserSelection onItemClickHandle={onItemClickHandle} />
+  return <AdList onItemClickHandle={onItemClickHandle} />
 }
