@@ -1,7 +1,8 @@
 import React from 'react';
 
-import TestUserSelection from '../plugins/testUserSelection/TestUserSelection';
+// import TestUserSelection from '../plugins/testUserSelection/TestUserSelection';
 import { AdList } from '@/export';
+// import NewDemo from '@/plugins/NewDemo/Sandbox';
 
 export default function inxe(props) {
 
