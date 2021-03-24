@@ -4,6 +4,9 @@ import layout from './layout';
 import AdItem from '@/plugins/AdList/AdItem';
 
 export default function Index(props){
+
+    const { data } = props;
+
     const {onItemClickHandle,data}=props;
 
     const config={
@@ -17,7 +20,7 @@ export default function Index(props){
     }
     return (
         <AutoLayout {...config} onItemClick={onClick}>
-            <div>1234</div>
+            <div>123455</div>
         </AutoLayout>
     )
 }

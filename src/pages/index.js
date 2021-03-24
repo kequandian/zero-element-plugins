@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import TestUserSelection from '../plugins/testUserSelection/TestUserSelection';
-import { AdList } from '@/export';
+import { NewDemo } from '@/export';
 // import NewDemo from '@/plugins/NewDemo/Sandbox';
 
 export default function inxe(props) {
@@ -10,5 +10,5 @@ export default function inxe(props) {
       console.log('event to dismiss the component')
   }
 
-  return <AdList onItemClickHandle={onItemClickHandle} />
+  return <NewDemo onItemClickHandle={onItemClickHandle} />
 }

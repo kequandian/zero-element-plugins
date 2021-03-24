@@ -6,18 +6,18 @@ const promiseAjax = require('@/utils/request');
 
 export default function(props){
 
-    const api = '/api/adList';
+    const api = '/api/adListddd';
 
     const [data, setData] = useState([]);
 
     function handleQuery(API, queryData) {
+        
         return promiseAjax(API, queryData).then(response => {
             if (response && response.code === 200) {
                 setData(response.data);
             }
         });
     }
-
     useEffect(_ => {
         handleQuery(api);
     }, []);

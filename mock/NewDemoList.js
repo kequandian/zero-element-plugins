@@ -1,5 +1,5 @@
 export default{
-    'GET /api/adList':{
+    'GET /api/adListddd':{
         "code":200,
         "data":[
             {
