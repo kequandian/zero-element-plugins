@@ -1,0 +1,27 @@
+module.exports={
+    xname:"Flexbox",
+    props:{
+        align:"start",
+        direction:'row',
+        justidy:'center'
+    },
+    gateway:{
+        xname:"Binding",
+        props:{
+            binding:{
+                imgUrl:"imgUrl",
+                title:'title',
+                theText:"theText",
+                time:"time",
+                adType:"adType"
+            }
+        }
+    },
+    cart:{
+        xname:"TheNewCart",
+        props:{
+            padding:'16px',
+        }
+    },
+    container:'PlainList'
+}

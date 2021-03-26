@@ -9,7 +9,7 @@ import layout from './layout';
 import AdItem from '@/plugins/AdList/AdItem';
 
 export default function Index(props) {
-
+    
     const { onItemClickHandle, data } = props;
 
     //Cart HoverShadowCart
