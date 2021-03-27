@@ -6,7 +6,7 @@ import FootContent from '@/plugins/NewDemo/FootContent'
 import layout from "./layout"
 
 export default function ExampleTwo(props){
-    console.log(props)
+    // console.log(props)
     const allComponents={
         ImageAnimation,
         TextContent,
@@ -16,6 +16,8 @@ export default function ExampleTwo(props){
         layout,
         ...props,
     }
+    console.log(config)
+    console.log(allComponents)
     return (
         <div className="BigBox">
             <AutoComponent {...config} allComponents={allComponents}/>

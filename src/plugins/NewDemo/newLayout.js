@@ -18,9 +18,10 @@ module.exports={
         }
     },
     cart:{
-        xname:"TheNewCart",
+        xname:"HoverShadowCart",
         props:{
             padding:'16px',
+            fill:"#cacaca"
         }
     },
     container:'PlainList'

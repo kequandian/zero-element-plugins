@@ -6,17 +6,7 @@ module.exports={
         justify:'center'
     },
     children:[
-        {
-            presenter:'ImageAnimation',
-            gateway:{
-                xname:"Binding",
-                props:{
-                    binding:{
-                        imgUrl:'imgUrl'
-                    }
-                }
-            }
-        },
+        
         {
             presenter:'TextContent',
             gateway:{
@@ -25,6 +15,16 @@ module.exports={
                     binding:{
                         title:'title',
                         theText:'theText',
+                    }
+                }
+            }
+        },{
+            presenter:'ImageAnimation',
+            gateway:{
+                xname:"Binding",
+                props:{
+                    binding:{
+                        imgUrl:'imgUrl'
                     }
                 }
             }
