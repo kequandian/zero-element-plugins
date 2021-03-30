@@ -12,7 +12,7 @@ module.exports={
                 xname:"Binding",
                 props:{
                     binding:{
-                        imgUrl:'imgUrl',
+                        imgUrl:'url',
                     }
                 }
             }

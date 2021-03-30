@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Title(props){
+export default function TheText(props){
     // console.log(props)
     const {theText}=props
     // console.log(theText)

@@ -1,8 +1,8 @@
 import React from 'react';
-import Title from '@/plugins/TheAdList/TheAdItem/presenter/Title/Title';
-import Text from '@/plugins/TheAdList/TheAdItem/presenter/Text/Text'
-import { AutoComponent } from 'zero-element-boot';
+import Title from '@/components/presenter/item/ItemTitle/Title';
+import Text from '@/components/presenter/item/ItemSubtitle/Text'
 require('./index.less')
+import { AutoComponent } from 'zero-element-boot';
 
 export default function ContentText(props){
     const allComponents={
@@ -24,7 +24,7 @@ export default function ContentText(props){
                         xname:"Binding",
                         props:{
                             binding:{
-                                title:"title"
+                                title:"content"
                             }
                         }
                     }
@@ -35,7 +35,7 @@ export default function ContentText(props){
                         xname:"Binding",
                         props:{
                             binding:{
-                                text:"text"
+                                text:"content"
                             }
                         }
                     }

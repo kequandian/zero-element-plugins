@@ -1,5 +1,5 @@
 module.exports={
-    xname:'Flexbox',
+    xname:"Flexbox",
     props:{
         align:"start",
         direction:"column",
@@ -10,17 +10,18 @@ module.exports={
         props:{
             binding:{
                 imgUrl:"imgUrl",
-                title:'title',
-                text:'text',
-                time:'time'
+                title:"title",
+                text:"text",
+                time:"time"
             }
         }
     },
     cart:{
         xname:"HoverShadowCart",
         props:{
-            
+            margin:"0",
+            fill:"#f0ffff"
         }
     },
-    container:'PlainList'
+    container:"PlainList"
 }

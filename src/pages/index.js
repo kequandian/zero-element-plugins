@@ -5,7 +5,8 @@ import React from 'react';
 // import NewDemo from '@/plugins/NewDemo/Sandbox';
 // import AdList from '@/plugins/AdList/Sandbox'
 // import NewDemo from '@/plugins/NewDemo/Example_two'
-import TheAdList from '@/plugins/TheAdList'
+// import TheAdList from '@/plugins/TheAdList'
+import Message from '@/plugins/TodoList/TodoItem/Message'
 
 export default function index(props) {
 
@@ -13,5 +14,5 @@ export default function index(props) {
       console.log('event to dismiss the component')
   }
 
-  return <TheAdList onItemClickHandle={onItemClickHandle} />
+  return <Message onItemClickHandle={onItemClickHandle} />
 }

@@ -1,9 +1,8 @@
 import React from 'react';
 require('./index.less')
 
-export default function Text(props){
-    const {text}=props
+export default function Text({content}){
     return (
-        <div className="Text_text">{text}</div>
+        <div className="Text_text">{content}</div>
     )
 }
