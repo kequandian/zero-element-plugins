@@ -1,5 +1,5 @@
 export default {
-    'GET /api/ExampleList': {
+    'GET /api/TodoList': {
       "code": 200,
       "data": 
       [

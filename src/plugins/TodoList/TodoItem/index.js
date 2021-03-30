@@ -20,8 +20,6 @@ export default function TodoItem(props){
         ...props
     }
     return (
-        <div className="Bigbox">
             <AutoComponent onItemClick={onToDoItemClick}  {...config} allComponents={allComponents}/>
-        </div>
     )
 }

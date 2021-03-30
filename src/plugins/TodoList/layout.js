@@ -17,10 +17,11 @@ module.exports={
         }
     },
     cart:{
-        xname:"HoverShadowCart",
+        xname:"ItemCart",
         props:{
             margin:"0",
-            fill:"#f0ffff"
+            fill:"#f0ffff",
+            padding:'10px'
         }
     },
     container:"PlainList"

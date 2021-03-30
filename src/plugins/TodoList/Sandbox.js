@@ -6,7 +6,7 @@ const promiseAjax = require('@/utils/request');
 
 export default function(props){
 
-    const api = '/api/ExampleList';
+    const api = '/api/TodoList';
 
     const [data, setData] = useState([]);
 
