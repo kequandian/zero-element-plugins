@@ -19,8 +19,6 @@ module.exports={
     cart:{
         xname:"ItemCart",
         props:{
-            margin:"0",
-            fill:"#f0ffff",
             padding:'10px'
         }
     },

@@ -7,7 +7,7 @@ import React from 'react';
 // import NewDemo from '@/plugins/NewDemo/Example_two'
 // import TheAdList from '@/plugins/TheAdList'
 import Message from '@/plugins/TodoList/TodoItem/Message'
-import PageCart from '@/plugins/TodoList/PageCart'
+import PageCart from '@/components/cart/PageCart'
 
 export default function index(props) {
 
