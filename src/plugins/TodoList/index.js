@@ -1,7 +1,8 @@
 import React from 'react';
 // import { Icon } from 'antd-';
 import TodoItem from '@/plugins/TodoList/TodoItem'
-import layout from './designLayout'
+// import layout from './designLayout'
+import layout from './layout'
 import { AutoLayout } from 'zero-element-boot';
 // require('./index.less')
 

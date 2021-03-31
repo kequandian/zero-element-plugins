@@ -4,7 +4,8 @@ require('./index.less')
 import ImageAnimation from '@/components/presenter/item/ItemAvator'
 import ContentText from '@/plugins/TodoList/TodoItem/Content_text'
 import ContentFinish from '@/components/presenter/item/ItemIconAction'
-import { AutoLayout} from 'zero-element-boot';
+import { AutoComponent, AutoLayout} from 'zero-element-boot';
+import layout from './layout'
 
 const CartSet = require('@/components/cart');
 
@@ -22,10 +23,10 @@ export default function TodoItem(props){
 
 
     const config={
-        // layout,
+        layout,
         ...props
     }
     return (
-            <AutoLayout onItemClick={onToDoItemClick}  {...config} cartSet={CartSet} allComponents={allComponents}/>
+            <AutoComponent onItemClick={onToDoItemClick}  {...config} cartSet={CartSet} allComponents={allComponents}/>
     )
 }
