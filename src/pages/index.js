@@ -15,8 +15,8 @@ export default function index(props) {
       console.log('event to dismiss the component')
   }
   return (
-    <PageCart {...props}>
-      <Message onItemClickHandle={onItemClickHandle} />
+    <PageCart alignItems={"flex-start"}>
+      <Message onItemClickHandle={onItemClickHandle} {...props} />
     </PageCart>
   )
 }

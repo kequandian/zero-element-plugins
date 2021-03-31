@@ -1,11 +1,12 @@
 import React from 'react';
 // import { Icon } from 'antd-';
 import TodoItem from '@/plugins/TodoList/TodoItem'
-import layout from './layout'
+import layout from './designLayout'
 import { AutoLayout } from 'zero-element-boot';
 // require('./index.less')
 
 export default function TodoList(props) {
+    // console.log(props)
 
     const { onhandleClick,onItemClickHandle,data } = props;
 
@@ -18,7 +19,7 @@ export default function TodoList(props) {
         console.log(item)
         onItemClickHandle();
     }
-
+    // console.log(config)
     return (
         <AutoLayout {...config}  onItemClick={onClick}>
             <TodoItem onToDoItemClick={onhandleClick} />

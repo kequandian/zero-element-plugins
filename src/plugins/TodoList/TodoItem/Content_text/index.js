@@ -3,6 +3,7 @@ import Title from '@/components/presenter/item/ItemTitle/Title';
 import Text from '@/components/presenter/item/ItemSubtitle/Text'
 require('./index.less')
 import { AutoComponent } from 'zero-element-boot';
+// import layout from '@/plugins/TodoList/designLayout';
 
 export default function ContentText(props){
     const allComponents={

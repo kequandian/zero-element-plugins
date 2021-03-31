@@ -13,10 +13,10 @@ export default function callback(key) {
   return(
     <div className="TheLabel">
       <Tabs defaultActiveKey="1" onChange={callback} >
-        <TabPane tab="未读消息" key="1">
+        <TabPane tab="未读消息" key="1" tabBarStyle={{margin:"auto"}}>
             <TodoList onhandleClick={onhandleClick}  display={`${display}`}/>
         </TabPane>
-        <TabPane tab="全部消息" key="2">
+        <TabPane tab="全部消息" key="2" tabBarStyle={{paddingLeft:"100px"}}>
             <TodoList />
         </TabPane>
       </Tabs>

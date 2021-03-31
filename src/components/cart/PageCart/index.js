@@ -4,7 +4,7 @@ import React,{forwardRef, useState } from 'react';
 export default forwardRef(function PageCart(props, ref){
 
 
-    const {margin='0 auto',backgroundColor='#cacaac' ,children,width='100%',height='1000px',cursor='pointer'}=props
+    const {display='flex',alignItems='center',backgroundColor='#D2E9FF' ,children,width='100%',height='1000px',cursor='pointer'}=props
     console.log(children)
 
     const [onHover, setOnHover] = useState(false);
@@ -33,7 +33,8 @@ export default forwardRef(function PageCart(props, ref){
     
       return React.Children.map(children, child => {
         return <div style={{
-          margin: `${margin}`,
+          display: `${display}`,
+          alignItems: `${alignItems}`,
           backgroundColor: `${backgroundColor}`,
           width:`${width}`,
           height:`${height}`,
