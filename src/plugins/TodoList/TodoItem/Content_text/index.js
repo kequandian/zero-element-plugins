@@ -2,7 +2,7 @@ import React from 'react';
 import Title from '@/components/presenter/item/ItemTitle/Title';
 import Text from '@/components/presenter/item/ItemSubtitle/Text'
 require('./index.less')
-import {AutoComponent, AutoLayout } from 'zero-element-boot';
+import {AutoComponent, AutoLayout } from 'zero-element-boot/lib/components';
 // import layout from '@/plugins/TodoList/designLayout';
 
 export default function ContentText(props){

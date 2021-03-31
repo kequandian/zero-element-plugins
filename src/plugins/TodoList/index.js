@@ -3,7 +3,7 @@ import React from 'react';
 import TodoItem from '@/plugins/TodoList/TodoItem'
 // import layout from './designLayout'
 import layout from './layout'
-import { AutoLayout } from 'zero-element-boot';
+import { AutoLayout } from 'zero-element-boot/lib/components';
 // require('./index.less')
 
 export default function TodoList(props) {

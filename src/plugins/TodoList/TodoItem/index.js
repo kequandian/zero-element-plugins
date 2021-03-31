@@ -4,7 +4,7 @@ require('./index.less')
 import ImageAnimation from '@/components/presenter/item/ItemAvator'
 import ContentText from '@/plugins/TodoList/TodoItem/Content_text'
 import ContentFinish from '@/components/presenter/item/ItemIconAction'
-import { AutoComponent, AutoLayout} from 'zero-element-boot';
+import { AutoComponent, AutoLayout} from 'zero-element-boot/lib/components';
 import layout from './layout'
 
 const CartSet = require('@/components/cart');
