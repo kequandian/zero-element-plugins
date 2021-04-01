@@ -9,7 +9,7 @@ import React from 'react';
 // import PlainList from 'zero-element-boot/lib/components/NamedList/PlainList';
 
 //方法三
-import { AutoLayout } from 'zero-element-boot';
+import { AutoLayout } from 'zero-element-boot/lib/components';
 
 const useUaasTestUser = require('@/plugins/testUserSelection/hooks/useUaasTestUser');
 
@@ -20,6 +20,8 @@ import { get as getEndpoint } from 'zero-element/lib/utils/request/endpoint';
 import { getToken, saveToken } from 'zero-element/lib/utils/request/token';
 
 import { useModel } from 'zero-element/lib/Model';
+import { divide } from 'lodash';
+import { configResponsive } from 'ahooks';
 
 
 /**
@@ -54,9 +56,8 @@ export default function TestUserSelection(props) {
         }
         onItemClickHandle();
     }
-
+    
     const [users, changeUser] = useUaasTestUser({ endpoint, accountToken }, callBack);
-
     const config = {
         items: users.length > 0 ? users : [],
         layout: {
@@ -86,11 +87,11 @@ export default function TestUserSelection(props) {
             container: 'PlainList'
         }
     };
-
     const onClick = (item) => {
         changeUser(item.id)
     }
-
+    // console.log(config)
+        
     return (
         <AutoLayout {...config} onItemClick={onClick}>
             <UserItem />

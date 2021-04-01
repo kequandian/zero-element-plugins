@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AutoComponent } from 'zero-element-boot/lib/export';
+import { AutoComponent, AutoLayout} from 'zero-element-boot/lib/components';
 
 const presenter = require('@/plugins/testUserSelection/presenter');
 
@@ -10,38 +10,44 @@ export default function UserItem(props) {
 
   const config = {
     layout: {
-      name: 'Flexbox',
+      xname: 'Flexbox',
       props: {
         align: 'start',
         direction: 'row',
-        itemStyle:{
-          itemAlign:'v-center'
-        }
+        // itemStyle:{
+        //   itemAlign:'v-center'
+        // }
       },
       children: [
         {
-          name: 'Avatar',
-          span: 2,
+          presenter: 'Avatar',
+          // span: 2,
           gateway: {
-            name: 'Gateway',
+            xname: 'Binding',
             props: {
-              field: 'avatar',
-              converter: {
-                avatar: 'avatarIcon'
+              binding:{
+                avatar:'avatar'
               }
+              // field: 'avatar',
+              // converter: {
+              //   avatar: 'avatarIcon'
+              // }
             }
           }
         },
         {
-          name: 'Title',
-          span: 2,
+          presenter: 'Title',
+          // span: 2,
           gateway: {
-            name: 'Gateway',
+            xname: 'Binding',
             props: {
-              field: 'account',
-              converter: {
-                account: 'TitleText'
+              binding:{
+                account:"title"
               }
+              // field: 'account',
+              // converter: {
+              //   account: 'TitleText'
+              // }
             }
           }
         },
@@ -49,10 +55,9 @@ export default function UserItem(props) {
     },
     ...props,
   };
-
   return (
     <div>
-      <AutoComponent config={config} allComponents={allComponents}  />
+      <AutoLayout {...config} allComponents={allComponents}  />
     </div>
   )
 
