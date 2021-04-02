@@ -1,8 +1,7 @@
 import React from 'react';
-import Title from '@/components/presenter/item/ItemTitle';
-import Subtitle from '@/components/presenter/item/ItemSubtitle'
 require('./index.less')
 import {AutoComponent} from 'zero-element-boot/lib/components';
+const presenter =require('@/plugins/TodoList/TodoItem/presenter/ContentText')
 // import layout from '@/plugins/TodoList/designLayout';
 
 /**
@@ -11,10 +10,7 @@ import {AutoComponent} from 'zero-element-boot/lib/components';
  * @returns
  */
 export default function ContentText(props){
-    const allComponents={
-        Title,
-        Subtitle,
-    };
+    const allComponents={...presenter}
     const config={
         layout:{
             xname:'Flexbox',
@@ -25,7 +21,7 @@ export default function ContentText(props){
             },
             children:[
                 {
-                    presenter:"Title",
+                    presenter:"ItemTitle",
                     gateway:{
                         xname:"Binding",
                         props:{
@@ -36,7 +32,7 @@ export default function ContentText(props){
                     }
                 },
                 {
-                    presenter:"Subtitle",
+                    presenter:"ItemSubtitle",
                     gateway:{
                         xname:"Binding",
                         props:{
@@ -47,11 +43,9 @@ export default function ContentText(props){
                     }
                 }
             ]
-
         },
         ...props,
     }
-    
     return (
         <div className="Content_text">
             <AutoComponent {...config} allComponents={allComponents}/>

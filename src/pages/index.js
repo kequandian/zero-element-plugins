@@ -8,7 +8,7 @@ import React from 'react';
 // import TheAdList from '@/plugins/TheAdList'
 import Message from '@/plugins/TodoList/TodoItem/Message'
 import PageCart from '@/components/cart/PageCart'
-import TestUserSelection from '@/plugins/testUserSelection/TestUserSelection'
+// import TestUserSelection from '@/plugins/testUserSelection/TestUserSelection'
 
 export default function index(props) {
 

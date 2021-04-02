@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import TodoList from './index';
 
-const promiseAjax = require('@/utils/request');
+const promiseAjax = require('zero-element-boot/lib/components/utils/request');
 
 export default function(props){
 
