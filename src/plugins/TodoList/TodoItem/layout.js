@@ -7,12 +7,12 @@ module.exports={
     },
     children:[
         {
-            presenter:'ImageAnimation',
+            presenter:'ItemAvator',
             gateway:{
                 xname:"Binding",
                 props:{
                     binding:{
-                        imgUrl:'url',
+                        logo:'url',
                     }
                 }
             }
@@ -24,18 +24,18 @@ module.exports={
                 props:{
                     binding:{
                         title:"title",
-                        text:"text"
+                        subtitle:"subtitle"
                     }
                 }
             }
         },
         {
-            presenter:'ContentFinish',
+            presenter:'ItemIconAction',
             gateway:{
                 xname:"Binding",
                 props:{
                     binding:{
-                        time:"time"
+                        timestamp:"timestamp"
                     }
                 }
             }

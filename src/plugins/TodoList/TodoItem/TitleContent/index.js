@@ -1,14 +1,19 @@
 import React from 'react';
-import Title from '@/components/presenter/item/ItemTitle/Title';
-import Text from '@/components/presenter/item/ItemSubtitle/Text'
+import Title from '@/components/presenter/item/ItemTitle';
+import Subtitle from '@/components/presenter/item/ItemSubtitle'
 require('./index.less')
-import {AutoComponent, AutoLayout } from 'zero-element-boot/lib/components';
+import {AutoComponent} from 'zero-element-boot/lib/components';
 // import layout from '@/plugins/TodoList/designLayout';
 
+/**
+ * @param {string} title 标题
+ * @param {string} subtitle 副标题
+ * @returns
+ */
 export default function ContentText(props){
     const allComponents={
         Title,
-        Text,
+        Subtitle,
     };
     const config={
         layout:{
@@ -31,12 +36,12 @@ export default function ContentText(props){
                     }
                 },
                 {
-                    presenter:"Text",
+                    presenter:"Subtitle",
                     gateway:{
                         xname:"Binding",
                         props:{
                             binding:{
-                                text:"content"
+                                subtitle:"content"
                             }
                         }
                     }

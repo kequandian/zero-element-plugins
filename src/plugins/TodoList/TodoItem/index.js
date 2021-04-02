@@ -1,24 +1,31 @@
 import React from 'react';
 // import layout from '@/plugins/TodoList/designLayout'
 require('./index.less')
-import ImageAnimation from '@/components/presenter/item/ItemAvator'
-import ContentText from '@/plugins/TodoList/TodoItem/Content_text'
-import ContentFinish from '@/components/presenter/item/ItemIconAction'
-import { AutoComponent, AutoLayout} from 'zero-element-boot/lib/components';
+import ItemAvator from '@/components/presenter/item/ItemAvator'
+import ContentText from '@/plugins/TodoList/TodoItem/TitleContent'
+import ItemIconAction from '@/components/presenter/item/ItemIconAction'
+import { AutoComponent} from 'zero-element-boot/lib/components';
 import layout from './layout'
 
 const CartSet = require('@/components/cart');
 
+
+/**
+ * @param {string} logo 图标
+ * @param {string} title 标题
+ * @param {string} subtitle 副标题
+ * @param {string} timestamp 时间戳
+ * @returns
+ */
+
 export default function TodoItem(props){
-    
-    console.log(props)
 
     const { onToDoItemClick } = props;
     
     const allComponents={
-        ImageAnimation,
+        ItemAvator,
         ContentText,
-        ContentFinish,
+        ItemIconAction,
     };
 
 

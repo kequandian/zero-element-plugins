@@ -17,7 +17,7 @@ export default function index(props) {
   }
   return (
     <PageCart alignItems={"flex-start"} backgroundColor={"#f0f4f7"}>
-      <TestUserSelection onItemClickHandle={onItemClickHandle} {...props} />
+      <Message onItemClickHandle={onItemClickHandle} {...props} />
     </PageCart>
   )
 }

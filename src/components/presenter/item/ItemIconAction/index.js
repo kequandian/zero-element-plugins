@@ -5,9 +5,15 @@ const overcheck=require('./images/overcheck.png')
 
 require('./index.less')
 
-export default function ContentFinish(props) {
+
+/**
+ * @param {string} timestamp 时间戳
+ * @returns
+ */
+
+export default function ItemIconAction(props) {
     const text = <span>完成</span>;
-    const { time } = props
+    const { timestamp } = props
     const [onClick,setOnClick]=useState(false)
     const [display,setDisplay]=useState(null)
     const [onHover, setOnHover] = useState(false);
@@ -27,7 +33,7 @@ export default function ContentFinish(props) {
     
     return (
         <div className="TheFinish">
-            <div className="TheTime">{time}</div>
+            <div className="TheTime">{timestamp}</div>
             
             <Tooltip placement="top" title={text}>
                 <div onClick={()=>toggleOnclick(false)} className="TheImage" style={{

@@ -9,10 +9,10 @@ module.exports={
         xname:"Binding",
         props:{
             binding:{
-                imgUrl:"imgUrl",
+                logo:"logo",
                 title:"title",
-                text:"text",
-                time:"time"
+                subtitle:"subtitle",
+                timestamp:"timestamp"
             }
         }
     },
