@@ -21,6 +21,7 @@ export default function TodoList(props) {
         items: data.length > 0 ? data : [],
         layout: layout,
     }
+    
     const onClick = (item) => {
         console.log(item)
         onItemClickHandle();
