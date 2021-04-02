@@ -17,9 +17,9 @@ export default function PageGridContainer(props){
     console.log(title)
     return React.Children.map(children,child=>{
         return (
-        <div style={{width:"336px"}}>
-            <Cart padding="4px" borderWidth="1px" borderStyle="solid"  fill="#dcffff" >
-            <Flexbox align="start" direction="row" justify="center">
+        <div style={{width:"336px",backgroundColor:"#ffffff"}}>
+            <Cart padding="4px" borderWidth="1px" borderStyle="solid"  fill="#ffffff" >
+            <Flexbox align="center" direction="row" justify="center">
                 <h3><ItemTitle content={title} /></h3>
                 <ItemSubtitle content={subtitle}/>
             </Flexbox>

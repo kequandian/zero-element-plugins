@@ -22,9 +22,11 @@ export default function index(props) {
     // <PageCart alignItems={"flex-start"} backgroundColor={"#f0f4f7"}>
     //   <Message onItemClickHandle={onItemClickHandle} {...props} />
     // </PageCart>
-    <PageGridContainer title={"邮件"} subtitle={"more"}>
-      <TodoList onItemClickHandle={onItemClickHandle} {...props}/>
-    </PageGridContainer>
+    <PageCart  alignItems={"flex-start"}>
+      <PageGridContainer title={"邮件"} subtitle={"more"}>
+        <TodoList onItemClickHandle={onItemClickHandle} {...props}/>
+      </PageGridContainer>
+    </PageCart>
     // <Demo onItemClickHandle={onItemClickHandle} {...props}/>
   )
 }
