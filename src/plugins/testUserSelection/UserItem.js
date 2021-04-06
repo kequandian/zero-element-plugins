@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {AutoLayout} from 'zero-element-boot/lib/components';
-import presenter from '@/plugins/testUserSelection/presenter'
+// import presenter from '@/plugins/testUserSelection/presenter'
 
 const presenter = require('@/plugins/testUserSelection/presenter');
 

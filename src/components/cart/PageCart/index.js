@@ -4,7 +4,7 @@ import React,{forwardRef, useState } from 'react';
 export default forwardRef(function PageCart(props, ref){
 
 
-    const {display='flex',alignItems='center',backgroundColor='#D2E9FF' ,children,width='100%',height='1000px',cursor='pointer'}=props
+    const {display='flex',alignItems='center',backgroundColor='#D2E9FF' ,children,width='100%',height='1000px',cursor='pointer' ,justifyContent="center"}=props
     console.log(children)
 
     const [onHover, setOnHover] = useState(false);
@@ -38,7 +38,9 @@ export default forwardRef(function PageCart(props, ref){
           backgroundColor: `${backgroundColor}`,
           width:`${width}`,
           height:`${height}`,
-          cursor:`${cursor}`
+          cursor:`${cursor}`,
+          justifyContent:`${justifyContent}`,
+
         }}
         
       onMouseEnter={() => toggleHover()} onMouseLeave={() => toggleHover()}

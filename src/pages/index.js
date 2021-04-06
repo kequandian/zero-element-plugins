@@ -8,7 +8,7 @@ import React from 'react';
 // import TheAdList from '@/plugins/TheAdList'
 import Message from '@/plugins/TodoList/TodoItem/Message'
 import PageCart from '@/components/cart/PageCart'
-// import TestUserSelection from '@/plugins/testUserSelection/TestUserSelection'
+import TestUserSelection from '@/plugins/testUserSelection/TestUserSelection'
 import PageGridContainer from '@/components/container/PageGridContainer';
 import TodoList from '@/plugins/TodoList/Sandbox'
 import Demo from '@/components/container/PageGridContainer/Demo'
@@ -19,14 +19,15 @@ export default function index(props) {
       console.log('event to dismiss the component')
   }
   return (
-    // <PageCart alignItems={"flex-start"} backgroundColor={"#f0f4f7"}>
+    // <PageCart backgroundColor={"#f0f4f7"}>
     //   <Message onItemClickHandle={onItemClickHandle} {...props} />
     // </PageCart>
-    <PageCart  alignItems={"flex-start"}>
-      <PageGridContainer title={"邮件"} subtitle={"more"}>
-        <TodoList onItemClickHandle={onItemClickHandle} {...props}/>
-      </PageGridContainer>
-    </PageCart>
-    // <Demo onItemClickHandle={onItemClickHandle} {...props}/>
-  )
+      <PageCart>
+        <PageGridContainer title={"邮件"} subtitle={"more"}>
+          <TodoList onItemClickHandle={onItemClickHandle} {...props}/>
+       </PageGridContainer>
+      </PageCart>
+    // <TestUserSelection onItemClickHandle={onItemClickHandle} {...props}/>  
+
+    )
 }
