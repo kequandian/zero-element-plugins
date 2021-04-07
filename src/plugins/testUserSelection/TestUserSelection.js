@@ -22,6 +22,7 @@ import { getToken, saveToken } from 'zero-element/lib/utils/request/token';
 import { useModel } from 'zero-element/lib/Model';
 import { divide } from 'lodash';
 import { configResponsive } from 'ahooks';
+import useTokenRequest from 'zero-element-boot/lib/components/hooks/useTokenRequest';
 
 
 /**
@@ -32,34 +33,35 @@ import { configResponsive } from 'ahooks';
  */
 
 export default function TestUserSelection(props) {
+    const api="/api/adm/users/testUserList";
+    // const { onItemClickHandle, setPermsHandle } = props;
 
-    const { onItemClickHandle, setPermsHandle } = props;
+    // const model = useModel('global');
 
-    const model = useModel('global');
+    // // const endpoint = getEndpoint(); http://192.168.3.236:8888
+    // // const accountToken = getToken();
 
-    // const endpoint = getEndpoint(); http://192.168.3.236:8888
-    // const accountToken = getToken();
+    // const endpoint = '';
+    // const accountToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJvcmdJZCI6IjEwMDAwMDAwMDAwMDAwMDAxMCIsInVzZXJJZCI6Ijg3NjcwODA4MjQzNzE5NzgzMCIsInVzZXJUeXBlIjoxMDEsImJVc2VyVHlwZSI6IlNZU1RFTSIsInRlbmFudE9yZ0lkIjoxMDAwMDAwMDAwMDAwMDAwMTAsImFjY291bnQiOiJhZG1pbiIsImV4dHJhVXNlclR5cGUiOjEsImlhdCI6MTYwOTgxMzg1MywianRpIjoiODc2NzA4MDgyNDM3MTk3ODMwIiwic3ViIjoiYWRtaW4iLCJleHAiOjE2MTAwNzMwNTN9.hF0JNPRctrtq47flMxTlT4ib-XNNr8btWP_bZ6uB85sxh-HG_Ns_EjtJHPVt5ib9H5dXsuIMg3QA4sbaR6Coiw';
 
-    const endpoint = '';
-    const accountToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJvcmdJZCI6IjEwMDAwMDAwMDAwMDAwMDAxMCIsInVzZXJJZCI6Ijg3NjcwODA4MjQzNzE5NzgzMCIsInVzZXJUeXBlIjoxMDEsImJVc2VyVHlwZSI6IlNZU1RFTSIsInRlbmFudE9yZ0lkIjoxMDAwMDAwMDAwMDAwMDAwMTAsImFjY291bnQiOiJhZG1pbiIsImV4dHJhVXNlclR5cGUiOjEsImlhdCI6MTYwOTgxMzg1MywianRpIjoiODc2NzA4MDgyNDM3MTk3ODMwIiwic3ViIjoiYWRtaW4iLCJleHAiOjE2MTAwNzMwNTN9.hF0JNPRctrtq47flMxTlT4ib-XNNr8btWP_bZ6uB85sxh-HG_Ns_EjtJHPVt5ib9H5dXsuIMg3QA4sbaR6Coiw';
-
-    const callBack = (data) => {
-        if(data){
-            // saveToken({
-            //     userName: data.name,
-            //     token: data.accessToken,
-            //     avatar: data.avatar,
-            //     remember: true,
-            //     extra: data.account,
-            // })
-            // model.queryPerm(true);
-        }
-        onItemClickHandle();
-    }
+    // const callBack = (data) => {
+    //     if(data){
+    //         // saveToken({
+    //         //     userName: data.name,
+    //         //     token: data.accessToken,
+    //         //     avatar: data.avatar,
+    //         //     remember: true,
+    //         //     extra: data.account,
+    //         // })
+    //         // model.queryPerm(true);
+    //     }
+    //     onItemClickHandle();
+    // }
     
-    const [users, changeUser] = useUaasTestUser({ endpoint, accountToken }, callBack);
+    // const [users, changeUser] = useUaasTestUser({ endpoint, accountToken }, callBack);
+    const [data]=useTokenRequest(api);
     const config = {
-        items: users.length > 0 ? users : [],
+        items: data.length > 0 ? data : [],
         layout: {
             xname: 'Flexbox',
             props: {
@@ -91,6 +93,7 @@ export default function TestUserSelection(props) {
         changeUser(item.id)
     }
     // console.log(config)
+    // console.log("users=",users)
         
     return (
         <AutoLayout {...config} onItemClick={onClick}>

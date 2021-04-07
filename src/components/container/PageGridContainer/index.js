@@ -19,7 +19,7 @@ export default function PageGridContainer(props){
     // console.log(title)
     return React.Children.map(children,child=>{
         return (
-        <div className="PageGridContainer" style={{backgroundColor:"#ffffff",border:"1px solid #ccc"}}>
+        <div className="PageGridContainer" style={{}}>
             <Cart padding="4px" linewidth="0px" borderStyle="solid"  fill="#ffffff" >
             <Container>    
             <Flexbox align="start-with-last-end" direction="row" justify="space-between" >
