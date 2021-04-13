@@ -1,16 +1,16 @@
-// import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { APIContainer } from 'zero-element-boot';
 
-// import TodoList from './index';
+import TodoList from './index';
 
-// import useTokenRequest from 'zero-element-boot/lib/components/hooks/useTokenRequest';
+const useTokenRequest = require('zero-element-boot/lib/components/hooks/useTokenRequest');
 
-// export default function(props){
-//     console.log('props=',props)
-//     const api = '/api/TodoList';
+export default function(props){
 
+    const api = '/api/TodoList';
 
-//     const [ data ] = useTokenRequest(api);
-//     console.log("data="+data)
+    const [ data ] = useTokenRequest(api);
 
-//     return <TodoList data={data} {...props } />;
-// }
+    return <TodoList data={data} {...props } />;
+
+}

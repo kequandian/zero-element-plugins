@@ -1,9 +1,0 @@
-// module.exports={
-//         filte:"data",
-//         binding:{
-//             link:"logo",
-//             title:"title",
-//             description:"subtitle",
-//             time:"timestamp"
-//         }
-// }

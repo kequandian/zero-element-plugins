@@ -6,13 +6,12 @@ import React from 'react';
 // import AdList from '@/plugins/AdList/Sandbox'
 // import NewDemo from '@/plugins/NewDemo/Example_two'
 // import TheAdList from '@/plugins/TheAdList'
-import Message from '@/plugins/GenericListItem/Message'
+import Message from '@/plugins/TodoList/Message'
 import PageCart from '@/components/cart/PageCart'
 import TestUserSelection from '@/plugins/testUserSelection/TestUserSelection'
 import PageGridContainer from '@/components/container/PageGridContainer';
-import TodoList from '@/plugins/TodoList'
+import TodoList from '@/plugins/TodoList/Sandbox'
 import Demo from '@/components/container/PageGridContainer/Demo'
-import GenericListItem from '@/plugins/GenericListItem/Sandbox'
 
 export default function index(props) {
 
@@ -25,7 +24,7 @@ export default function index(props) {
     // </PageCart>
       // <PageCart>
       //   <PageGridContainer title={"邮件"} subtitle={"more"}>
-          <GenericListItem onItemClickHandle={onItemClickHandle} {...props}/>
+          <TodoList onItemClickHandle={onItemClickHandle} {...props}/>
       //  </PageGridContainer>
       // </PageCart>
     // <TestUserSelection onItemClickHandle={onItemClickHandle} {...props}/>  
