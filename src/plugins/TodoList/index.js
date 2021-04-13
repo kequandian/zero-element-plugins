@@ -1,7 +1,8 @@
 import React from 'react';
-import TodoItem from '@/plugins/TodoList/TodoItem'
-import layout from './layout'
-import { AutoLayout } from 'zero-element-boot/lib/components';
+import GenericListItem from '@/plugins/GenericListItem'
+import layout from './gateway'
+import { APIContainer, AutoLayout } from 'zero-element-boot/lib/components';
+import { gateway } from '../TodoList/gateway';
 
 
 /**
@@ -12,24 +13,12 @@ import { AutoLayout } from 'zero-element-boot/lib/components';
  * @returns
  */
 
-export default function TodoList(props) {
-
-    const { onhandleClick,onItemClickHandle,data } = props;
-
-    
-    const config = {
-        items: data.length > 0 ? data : [],
-        layout: layout,
-    }
-    
-    const onClick = (item) => {
-        console.log(item)
-        onItemClickHandle();
-    }
+export default function TodoList(props) {    
+    console.log("props="+props)
     return (
-        <AutoLayout {...config}  onItemClick={onClick}>
-            <TodoItem onToDoItemClick={onhandleClick} />
-        </AutoLayout>
+        <APIContainer api={'/api/TodoList'} {...gateway}>
+            <GenericListItem />
+        </APIContainer>
     )
 
 }

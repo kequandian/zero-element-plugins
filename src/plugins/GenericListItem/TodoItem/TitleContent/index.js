@@ -1,7 +1,7 @@
 import React from 'react';
 require('./index.less')
 import {AutoComponent} from 'zero-element-boot/lib/components';
-const presenter =require('@/plugins/TodoList/TodoItem/presenter/ContentText')
+const presenter =require('@/plugins/GenericListItem/TodoItem/presenter/ContentText')
 // import layout from '@/plugins/TodoList/designLayout';
 
 /**
