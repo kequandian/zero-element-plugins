@@ -11,7 +11,7 @@ import React from 'react';
 //方法三
 import { AutoLayout } from 'zero-element-boot/lib/components';
 
-const useUaasTestUser = require('@/plugins/testUserSelection/hooks/useUaasTestUser');
+//const useUaasTestUser = require('@/plugins/testUserSelection/hooks/useUaasTestUser');
 
 const { UserItem } = require('@/plugins/testUserSelection');
 const { Seperator } = require('@/plugins/testUserSelection/presenter')
@@ -22,6 +22,7 @@ import { getToken, saveToken } from 'zero-element/lib/utils/request/token';
 import { useModel } from 'zero-element/lib/Model';
 import { divide } from 'lodash';
 import { configResponsive } from 'ahooks';
+
 import useTokenRequest from 'zero-element-boot/lib/components/hooks/useTokenRequest';
 
 
@@ -33,7 +34,9 @@ import useTokenRequest from 'zero-element-boot/lib/components/hooks/useTokenRequ
  */
 
 export default function TestUserSelection(props) {
-    const api="/api/adm/users/testUserList";
+
+    const api = "/api/adm/users/testUserList";
+
     // const { onItemClickHandle, setPermsHandle } = props;
 
     // const model = useModel('global');
@@ -57,9 +60,11 @@ export default function TestUserSelection(props) {
     //     }
     //     onItemClickHandle();
     // }
-    
+
     // const [users, changeUser] = useUaasTestUser({ endpoint, accountToken }, callBack);
-    const [data]=useTokenRequest(api);
+
+    const [data] = useTokenRequest(api);
+
     const config = {
         items: data.length > 0 ? data : [],
         layout: {
@@ -74,18 +79,18 @@ export default function TestUserSelection(props) {
                 xname: 'Binding',
                 props: {
                     binding: {
-                       avatar: 'avatar',
-                       account: 'title',
-                       name: 'subtitle'
+                        avatar: 'avatar',
+                        account: 'title',
+                        name: 'subtitle'
                     }
                 }
             },
-            cart:{
+            cart: {
                 xname: 'ItemCart',
                 props: {
                     padding: '10px',
                 }
-            }, 
+            },
             container: 'PlainList'
         }
     };
@@ -94,7 +99,7 @@ export default function TestUserSelection(props) {
     }
     // console.log(config)
     // console.log("users=",users)
-        
+
     return (
         <AutoLayout {...config} onItemClick={onClick}>
             <UserItem />
