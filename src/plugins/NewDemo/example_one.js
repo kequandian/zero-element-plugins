@@ -1,27 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Comment from "@/plugins/NewDemo/Comment"
-const promiseAjax = require('@/utils/request');
+import useTokenRequest from 'zero-element-boot/lib/components/hooks/useTokenRequest';
 
 export default function Index(props) {
 
     const api = '/api/adListaaa';
 
-    // const [data, setData] = useState([]);
-
-    // function handleQuery(API, queryData) {
-    //     console.log("API ", API);
-    //     return promiseAjax(API, queryData).then(response => {
-    //         console.log("response ", response);
-    //         if (response && response.code === 200) {
-    //             setData(response.data);
-    //             console.log("response.data ", response.data);
-    //         }
-    //     });
-    // }
-
-    // useEffect(_ => {
-    //     handleQuery(api);
-    // }, []);
+    //const [data]=useTokenRequest(api);
 
     const data = {
         text:'I hope you enjoy learning React!',
