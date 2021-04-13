@@ -3,7 +3,8 @@ import React from 'react';
 require('./index.less')
 import { AutoComponent} from 'zero-element-boot/lib/components';
 import layout from './layout'
-const presenter=require('@/plugins/GenericListItem/TodoItem/presenter')
+const presenter=require('@/plugins/GenericListItem/LogoSubtitleItem/presenter')
+
 
 const CartSet = require('@/components/cart');
 
@@ -28,6 +29,7 @@ export default function TodoItem(props){
         ...props
     }
     return (
+        
             <AutoComponent onItemClick={onToDoItemClick}  {...config} cartSet={CartSet} allComponents={allComponents}/>
     )
 }

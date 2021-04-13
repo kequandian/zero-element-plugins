@@ -1,5 +1,5 @@
 import React from 'react';
-import TodoItem from '@/plugins/GenericListItem/TodoItem'
+import LogoSubtitleItem from '@/plugins/GenericListItem/LogoSubtitleItem'
 import layout from './layout'
 import { AutoLayout } from 'zero-element-boot/lib/components';
 
@@ -24,11 +24,11 @@ export default function TodoList(props) {
     
     const onClick = (item) => {
         console.log(item)
-        onItemClickHandle();
+        onItemClickHandle();    
     }
     return (
         <AutoLayout {...config}  onItemClick={onClick}>
-            <TodoItem onToDoItemClick={onhandleClick} />
+            <LogoSubtitleItem onToDoItemClick={onhandleClick} />
         </AutoLayout>
     )
 

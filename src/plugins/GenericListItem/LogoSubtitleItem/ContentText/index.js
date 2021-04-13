@@ -1,7 +1,11 @@
 import React from 'react';
 require('./index.less')
 import {AutoComponent} from 'zero-element-boot/lib/components';
-const presenter =require('@/plugins/GenericListItem/TodoItem/presenter/ContentText')
+
+import ItemTitle from '@/components/presenter/item/ItemTitle'
+import ItemSubtitle from '@/components/presenter/item/ItemSubtitle'
+// const presenter =require('@/plugins/GenericListItem/LogoSubtitleItem/presenter/ContentText')
+
 // import layout from '@/plugins/TodoList/designLayout';
 
 /**
@@ -9,8 +13,13 @@ const presenter =require('@/plugins/GenericListItem/TodoItem/presenter/ContentTe
  * @param {string} subtitle 副标题
  * @returns
  */
+
+ 
 export default function ContentText(props){
-    const allComponents={...presenter}
+    const allComponents={
+        ItemTitle,
+        ItemSubtitle
+    }
     const config={
         layout:{
             xname:'Flexbox',
