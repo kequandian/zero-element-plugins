@@ -1,16 +1,36 @@
+// import layout from '@/components/item/LogoSubtitleItem/layout';
 import React, { useState, useEffect } from 'react';
-import { APIContainer } from 'zero-element-boot';
-
+// import { APIContainer } from 'zero-element-boot';
 import TodoList from './index';
 
-const useTokenRequest = require('zero-element-boot/lib/components/hooks/useTokenRequest');
-
 export default function(props){
+    const commits=[
+        {
+            url:"https://s.cn.bing.net/th?id=ODL.8acd6796e431785e9623a48ef791095b&w=146&h=146&c=7&rs=1&qlt=80&pid=RichNav",
+            title:"飞书助手",
+            description:"🎦 屏幕共享进阶窍门",
+            update_time:"昨天",
+          },
+          {
+            url:"https://s.cn.bing.net/th?id=ODL.8acd6796e431785e9623a48ef791095b&w=146&h=146&c=7&rs=1&qlt=80&pid=RichNav",
+            title:"飞书助手",
+            description:"🎦 屏幕共享进阶窍门",
+            update_time:"昨天",
+          },
+          {
+            url:"https://s.cn.bing.net/th?id=ODL.8acd6796e431785e9623a48ef791095b&w=146&h=146&c=7&rs=1&qlt=80&pid=RichNav",
+            title:"飞书助手",
+            description:"🎦 屏幕共享进阶窍门",
+            update_time:"昨天",
+          }
+    ];
+        
+    const config = {
+        items: commits
+    }
 
-    const api = '/api/TodoList';
-
-    const [ data ] = useTokenRequest(api);
-
-    return <TodoList data={data} {...props } />;
+    return (
+    <TodoList {...config} />
+    )
 
 }

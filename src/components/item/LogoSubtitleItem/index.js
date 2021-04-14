@@ -3,7 +3,7 @@ import React from 'react';
 require('./index.less')
 import { AutoComponent} from 'zero-element-boot/lib/components';
 import layout from './layout'
-const presenter=require('@/components/presenter/item/LogoSubtitleItem/presenter')
+const presenter=require('@/components/item/LogoSubtitleItem/presenter')
 
 
 const CartSet = require('@/components/cart');
