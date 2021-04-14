@@ -5,8 +5,7 @@ import { AutoComponent} from 'zero-element-boot/lib/components';
 import layout from './layout'
 const presenter=require('@/components/item/LogoSubtitleItem/presenter')
 
-
-const CartSet = require('@/components/cart');
+// const CartSet = require('@/components/cart');
 
 
 /**
@@ -18,18 +17,17 @@ const CartSet = require('@/components/cart');
  */
 
 export default function TodoItem(props){
-
-    const { onToDoItemClick } = props;
+    //const { onToDoItemClick } = props;
     
     const allComponents={...presenter}
-
 
     const config={
         layout,
         ...props
     }
+
     return (
-        
-            <AutoComponent onItemClick={onToDoItemClick}  {...config} cartSet={CartSet} allComponents={allComponents}/>
+        //<AutoComponent onItemClick={onToDoItemClick}  {...config} cartSet={CartSet} allComponents={allComponents}/>
+        <AutoComponent {...config} allComponents={allComponents}/>
     )
 }
