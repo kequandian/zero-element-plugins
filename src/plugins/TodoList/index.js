@@ -25,15 +25,15 @@ export default function TodoList(props) {
     }
     
     const onClick = (item) => {
-        console.log('TodoList:onClick:item data=', item)
+        // console.log('TodoList:onClick:item data=', item)
         if(onItemClickHandle){
-           onItemClickHandle();  
+           onItemClickHandle(item);  
         }  
     }
 
     return (
-        <AutoLayout {...config}  onItemClick={onClick}>
-            <LogoSubtitleItem onToDoItemClick={onhandleClick} />
+        <AutoLayout {...config}  onItemClick={() => {}}>
+            <LogoSubtitleItem onToDoItemClick={onClick} />
         </AutoLayout>
     )
 
