@@ -3,7 +3,7 @@ module.exports={
     props:{
         align:"start",
         direction:"column",
-        justidy:"center"
+        justify:"center column"
     },
     gateway:{
         xname:"Binding",

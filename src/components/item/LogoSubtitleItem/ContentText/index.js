@@ -26,7 +26,7 @@ export default function ContentText(props){
             props:{
                 align:"start",
                 direction:"column",
-                justidy:"center"
+                justify:"start column"
             },
             children:[
                 {

@@ -1,9 +1,7 @@
 import ItemAvator from '@/components/presenter/item/ItemAvator';
-import ItemIconAction from '@/components/presenter/item/ItemIconAction';
-import ContentText from  '@/components/item/LogoSubtitleItem/ContentText'
+import Content from '@/plugins/TodoList/Content'
 
 export {
         ItemAvator,
-        ContentText,
-        ItemIconAction,
-    }
+        Content
+}

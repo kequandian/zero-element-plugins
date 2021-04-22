@@ -3,7 +3,7 @@ module.exports={
     props:{
         align:'start',
         direction:'row',
-        justidy:'center'
+        justify:'start row'
     },
     children:[
         {
@@ -18,23 +18,13 @@ module.exports={
             }
         },
         {
-            presenter:'ContentText',
+            presenter:'Content',
             gateway:{
                 xname:"Binding",
                 props:{
                     binding:{
                         title:"title",
-                        subtitle:"subtitle"
-                    }
-                }
-            }
-        },
-        {
-            presenter:'ItemIconAction',
-            gateway:{
-                xname:"Binding",
-                props:{
-                    binding:{
+                        subtitle:"subtitle",
                         timestamp:"timestamp"
                     }
                 }
