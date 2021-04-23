@@ -5,17 +5,17 @@ module.exports={
         direction:"column",
         justify:"center column"
     },
-    gateway:{
-        xname:"Binding",
-        props:{
-            binding:{
-                url:"logo",
-                title:"title",
-                description:"subtitle",
-                update_time:"timestamp"
-            }
-        }
-    },
+    // gateway:{
+    //     xname:"Binding",
+    //     props:{
+    //         binding:{
+    //             url:"logo",
+    //             title:"title",
+    //             description:"subtitle",
+    //             update_time:"timestamp"
+    //         }
+    //     }
+    // },
     cart:{
         xname:"ItemCart",
         props:{
