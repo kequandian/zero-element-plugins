@@ -1,17 +1,16 @@
 import React from 'react'
 import Title from '@/plugins/QuestionList/QuestionItem/presenter/Title'
-import HeadText from '@/plugins/QuestionList/QuestionItem/presenter/HeadText'
+import HeadText from '@/plugins/QuestionList/QuestionItem/components/HeadText'
 import ContentText from '@/plugins/QuestionList/QuestionItem/presenter/ContentText'
-import FootContent from '@/plugins/QuestionList/QuestionItem/presenter/FootContent'
+import FootContent from '@/plugins/QuestionList/QuestionItem/components/FootContent'
 import { AutoComponent} from 'zero-element-boot/lib/components';
 
 export default function QuestionItem(props){    
-    console.log(props)
     const allComponents={
         Title,
-        // HeadText,
-        // ContentText,
-        // FootContent
+        HeadText,
+        ContentText,
+        FootContent
     }
     const config={
         layout:{
@@ -19,7 +18,7 @@ export default function QuestionItem(props){
             props:{
                 align:"start",
                 direction:"row",
-                justify:"between row"
+                justify:"start"
             },
             children:[
                 {
@@ -34,44 +33,44 @@ export default function QuestionItem(props){
                         }
                     }
                 },
-                // {
-                //     persenter:"HeadText",
-                //     gateway:{
-                //         xname:"Binding",
-                //         props:{
-                //             binding:{
-                //                 number:"number",
-                //                 topic:"topic",
-                //                 typetext:"typetext"                                
-                //             }
-                //         }
-                //     }
-                // },
-                // {
-                //     persenter:"ContentText",
-                //     gateway:{
-                //         xname:"Binding",
-                //         props:{
-                //             binding:{
-                //                 content:"content"
-                //             }
-                //         }
-                //     }
-                // },
-                // {
-                //     persenter:"FootContent",
-                //     gateway:{
-                //         xname:"Binding",
-                //         props:{
-                //             binding:{
-                //                 account:"account",
-                //                 passRate:"passRate",
-                //                 diffect:"diffect",
-                //                 colors:"colors"
-                //             }
-                //         }
-                //     }
-                // }
+                {
+                    persenter:"HeadText",
+                    gateway:{
+                        xname:"Binding",
+                        props:{
+                            binding:{
+                                number:"number",
+                                topic:"topic",
+                                typetext:"typetext"                                
+                            }
+                        }
+                    }
+                },
+                {
+                    persenter:"ContentText",
+                    gateway:{
+                        xname:"Binding",
+                        props:{
+                            binding:{
+                                content:"content"
+                            }
+                        }
+                    }
+                },
+                {
+                    persenter:"FootContent",
+                    gateway:{
+                        xname:"Binding",
+                        props:{
+                            binding:{
+                                account:"account",
+                                passRate:"passRate",
+                                diffect:"diffect",
+                                colors:"colors"
+                            }
+                        }
+                    }
+                }
             ]
         },
         ...props

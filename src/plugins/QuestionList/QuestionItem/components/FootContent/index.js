@@ -1,5 +1,5 @@
 import React from 'react'
-import FootText from '@/plugins/QuestionList/QuestionItem/presenter/FootText'
+import FootText from '@/plugins/QuestionList/QuestionItem/components/FootText'
 import TodoTest from '@/plugins/QuestionList/QuestionItem/presenter/TodoTest'
 
 export default function FootContent(props){
