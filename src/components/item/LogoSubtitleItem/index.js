@@ -26,6 +26,7 @@ export default function TodoItem(props){
         layout,
         ...props
     }
+    console.log(config)
 
     return (
         //<AutoComponent onItemClick={onToDoItemClick}  {...config} cartSet={CartSet} allComponents={allComponents}/>

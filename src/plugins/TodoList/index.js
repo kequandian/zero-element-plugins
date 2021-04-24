@@ -1,8 +1,5 @@
 import React from 'react';
-import layout from './layout'
-import { AutoLayout } from 'zero-element-boot/lib/components';
 import bindFiles from './gateway.json'
-import LogoSubtitleItem from '@/components/item/LogoSubtitleItem'
 import LogoSubtitleList from '@/components/list/LogoSubtitleList'
 
 const useTokenRequest = require('zero-element-boot/lib/components/hooks/useTokenRequest');
@@ -16,11 +13,15 @@ const useTokenRequest = require('zero-element-boot/lib/components/hooks/useToken
  * @returns
  */
 export default function TodoList(props) {
-    // const { onhandleClick, onItemClickHandle, items } = props;
+    const { items } = props;
+    const api = '/api/TodoList';
+    const [ data ] = useTokenRequest({api, bindFiles});
 
-
+    const config = {
+        items: items ? items : (data.length > 0 ? data : []),
+    }
     return (
-        <LogoSubtitleList></LogoSubtitleList>
+        <LogoSubtitleList {...config}></LogoSubtitleList>
     )
 
 }

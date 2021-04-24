@@ -1,10 +1,8 @@
 import React from 'react';
-import layout from './layout'
+import layout from '@/components/list/LogoSubtitleList/layout'
 import { AutoLayout } from 'zero-element-boot/lib/components';
-import bindFiles from '@/plugins/TodoList/gateway.json'
 import LogoSubtitleItem from '@/components/item/LogoSubtitleItem'
 
-const useTokenRequest = require('zero-element-boot/lib/components/hooks/useTokenRequest');
 
 /**
  * @param {Event} onItemClickHandle 子项点击事件
@@ -14,27 +12,24 @@ const useTokenRequest = require('zero-element-boot/lib/components/hooks/useToken
  * @param {string} timestamp 时间戳
  * @returns
  */
-export default function TodoList(props) {
-    const { onhandleClick, onItemClickHandle, items } = props;
+export default function LogoSubtitleList(props) {
+    const { onhandleClick, onItemClickHandle, ...data } = props;
 
-    const api = '/api/TodoList';
-    const [ data ] = useTokenRequest({api, bindFiles});
-    // const [ data ] = useTokenRequest(api);
+    // const onClick = (item) => {
+    //     // console.log('TodoList:onClick:item data=', item)
+    //     if(onItemClickHandle){
+    //        onItemClickHandle(item);  
+    //     }  
+    // }
+
     const config = {
-        items: items ? items : (data.length > 0 ? data : []),
-        layout: layout,
-    }
-    
-    const onClick = (item) => {
-        // console.log('TodoList:onClick:item data=', item)
-        if(onItemClickHandle){
-           onItemClickHandle(item);  
-        }  
+        items: data.items,
+        layout
     }
 
     return (
         <AutoLayout {...config}  onItemClick={() => onhandleClick}>
-            <LogoSubtitleItem onToDoItemClick={onClick} />
+            <LogoSubtitleItem  />
         </AutoLayout>
     )
 
