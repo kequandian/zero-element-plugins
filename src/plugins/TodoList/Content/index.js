@@ -5,6 +5,7 @@ import { AutoComponent } from 'zero-element-boot';
 
 
 export default function Content(props){
+
     const allComponents={        
         ContentText,
         ItemIconAction
@@ -25,7 +26,7 @@ export default function Content(props){
                         props:{
                             binding:{
                                 title:"title",
-                                subtitle:"description"
+                                description:"description"
                             }
                         }
                     }
@@ -36,7 +37,7 @@ export default function Content(props){
                         xname:"Binding",
                         props:{
                             binding:{
-                                timestamp:"timestamp"
+                                update_time:"update_time"
                             }
                         }
                     }

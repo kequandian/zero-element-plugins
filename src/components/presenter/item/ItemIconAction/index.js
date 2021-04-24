@@ -13,7 +13,7 @@ require('./index.less')
 
 export default function ItemIconAction(props) {
     const text = <span>完成</span>;
-    const { timestamp } = props
+    const { update_time } = props
     const [onClick,setOnClick]=useState(false)
     const [display,setDisplay]=useState(null)
     const [onHover, setOnHover] = useState(false);
@@ -33,7 +33,7 @@ export default function ItemIconAction(props) {
     
     return (
         <div className="TheFinish">
-            <div className="TheTime">{timestamp}</div>
+            <div className="TheTime">{update_time}</div>
             
             <Tooltip placement="top" title={text}>
                 <div onClick={()=>toggleOnclick(false)} className="TheImage" style={{

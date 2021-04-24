@@ -17,6 +17,7 @@ const presenter=require('@/components/item/LogoSubtitleItem/presenter')
  */
 
 export default function TodoItem(props){
+
     const { onToDoItemClick } = props;
     
     const allComponents={...presenter}

@@ -24,8 +24,8 @@ module.exports={
                 props:{
                     binding:{
                         title:"title",
-                        subtitle:"subtitle",
-                        timestamp:"timestamp"
+                        subtitle:"description",
+                        timestamp:"update_time"
                     }
                 }
             }

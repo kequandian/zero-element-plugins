@@ -43,7 +43,7 @@ export default function ContentText(props){
                         xname:"Binding",
                         props:{
                             binding:{
-                                subtitle:"content"
+                                description:"content"
                             }
                         }
                     }
