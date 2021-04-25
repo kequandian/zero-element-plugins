@@ -1,6 +1,6 @@
 import React from 'react';
 import ItemIconAction from '@/components/presenter/item/ItemIconAction';
-import ContentText from  '@/components/item/LogoSubtitleItem/ContentText'
+import ContentText from  '@/components/item/LogoSubtitleItem/components/ContentText'
 import { AutoComponent } from 'zero-element-boot';
 
 

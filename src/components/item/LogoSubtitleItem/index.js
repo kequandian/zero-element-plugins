@@ -16,7 +16,7 @@ const presenter=require('@/components/item/LogoSubtitleItem/presenter')
  * @returns
  */
 
-export default function TodoItem(props){
+export default function LogoSubtitleItem(props){
 
     const { onLogoSubtitleItemClick } = props;
     

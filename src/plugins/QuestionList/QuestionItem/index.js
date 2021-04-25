@@ -4,9 +4,12 @@ import HeadText from '@/plugins/QuestionList/QuestionItem/components/HeadText'
 import ContentText from '@/plugins/QuestionList/QuestionItem/presenter/ContentText'
 import FootContent from '@/plugins/QuestionList/QuestionItem/components/FootContent'
 import { AutoComponent} from 'zero-element-boot/lib/components';
+
+import  Cart from 'zero-element-boot/lib/components/cart/Cart';
 require('./index.less')
 
-export default function QuestionItem(props){    
+export default function QuestionItem(props){  
+    const {color}=props
     const allComponents={
         Title,
         HeadText,
@@ -77,8 +80,8 @@ export default function QuestionItem(props){
         ...props
     }
     return (
-    <div className="Bigbox">
-        <AutoComponent  {...config} allComponents={allComponents}/> 
-    </div>
+        <Cart corner="10px" linewidth="3px 0px 0px 0px" lineColor={color} shadow="0 0 8px #ccc">
+            <AutoComponent  {...config} allComponents={allComponents}/> 
+        </Cart>
     )
 }

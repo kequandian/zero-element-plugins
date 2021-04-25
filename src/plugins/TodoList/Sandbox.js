@@ -30,6 +30,6 @@ export default function(props){
 
     }
     return (
-      <TodoList onToDoItemClick={onItemClickHandle} items={data} />
+      <TodoList onTodoListClick={onItemClickHandle} items={data} />
     )
 }
