@@ -1,5 +1,6 @@
 import React from 'react'
 import FootText from '@/plugins/QuestionList/QuestionItem/components/FootText'
+import { AutoComponent} from 'zero-element-boot/lib/components';
 import TodoTest from '@/plugins/QuestionList/QuestionItem/presenter/TodoTest'
 
 export default function FootContent(props){

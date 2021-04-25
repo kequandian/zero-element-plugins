@@ -50,7 +50,7 @@ export default function QuestionList(props){
             xname:"Flexbox",
             props:{
                 align:"start",
-                direction:"column",
+                direction:"row",
                 justify:"start"
             },
             gateway:{

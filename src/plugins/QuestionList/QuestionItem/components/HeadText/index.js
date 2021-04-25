@@ -1,5 +1,5 @@
 import React from 'react'
-import TheTitle from '@/plugins/QuestionList/QuestionItem/presenter/TheTitle'
+import TheTitle from '@/plugins/QuestionList/QuestionItem/components/TheTitle'
 import TypeText from '@/plugins/QuestionList/QuestionItem/presenter/TypeText'
 import { AutoComponent} from 'zero-element-boot/lib/components';
 
@@ -18,7 +18,7 @@ export default function HeadText(props){
             },
             children:[
                 {
-                    persenter:"TheTitle",
+                    presenter:"TheTitle",
                     gateway:{
                         xname:"Binding",
                         props:{
@@ -30,7 +30,7 @@ export default function HeadText(props){
                     }
                 },
                 {
-                    persenter:"TypeText",
+                    presenter:"TypeText",
                     gateway:{
                         xname:"Binding",
                         props:{
@@ -45,6 +45,8 @@ export default function HeadText(props){
         ...props
     }
     return (
-        <AutoComponent  {...config} allComponents={allComponents}/>
+        <div style={{width:"480px"}}>
+            <AutoComponent  {...config} allComponents={allComponents}/>
+        </div>
     )
 }

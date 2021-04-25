@@ -4,6 +4,7 @@ import HeadText from '@/plugins/QuestionList/QuestionItem/components/HeadText'
 import ContentText from '@/plugins/QuestionList/QuestionItem/presenter/ContentText'
 import FootContent from '@/plugins/QuestionList/QuestionItem/components/FootContent'
 import { AutoComponent} from 'zero-element-boot/lib/components';
+require('./index.less')
 
 export default function QuestionItem(props){    
     const allComponents={
@@ -17,12 +18,12 @@ export default function QuestionItem(props){
             xname:"Flexbox",
             props:{
                 align:"start",
-                direction:"row",
+                direction:"column",
                 justify:"start"
             },
             children:[
                 {
-                    persenter:"Title",
+                    presenter:"Title",
                     gateway:{
                         xname:"Binding",
                         props:{
@@ -34,7 +35,7 @@ export default function QuestionItem(props){
                     }
                 },
                 {
-                    persenter:"HeadText",
+                    presenter:"HeadText",
                     gateway:{
                         xname:"Binding",
                         props:{
@@ -47,7 +48,7 @@ export default function QuestionItem(props){
                     }
                 },
                 {
-                    persenter:"ContentText",
+                    presenter:"ContentText",
                     gateway:{
                         xname:"Binding",
                         props:{
@@ -58,7 +59,7 @@ export default function QuestionItem(props){
                     }
                 },
                 {
-                    persenter:"FootContent",
+                    presenter:"FootContent",
                     gateway:{
                         xname:"Binding",
                         props:{
@@ -75,5 +76,9 @@ export default function QuestionItem(props){
         },
         ...props
     }
-    return <AutoComponent  {...config} allComponents={allComponents}/> 
+    return (
+    <div className="Bigbox" style={{borderTop:""}}>
+        <AutoComponent  {...config} allComponents={allComponents}/> 
+    </div>
+    )
 }

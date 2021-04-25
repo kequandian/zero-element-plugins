@@ -1,13 +1,13 @@
 import React from 'react'
-import Number from '@/plugins/QuestionList/QuestionItem/presenter/Number'
-import Topic from '@/plugins/QuestionList/QuestionItem/presenter/Topic'
+import ItemLogo from '@/plugins/Exercise/ExerciseItem/presenter/ItemLogo';
+import AppName from '@/plugins/Exercise/ExerciseItem/presenter/AppName';
 import { AutoComponent} from 'zero-element-boot/lib/components';
 
-export default function TheTitle(props){
+export default function ContentText(props){
     const allComponents={
-        Number,
-        Topic
-    }
+        ItemLogo,
+        AppName
+    };
     const config={
         layout:{
             xname:"Flexbox",
@@ -18,23 +18,23 @@ export default function TheTitle(props){
             },
             children:[
                 {
-                    persenter:"Number",
+                    presenter:"ItemLogo",
                     gateway:{
                         xname:"Binding",
                         props:{
                             binding:{
-                                number:"number"
+                                logo:"logo"
                             }
                         }
                     }
                 },
                 {
-                    persenter:"Topic",
+                    presenter:"AppName",
                     gateway:{
                         xname:"Binding",
                         props:{
                             binding:{
-                                topic:"topic"
+                                appname:"appname"
                             }
                         }
                     }

@@ -1,7 +1,7 @@
 import React from 'react'
-import ImageAnimation from '@/plugins/Exercise/ExerciseItem/persenter/ImageAnimation'
-import ContentText from '@/plugins/Exercise/ExerciseItem/persenter/ContentText'
-import ItemTitle from '@/plugins/Exercise/ExerciseItem/persenter/ItemTitle'
+import ImageAnimation from '@/plugins/Exercise/ExerciseItem/presenter/ImageAnimation'
+import ContentText from '@/plugins/Exercise/ExerciseItem/presenter/ContentText'
+import ItemTitle from '@/plugins/Exercise/ExerciseItem/presenter/ItemTitle'
 import { AutoComponent} from 'zero-element-boot/lib/components';
 
 
