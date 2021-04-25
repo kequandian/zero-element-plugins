@@ -26,9 +26,10 @@ export default function(props){
     ];
     const onItemClickHandle = (item) => {
        console.log('event to dismiss the component:', item)
-    }
+    console.log("item=",item)
 
+    }
     return (
-      <TodoList onItemClickHandle={onItemClickHandle} items={data} />
+      <TodoList onToDoItemClick={onItemClickHandle} items={data} />
     )
 }

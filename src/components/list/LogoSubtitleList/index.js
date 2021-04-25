@@ -13,7 +13,7 @@ import LogoSubtitleItem from '@/components/item/LogoSubtitleItem'
  * @returns
  */
 export default function LogoSubtitleList(props) {
-    const { onhandleClick, onItemClickHandle, ...data } = props;
+    const { onhandleClick, onItemClickHandle, onToDoItemClick, ...data } = props;
 
     // const onClick = (item) => {
     //     // console.log('TodoList:onClick:item data=', item)
@@ -29,7 +29,7 @@ export default function LogoSubtitleList(props) {
 
     return (
         <AutoLayout {...config}  onItemClick={() => onhandleClick}>
-            <LogoSubtitleItem  />
+            <LogoSubtitleItem  onLogoSubtitleItemClick={onToDoItemClick} />
         </AutoLayout>
     )
 

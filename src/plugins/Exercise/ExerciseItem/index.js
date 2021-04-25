@@ -11,6 +11,7 @@ export default function ExerciseItem(props){
         ContentText,
         ItemTitle
     }
+    
     const config={
         layout:{
             xname:"Flexbox",

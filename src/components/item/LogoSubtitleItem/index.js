@@ -18,7 +18,7 @@ const presenter=require('@/components/item/LogoSubtitleItem/presenter')
 
 export default function TodoItem(props){
 
-    const { onToDoItemClick } = props;
+    const { onLogoSubtitleItemClick } = props;
     
     const allComponents={...presenter}
 
@@ -26,10 +26,9 @@ export default function TodoItem(props){
         layout,
         ...props
     }
-    console.log(config)
 
     return (
         //<AutoComponent onItemClick={onToDoItemClick}  {...config} cartSet={CartSet} allComponents={allComponents}/>
-        <AutoComponent {...config} allComponents={allComponents} onItemClick={onToDoItemClick} setClick={true}/>
+        <AutoComponent {...config} allComponents={allComponents} onItemClick={onLogoSubtitleItemClick}/>
     )
 }

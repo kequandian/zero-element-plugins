@@ -7,6 +7,7 @@ module.exports={
     },
     cart:{
         xname:"ItemCart",
+        indicator: "SelectIndicatorCart",        
         props:{
             padding:'10px'
         }

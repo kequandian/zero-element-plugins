@@ -13,12 +13,13 @@ const useTokenRequest = require('zero-element-boot/lib/components/hooks/useToken
  * @returns
  */
 export default function TodoList(props) {
-    const { items } = props;
+    const { items, onToDoItemClick } = props;
     const api = '/api/TodoList';
     const [ data ] = useTokenRequest({api, bindFiles});
 
     const config = {
         items: items ? items : (data.length > 0 ? data : []),
+        onToDoItemClick
     }
     return (
         <LogoSubtitleList {...config}></LogoSubtitleList>
