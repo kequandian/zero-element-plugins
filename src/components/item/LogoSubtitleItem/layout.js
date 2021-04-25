@@ -18,7 +18,7 @@ module.exports={
             }
         },
         {
-            presenter:'Content',
+            presenter:'ContentAction',
             gateway:{
                 xname:"Binding",
                 props:{

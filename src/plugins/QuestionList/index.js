@@ -1,13 +1,16 @@
 import React from 'react'
 import { AutoLayout } from 'zero-element-boot/lib/components';
 import QuestionItem from '@/plugins/QuestionList/QuestionItem'
+import useTokenRequest from 'zero-element-boot/lib/components/hooks/useTokenRequest';
 
 export default function QuestionList(props){
-    console.log("props=",props)
+    const api='/api/QuestionList'
+    const [data]=useTokenRequest({api,bindFiles})
     
+    // const {data}=props
     
     const config={
-        items:props,
+        items:data,
         layout:{
             xname:"Flexbox",
             props:{

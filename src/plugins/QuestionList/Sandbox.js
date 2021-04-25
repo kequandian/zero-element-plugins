@@ -2,7 +2,7 @@ import React from 'react'
 import QuestionList from '@/plugins/QuestionList'
 
 export default function Sandbox(props){
-    const data=[
+    const commit=[
         {
             title:"每日一练",
             color:"#1E90FF",
@@ -43,6 +43,5 @@ export default function Sandbox(props){
             
         }
     ]
-    console.log("data=",data)
-    return <QuestionList {...data}/>
+    return <QuestionList data={commit}/>
 }

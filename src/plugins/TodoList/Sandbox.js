@@ -3,7 +3,6 @@ import TodoList from './index';
 
 
 export default function(props){
-
     const data=[
         {
             url:"https://s.cn.bing.net/th?id=ODL.8acd6796e431785e9623a48ef791095b&w=146&h=146&c=7&rs=1&qlt=80&pid=RichNav",
@@ -27,9 +26,8 @@ export default function(props){
     const onItemClickHandle = (item) => {
        console.log('event to dismiss the component:', item)
     console.log("item=",item)
-
     }
     return (
-      <TodoList onTodoListClick={onItemClickHandle} items={data} />
+      <TodoList onListItemClick={onItemClickHandle} items={data} />
     )
 }

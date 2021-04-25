@@ -13,22 +13,19 @@ const presenter=require('@/components/item/LogoSubtitleItem/presenter')
  * @param {string} title 标题
  * @param {string} subtitle 副标题
  * @param {string} timestamp 时间戳
+ * @param onListItemClick 子项点击事件
  * @returns
  */
 
 export default function LogoSubtitleItem(props){
-
-    const { onLogoSubtitleItemClick } = props;
-    
+    const { onListItemClick } = props;
     const allComponents={...presenter}
-
     const config={
         layout,
         ...props
     }
-
     return (
         //<AutoComponent onItemClick={onToDoItemClick}  {...config} cartSet={CartSet} allComponents={allComponents}/>
-        <AutoComponent {...config} allComponents={allComponents} onItemClick={onLogoSubtitleItemClick}/>
+        <AutoComponent {...config} allComponents={allComponents} onItemClick={onListItemClick}/>
     )
 }
