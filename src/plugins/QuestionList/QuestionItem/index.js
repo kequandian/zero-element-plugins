@@ -77,7 +77,7 @@ export default function QuestionItem(props){
         ...props
     }
     return (
-    <div className="Bigbox" style={{borderTop:""}}>
+    <div className="Bigbox">
         <AutoComponent  {...config} allComponents={allComponents}/> 
     </div>
     )

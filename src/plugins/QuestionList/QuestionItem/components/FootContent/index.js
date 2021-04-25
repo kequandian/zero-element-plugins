@@ -12,7 +12,7 @@ export default function FootContent(props){
         layout:{
             xname:"Flexbox",
             props:{
-                align:"start",
+                align:"between",
                 direction:"row",
                 justify:"between row"
             },
@@ -30,10 +30,25 @@ export default function FootContent(props){
                             }
                         }
                     }
+                },
+                {
+                    presenter:"TodoTest",
+                    gateway:{
+                        xname:"Binding",
+                        props:{
+                            binding:{
+
+                            }
+                        }
+                    }
                 }
             ]            
         },
         ...props
     }
-    return <AutoComponent {...config} allComponents={allComponents}/>
+    return (
+        <div style={{width:"480px"}}>
+            <AutoComponent {...config} allComponents={allComponents}/>
+        </div>
+        )
 }

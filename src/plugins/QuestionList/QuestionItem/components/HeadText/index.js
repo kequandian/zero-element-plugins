@@ -12,7 +12,7 @@ export default function HeadText(props){
         layout:{
             xname:"Flexbox",
             props:{
-                align:"start",
+                align:"between",
                 direction:"row",
                 justify:"between row"
             },
