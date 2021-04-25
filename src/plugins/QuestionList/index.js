@@ -1,16 +1,24 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { AutoLayout } from 'zero-element-boot/lib/components';
 import QuestionItem from '@/plugins/QuestionList/QuestionItem'
-import useTokenRequest from 'zero-element-boot/lib/components/hooks/useTokenRequest';
+const promiseAjax=require('../../../lib/utils/request')
 
 export default function QuestionList(props){
+    const {items}=props
     const api='/api/QuestionList'
-    const [data]=useTokenRequest({api,bindFiles})
-    
-    // const {data}=props
-    
+    const [data,setData]=useState([]);
+    function handleQuery(API,queryData){
+        return promiseAjax(API,queryData).then(response=>{
+            if(response && response.code==200){
+                setData(response.data)
+            }
+        })
+    }
+    useEffect(_=>{
+        handleQuery(api);
+    },[])
     const config={
-        items:data,
+        items: items ? items : (data.length > 0 ? data : []),
         layout:{
             xname:"Flexbox",
             props:{
@@ -44,7 +52,6 @@ export default function QuestionList(props){
             container:"PlainList"
         }
     }
-    
     return(
         <AutoLayout {...config}>
             <QuestionItem />
