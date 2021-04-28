@@ -3,7 +3,6 @@ import { set as NamedPresenterSet } from 'zero-element-boot/lib/config/NamedPres
 
 
 // //cart
-import SelectIndicatorCart from '@/components/cart/indicator/SelectIndicatorCart'
 import ItemCartConfig from '@/components/cart/ItemCart';
 import PageGridContainer from '@/components/container/PageGridContainer'
 
@@ -14,8 +13,7 @@ import PageGridContainer from '@/components/container/PageGridContainer'
 
 NamedCartSet({
   ItemCartConfig,
-  PageGridContainer,
-  SelectIndicatorCart
+  PageGridContainer
 })
 
 // NamedPresenterSet({
