@@ -18,6 +18,7 @@ import QuestionList from '@/plugins/QuestionList/Sandbox'
 import Top from '@/plugins/QuestionList/Top'
 // import QuestionList from '@/plugins/QuestionList'
 // import Account from '@/plugins/QuestionList/QuestionItem/presenter/Diffect'
+import ComponentsList from '@/plugins/ComponentsList'
 
 export default function index(props) {
 
@@ -37,8 +38,11 @@ export default function index(props) {
     // <TestUserSelection onItemClickHandle={onItemClickHandle} {...props}/>  
 
       //  <TodoListSandbox />
-        <Top>
-          <QuestionList />
-       </Top>
+      //   <Top>
+      //     <QuestionList />
+      //  </Top>
+      <PageGridContainer title={"自定义组件"} subtitle={" · · · "}>
+          <ComponentsList />
+      </PageGridContainer>
     )
 }
