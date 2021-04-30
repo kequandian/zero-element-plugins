@@ -13,12 +13,13 @@ import PageGridContainer from '@/components/container/PageGridContainer';
 // import TodoList from '@/plugins/TodoList'
 import TodoListSandbox from '@/plugins/TodoList/Sandbox'
 import Demo from '@/components/container/PageGridContainer/Demo'
-// import Exercise from '@/plugins/Exercise'
+import Exercise from '@/plugins/Exercise/Button'
 import QuestionList from '@/plugins/QuestionList/Sandbox'
 import Top from '@/plugins/QuestionList/Top'
 // import QuestionList from '@/plugins/QuestionList'
 // import Account from '@/plugins/QuestionList/QuestionItem/presenter/Diffect'
 import ComponentsList from '@/plugins/ComponentsList'
+import FormList from '@/plugins/FormList'
 
 export default function index(props) {
 
@@ -41,8 +42,9 @@ export default function index(props) {
       //   <Top>
       //     <QuestionList />
       //  </Top>
-      <PageGridContainer title={"自定义组件"} subtitle={" · · · "}>
-          <ComponentsList />
-      </PageGridContainer>
+    //   <PageGridContainer title={"自定义组件"} subtitle={" · · · "}>
+    //       <ComponentsList />
+    //   </PageGridContainer>
+    <FormList />
     )
 }

@@ -45,7 +45,7 @@ export default function Sandbox(props){
                 },
                 {
                     content:"Corner"
-                },
+                },w
                 {
                     content:"Circle"
                 },
