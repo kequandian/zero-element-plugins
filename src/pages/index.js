@@ -13,7 +13,7 @@ import PageGridContainer from '@/components/container/PageGridContainer';
 // import TodoList from '@/plugins/TodoList'
 import TodoListSandbox from '@/plugins/TodoList/Sandbox'
 import Demo from '@/components/container/PageGridContainer/Demo'
-import Exercise from '@/plugins/Exercise/Button'
+import Exercise from '@/plugins/Exercise'
 import QuestionList from '@/plugins/QuestionList/Sandbox'
 import Top from '@/plugins/QuestionList/Top'
 // import QuestionList from '@/plugins/QuestionList'
@@ -45,6 +45,6 @@ export default function index(props) {
     //   <PageGridContainer title={"自定义组件"} subtitle={" · · · "}>
     //       <ComponentsList />
     //   </PageGridContainer>
-    <FormList />
+      <FormList />
     )
 }

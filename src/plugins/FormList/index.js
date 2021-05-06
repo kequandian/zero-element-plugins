@@ -17,11 +17,15 @@ export default function FormList(props){
         {
             title:"Referrals",
             account:""
+        },
+        {
+            title:"",
+            account:""
         }
     ]
     const config={
         layout:{
-            xname:"Flexbox",
+            xname:"SelectBox",
             props:{
                 align:"betweent",
                 direction:"column"
@@ -36,8 +40,7 @@ export default function FormList(props){
                 }
             },
             cart:{
-                xname:"ItemCart",
-                indicator: "SelectIndicatorCartab",     
+                xname:"SelectedCart",
                 props:{
                     lineColor:"#5f9ea0",
                     activeLeftLine:"5px",
