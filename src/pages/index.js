@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import TestUserSelection from '../plugins/testUserSelection/TestUserSelection';
-// import  NewDemo  from '@/plugins/NewDemo';
+// import  NewDemo  from '@/pages/NewDemo';
 // import NewDemo from '@/plugins/NewDemo/Sandbox';
 // import AdList from '@/plugins/AdList/Sandbox'
 // import NewDemo from '@/plugins/NewDemo/Example_two'
@@ -13,7 +13,7 @@ import PageGridContainer from '@/components/container/PageGridContainer';
 // import TodoList from '@/plugins/TodoList'
 import TodoListSandbox from '@/plugins/TodoList/Sandbox'
 import Demo from '@/components/container/PageGridContainer/Demo'
-import Exercise from '@/plugins/Exercise'
+import Exercise from '@/pages/Exercise'
 import QuestionList from '@/plugins/QuestionList/Sandbox'
 import Top from '@/plugins/QuestionList/Top'
 // import QuestionList from '@/plugins/QuestionList'
@@ -42,9 +42,9 @@ export default function index(props) {
       //   <Top>
       //     <QuestionList />
       //  </Top>
-    //   <PageGridContainer title={"自定义组件"} subtitle={" · · · "}>
-    //       <ComponentsList />
-    //   </PageGridContainer>
+      // <PageGridContainer title={"自定义组件"} subtitle={" · · · "}>
+      //     <ComponentsList />
+      // </PageGridContainer>
       <FormList />
     )
 }

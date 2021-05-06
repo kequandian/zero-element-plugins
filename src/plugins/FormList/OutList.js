@@ -1,54 +1,98 @@
 import React from 'react'
 import { AutoLayout } from 'zero-element-boot/lib/components'
-import FormItem from '@/plugins/FormList/FormItem'
-import SelectCart from 'zero-element-boot/lib/components/cart/SelectCart'
+import FormList from '@/plugins/FormList'
+// import SelectCart from 'zero-element-boot/lib/components/cart/SelectCart'
 
 
-export default function FormList(props){
+export default function OutList(props){
     const commit=[
         {
-            title:"My Energy",
-            account:"1"
+            text:[
+                {
+                    title:"My Energy",
+                    account:"1"
+                },
+                {
+                    title:"Notifications",
+                    account:""
+                },
+                {
+                    title:"Referrals",
+                    account:""
+                }
+            ]
         },
         {
-            title:"Notifications",
-            account:""
+            text:[
+                {
+                    logo:"https://s.cn.bing.net/th?id=ODL.8acd6796e431785e9623a48ef791095b&w=146&h=146&c=7&rs=1&qlt=80&pid=RichNav",
+                    title:"Bill Pay",
+                    account:""
+                },
+                {
+                    logo:"https://s.cn.bing.net/th?id=ODL.8acd6796e431785e9623a48ef791095b&w=146&h=146&c=7&rs=1&qlt=80&pid=RichNav",
+                    title:"Smart Rate",
+                    account:""
+                },
+                {
+                    logo:"https://s.cn.bing.net/th?id=ODL.8acd6796e431785e9623a48ef791095b&w=146&h=146&c=7&rs=1&qlt=80&pid=RichNav",
+                    title:"Wind Energy",
+                    account:""
+                },
+                {
+                    logo:"https://s.cn.bing.net/th?id=ODL.8acd6796e431785e9623a48ef791095b&w=146&h=146&c=7&rs=1&qlt=80&pid=RichNav",
+                    title:"Community Solar",
+                    account:""
+                },
+                {
+                    logo:"https://s.cn.bing.net/th?id=ODL.8acd6796e431785e9623a48ef791095b&w=146&h=146&c=7&rs=1&qlt=80&pid=RichNav",
+                    title:"HomeEfficiency",
+                    account:""
+                }
+            ]
         },
         {
-            title:"Referrals",
-            account:""
-        }
+            text:[
+                {
+                    title:"My Account",
+                    account:""
+                },
+                {
+                    title:"Statements",
+                    account:""
+                }
+            ]
+        },
     ]
     const config={
         layout:{
             xname:"Flexbox",
             props:{
-                align:"betweent",
+                align:"start",
                 direction:"column"
             },
             gateway:{
                 xname:"Binding",
                 props:{
                     binding:{
-                        title:"title",
-                        account:"account"
+                        text:"text"
                     }
                 }
             },
             cart:{
                 xname:"ItemCart",
-                indicator: "SelectIndicatorCart",        
+                // indicator: "SelectIndicatorCart",        
 
                 props:{
                 }
             },
-            container:"SelectedList"
+            container:"PlainList"
         },
         items:commit
     }
     return (
         <AutoLayout {...config}>
-            <FormItem />
+            <FormList />
         </AutoLayout>
     )
 }

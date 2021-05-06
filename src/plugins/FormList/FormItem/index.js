@@ -23,6 +23,7 @@ export default function FormItem(props){
                         xname:"Binding",
                         props:{
                             binding:{
+                                logo:"logo",
                                 title:"content"
                             }
                         }

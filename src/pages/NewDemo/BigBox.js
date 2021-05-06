@@ -1,7 +1,7 @@
 import React from 'react';
-import ImageAnimation from '@/plugins/NewDemo/ImageAnimation'
-import TextContent from '@/plugins/NewDemo/TextContent'
-import FootContent from '@/plugins/NewDemo/FootContent'
+import ImageAnimation from '@/pages/NewDemo/ImageAnimation'
+import TextContent from '@/pages/NewDemo/TextContent'
+import FootContent from '@/pages/NewDemo/FootContent'
 require('./Example_two.less')
 
 export default function BigBox(props){

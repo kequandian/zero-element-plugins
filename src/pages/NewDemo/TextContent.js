@@ -1,6 +1,6 @@
 import React from 'react';
-import Title from '@/plugins/NewDemo/Title';
-import TheText from '@/plugins/NewDemo/TheText'
+import Title from '@/pages/NewDemo/Title';
+import TheText from '@/pages/NewDemo/TheText'
 
 export default function TextContent(props){
     // console.log(props)

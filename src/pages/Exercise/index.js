@@ -1,6 +1,6 @@
 import React from 'react'
 import { AutoLayout } from 'zero-element-boot/lib/components';
-import ExerciseItem from '@/plugins/Exercise/ExerciseItem'
+import ExerciseItem from '@/pages/Exercise/ExerciseItem'
 
 export default function Exercise(props){
     const commit=[

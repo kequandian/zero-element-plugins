@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Comment from "@/plugins/NewDemo/Comment"
+import Comment from "@/pages/NewDemo/Comment"
 import useTokenRequest from 'zero-element-boot/lib/components/hooks/useTokenRequest';
 
 export default function Index(props) {

@@ -1,7 +1,7 @@
 import React from 'react';
 // import BigBox from '@/plugins/NewDemo/BigBox';
 import { AutoLayout } from 'zero-element-boot';
-import ExampleTwo from "@/plugins/NewDemo/ExampleTwo"
+import ExampleTwo from "@/pages/NewDemo/ExampleTwo"
 import layout from './newLayout';
 require('./Example_two.less')
 

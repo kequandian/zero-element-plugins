@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageAnimation from '@/plugins/NewDemo/NewDemoList/presenter/ImageAnimation'
+import ImageAnimation from '@/pages/NewDemo/NewDemoList/presenter/ImageAnimation'
 import layout from "./layout";
 
 export default function NewDemoItem(props){

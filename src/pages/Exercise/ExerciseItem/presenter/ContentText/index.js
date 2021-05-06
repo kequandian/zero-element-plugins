@@ -1,6 +1,6 @@
 import React from 'react'
-import ItemLogo from '@/plugins/Exercise/ExerciseItem/presenter/ItemLogo';
-import AppName from '@/plugins/Exercise/ExerciseItem/presenter/AppName';
+import ItemLogo from '@/pages/Exercise/ExerciseItem/presenter/ItemLogo';
+import AppName from '@/pages/Exercise/ExerciseItem/presenter/AppName';
 import { AutoComponent} from 'zero-element-boot/lib/components';
 
 export default function ContentText(props){
