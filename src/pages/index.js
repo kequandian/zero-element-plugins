@@ -20,6 +20,7 @@ import Top from '@/plugins/QuestionList/Top'
 // import Account from '@/plugins/QuestionList/QuestionItem/presenter/Diffect'
 import ComponentsList from '@/plugins/ComponentsList'
 import FormList from '@/plugins/FormList'
+import Project from '@/plugins/Project'
 
 export default function index(props) {
 
@@ -45,6 +46,6 @@ export default function index(props) {
       // <PageGridContainer title={"自定义组件"} subtitle={" · · · "}>
       //     <ComponentsList />
       // </PageGridContainer>
-      <FormList />
+      <Project />
     )
 }

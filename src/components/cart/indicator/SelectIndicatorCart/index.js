@@ -13,23 +13,30 @@ require('./index.less');
 
 export default forwardRef(function SelectIndicatorCart(props, ref) {
 
-  const { children, isSelected, itemIndex} = props;
-  const {lineColor='#4285F4',activeLeftLine="1px" }=children.props
+  const { children,title} = props;
+  let {isSelected}=props
+
+  const {lineColor='#4285F4',activeLeftLine="1px" , margin="10px"}=children.props
   const [onHover, setOnHover] = useState(false);
+  
 
-  function clickItem (itemIndex) {
-    props.onSelected(itemIndex)
+  
+  if(!title){
+    isSelected=false
   }
-
   return React.Children.map(children, child => {
 
     const toggleHover = () => {
-      const result = !onHover;
+      let result = !onHover;
+      if(!title){
+        result=onHover
+      }
       setOnHover(result)
     }
+    
 
     const fill = '#ffffff';
-    const margin = '0px';
+    // const margin = '0px';
     const padding = '0px'
     let linewidth = '';
     // let activeLeftLine = line.activeLeftLine ? line.activeLeftLine : '5px';
@@ -51,7 +58,7 @@ export default forwardRef(function SelectIndicatorCart(props, ref) {
 
     return (
       <>
-        <div className={`i-SelectIndicatorCart`} onClick={() => clickItem(itemIndex)}
+        <div className={`i-SelectIndicatorCart`} 
           style={{
             position: 'relative',
             margin: `${margin}`,

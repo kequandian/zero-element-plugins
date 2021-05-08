@@ -1,40 +1,42 @@
 import React from 'react'
-import Content from '@/plugins/FormList/FormItem/Content'
-import { AutoComponent } from 'zero-element-boot/lib/components'
-import Account from '@/plugins/FormList/FormItem/Account'
-require('./index.less')
+import { AutoComponent } from 'zero-element-boot'
+import Title from "@/plugins/SelectList/SelectItem/Title"
+import ContentText from "@/plugins/SelectList/SelectItem/ContentText"
 
-export default function FormItem(props){
+export default function SelectItem(props){
+    console.log("1111=",props)
+
     const allComponents={
-        Content,
-        Account
+        Title,
+        ContentText
     }
     const config={
         layout:{
             xname:"Flexbox",
             props:{
                 align:"start",
-                direction:"row"
+                direction:"column",
+                justify:"start"
             },
             children:[
                 {
-                    presenter:"Content",
+                    presenter:"Title",
                     gateway:{
                         xname:"Binding",
                         props:{
                             binding:{
-                                title:"content"
+                                title:"title",
                             }
                         }
                     }
                 },
                 {
-                    presenter:"Account",
+                    presenter:"ContentText",
                     gateway:{
                         xname:"Binding",
                         props:{
                             binding:{
-                                account:"account"
+                                cart:"cart"
                             }
                         }
                     }
@@ -44,8 +46,6 @@ export default function FormItem(props){
         ...props
     }
     return (
-        <div className="FormItem">
-            <AutoComponent {...config} allComponents={allComponents}/>
-        </div>
+        <AutoComponent {...config} allComponents={allComponents} />
     )
 }
