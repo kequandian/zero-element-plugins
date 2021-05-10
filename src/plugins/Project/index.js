@@ -20,10 +20,10 @@ export default function Project(props){
                         account:"1"
                     }
             ],
-            select:[
+            selectionOne:[
                 {
                     title:"Cart",
-                    cart:[
+                    cartText:[
                         {
                             text:"Corner"
                         },
@@ -34,39 +34,41 @@ export default function Project(props){
                             text:"SelectedCart"
                         }
                     ]
-                },
-                // {
-                //     title:"Layout",
-                //     layout:[
-                //         {
-                //             text:"Flexbox"
-                //         },
-                //         {
-                //             text:"Itembox"
-                //         },
-                //         {
-                //             text:"SelectBox"
-                //         }
-                //     ]
-                // }        
+                }
+            ],
+            selectionTwo:[
+                {
+                    title:"Layout",
+                    layoutText:[
+                        {
+                            text:"Flexbox"
+                        },
+                        {
+                            text:"Itembox"
+                        },
+                        {
+                            text:"SelectBox"
+                        }
+                    ]
+                }        
             ],
             demo:"123",
-            // list:[
-            //     {
-            //         title:"复合组件",
-            //         content:[
-            //             {
-            //                 text:"Corner"
-            //             },
-            //             {
-            //                 text:"HoverShadowCart"
-            //             },
-            //             {
-            //                 text:"SelectedCart"
-            //             }
-            //         ]
-            //     }
-            // ]
+            list:[
+                {
+                    title:"复合组件",
+                    content:[
+                        {
+                            text:"ItemAvator"
+                        },
+                        {
+                            text:"Ite,IconAction"
+                        },
+                        {
+                            text:"ItemSubTitle"
+                        }
+                    ]
+                }
+            ]
         }
     ]
     const config={
@@ -81,7 +83,8 @@ export default function Project(props){
                 props:{
                     binding:{
                         form:"form",
-                        select:"select",
+                        selectionOne:"selectionOne",
+                        selectionTwo:"selectionTwo",
                         demo:"demo",
                         list:"list"
                     }
@@ -90,10 +93,10 @@ export default function Project(props){
             cart:{
                 xname:"ItemCart",
                 props:{
-
+                    padding:0
                 }
             },
-            container:"SelectionList"
+            container:"PlainList"
         },
         items:commit
     }

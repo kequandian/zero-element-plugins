@@ -1,10 +1,10 @@
 import React from 'react'
-import Select from '@/plugins/SelectList/SelectItem/Select'
+import SelectCart from '@/plugins/SelectList/SelectItem/CartList/SelectCart'
 import { AutoLayout } from 'zero-element-boot'
 
 export default function ContentText(props){
 
-    const {content}=props
+    const {cartText}=props
     const config={
         layout:{
             xname:"Flexbox",
@@ -16,14 +16,13 @@ export default function ContentText(props){
                 xname:"Binding",
                 props:{
                     binding:{
-                        content:"cart"
+                        text:"text"
                     }
                 }
             },
             cart:{
                 xname:"SelectedCart",
-                indicator: "SelectIndicatorCartab",        
-                
+                indicator:"SelectIndicatorCart",
                 props:{
                     padding:0,
                     margin:"10px"
@@ -31,12 +30,11 @@ export default function ContentText(props){
             },
             container:"SelectionList"
         },
-        items:content
+        items:cartText
     }
-    console.log("config=",config)
     return (
         <AutoLayout {...config}>
-            <Select />
+            <SelectCart />
         </AutoLayout>
     )
     

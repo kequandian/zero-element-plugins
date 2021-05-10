@@ -1,15 +1,13 @@
 import React from 'react'
 import { AutoComponent } from 'zero-element-boot'
-import Title from "@/plugins/SelectList/SelectItem/Title"
-import ContentText from "@/plugins/SelectList/SelectItem/CartList/ContentText"
-require('./index.less')
+import CartList from "@/plugins/SelectList/SelectItem/CartList"
+import LayoutList from "@/plugins/SelectList/SelectItem/LayoutList"
 
-export default function SelectItem(props){
-    // console.log(props)
+export default function SelectContent(props){
 
     const allComponents={
-        Title,
-        ContentText
+        CartList,
+        LayoutList
     }
     const config={
         layout:{
@@ -21,23 +19,23 @@ export default function SelectItem(props){
             },
             children:[
                 {
-                    presenter:"Title",
+                    presenter:"CartList",
                     gateway:{
                         xname:"Binding",
                         props:{
                             binding:{
-                                title:"title",
+                                selectionOne:"selectionOne"
                             }
                         }
                     }
                 },
                 {
-                    presenter:"ContentText",
+                    presenter:"LayoutList",
                     gateway:{
                         xname:"Binding",
                         props:{
                             binding:{
-                                content:"content"
+                                selectionTwo:"selectionTwo"
                             }
                         }
                     }
@@ -47,8 +45,6 @@ export default function SelectItem(props){
         ...props
     }
     return (
-        <div className="SelectItem">
             <AutoComponent {...config} allComponents={allComponents} />
-        </div>
     )
 }

@@ -1,17 +1,20 @@
 import React from 'react'
 import FormList from '@/plugins/FormList'
-import SelectList from '@/plugins/SelectList'
-// import SelectListComposite from '@/plugins/SelectList/SelectListComposite'
+import SelectContent from '@/plugins/SelectList/SelectItem/SelectContent'
 import Demonstration from '@/plugins/Demonstration'
+import CompoundList from '@/plugins/SelectList/SelectItem/CompoundList'
+
 import { AutoComponent } from 'zero-element-boot/lib/components'
+require('./index.less')
 
 
 export default function ProjectItem(props){
+
     const allComponents={
         FormList,
-        SelectList,
+        SelectContent,
         Demonstration,
-        // SelectListComposite
+        CompoundList
     }
     const config={
         layout:{
@@ -33,12 +36,13 @@ export default function ProjectItem(props){
                     }
                 },
                 {
-                    presenter:"SelectList",
+                    presenter:"SelectContent",
                     gateway:{
                         xname:"Binding",
                         props:{
                             binding:{
-                                select:"select"
+                                selectionOne:"selectionOne",
+                                selectionTwo:"selectionTwo"
                             }
                         }
                     }
@@ -54,20 +58,24 @@ export default function ProjectItem(props){
                         }
                     }
                 },
-                // {
-                //     presenter:"SelectListComposite",
-                //     gateway:{
-                //         xname:"Binding",
-                //         props:{
-                //             binding:{
-                //                 list:"list"
-                //             }
-                //         }
-                //     }
-                // }
+                {
+                    presenter:"CompoundList",
+                    gateway:{
+                        xname:"Binding",
+                        props:{
+                            binding:{
+                                list:"list"
+                            }
+                        }
+                    }
+                }
             ]
         },
         ...props        
     }
-    return <AutoComponent {...config} allComponents={allComponents}/>
+    return (
+        <div className="ProjectItem">
+            <AutoComponent {...config} allComponents={allComponents}/>
+        </div>
+    )
 }

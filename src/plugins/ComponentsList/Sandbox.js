@@ -1,5 +1,5 @@
 import React from 'react'
-import ComponentsList from '.'
+import ComponentsList from '@/plugins/ComponentsList'
 
 export default function Sandbox(props){
     const commit=[
@@ -45,7 +45,7 @@ export default function Sandbox(props){
                 },
                 {
                     content:"Corner"
-                },w
+                },
                 {
                     content:"Circle"
                 },

@@ -1,10 +1,11 @@
 import { AutoLayout } from 'zero-element-boot/lib/components';
 import React from 'react'
-import SelectItem from '@/plugins/SelectList/SelectItem'
+import SelectContent from '@/plugins/SelectList/SelectItem/SelectContent'
+require('./index.less')
 
 export default function SelectList(props){
-    console.log("222=",props)
-    const {cart}=props
+    const {select} =props
+
     // const commit=[
     //     {
     //         title:"Cart",
@@ -46,8 +47,9 @@ export default function SelectList(props){
                 xname:"Binding",
                 props:{
                     binding:{
-                        title:"title",
-                        cart:"cart"
+                        cartText:"cartText",
+                        layoutText:"layoutText"
+                        // select:"select"
                     }
                 }
             },
@@ -60,11 +62,14 @@ export default function SelectList(props){
             },
             container:"PlainList"
         },
-        items:cart
+        items:select
     }
+
     return(
-        <AutoLayout {...config} >
-            <SelectItem/>
-        </AutoLayout>
+        <div className="SelectList">
+            <AutoLayout {...config} >
+                <SelectContent/>
+            </AutoLayout>
+        </div>
         )
 }

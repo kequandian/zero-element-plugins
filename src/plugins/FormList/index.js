@@ -2,7 +2,6 @@ import React from 'react'
 import { AutoLayout } from 'zero-element-boot/lib/components'
 import FormItem from '@/plugins/FormList/FormItem'
 require('./index.less')
-import SelectCart from 'zero-element-boot/lib/components/cart/SelectCart'
 
 
 export default function FormList(props){

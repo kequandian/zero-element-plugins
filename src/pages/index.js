@@ -21,6 +21,7 @@ import Top from '@/plugins/QuestionList/Top'
 import ComponentsList from '@/plugins/ComponentsList'
 import FormList from '@/plugins/FormList'
 import Project from '@/plugins/Project'
+import LayoutList from '@/plugins/SelectList/SelectItem/LayoutList'
 
 export default function index(props) {
 

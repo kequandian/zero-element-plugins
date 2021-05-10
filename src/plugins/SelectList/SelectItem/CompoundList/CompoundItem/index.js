@@ -1,15 +1,12 @@
 import React from 'react'
 import { AutoComponent } from 'zero-element-boot'
 import Title from "@/plugins/SelectList/SelectItem/Title"
-import ContentText from "@/plugins/SelectList/SelectItem/CartList/ContentText"
-require('./index.less')
+import ContentTextCom from "@/plugins/SelectList/SelectItem/CompoundList/ContentTextCom"
 
-export default function SelectItem(props){
-    // console.log(props)
-
+export default function CompoundItem(props){
     const allComponents={
         Title,
-        ContentText
+        ContentTextCom
     }
     const config={
         layout:{
@@ -32,7 +29,7 @@ export default function SelectItem(props){
                     }
                 },
                 {
-                    presenter:"ContentText",
+                    presenter:"ContentTextCom",
                     gateway:{
                         xname:"Binding",
                         props:{
@@ -47,8 +44,6 @@ export default function SelectItem(props){
         ...props
     }
     return (
-        <div className="SelectItem">
             <AutoComponent {...config} allComponents={allComponents} />
-        </div>
     )
 }

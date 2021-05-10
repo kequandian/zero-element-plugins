@@ -2,11 +2,8 @@ import React from 'react'
 import { AutoComponent } from 'zero-element-boot'
 import Title from "@/plugins/SelectList/SelectItem/Title"
 import ContentText from "@/plugins/SelectList/SelectItem/CartList/ContentText"
-require('./index.less')
 
-export default function SelectItem(props){
-    // console.log(props)
-
+export default function CartItem(props){
     const allComponents={
         Title,
         ContentText
@@ -37,7 +34,7 @@ export default function SelectItem(props){
                         xname:"Binding",
                         props:{
                             binding:{
-                                content:"content"
+                                cartText:"cartText"
                             }
                         }
                     }
@@ -47,8 +44,6 @@ export default function SelectItem(props){
         ...props
     }
     return (
-        <div className="SelectItem">
             <AutoComponent {...config} allComponents={allComponents} />
-        </div>
     )
 }
