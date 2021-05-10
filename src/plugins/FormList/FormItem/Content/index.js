@@ -4,7 +4,7 @@ export default function Content(props){
     const {content,isSelected}=props
     let color="#2f4f4f"
     if(isSelected){
-        color="#5f9ea0"
+        color="#1496BB"
     }else{
         color='#2f4f4f'
     }

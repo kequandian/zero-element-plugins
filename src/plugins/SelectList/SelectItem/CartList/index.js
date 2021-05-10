@@ -3,6 +3,7 @@ import {AutoLayout} from 'zero-element-boot/lib/components'
 require('./index.less')
 import CartItem from '@/plugins/SelectList/SelectItem/CartList/CartItem'
 import SelectIndicatorCart from 'zero-element-boot/lib/components/cart/indicator/SelectIndicatorCart'
+import { PageGridContainer } from '@/components/container'
 
 export default function CartList(props){
     const {selectionOne}=props
@@ -51,9 +52,11 @@ export default function CartList(props){
         }
         return (
             <div className="CartList">
+                <PageGridContainer>
                 <AutoLayout {...config}>
                     <CartItem />
                 </AutoLayout>
+                </PageGridContainer>
             </div>
         )
     }

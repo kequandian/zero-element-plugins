@@ -2,6 +2,7 @@ import React from 'react'
 import { AutoLayout } from 'zero-element-boot/lib/components'
 import FormItem from '@/plugins/FormList/FormItem'
 require('./index.less')
+import SelectCart from 'zero-element-boot/lib/components/cart/SelectCart'
 
 
 export default function FormList(props){
@@ -70,7 +71,7 @@ export default function FormList(props){
 
                 props:{
                     padding:"6px",
-                    lineColor:"#5f9ea0",
+                    lineColor:"#1496BB",
                     activeLeftLine:"5px",
                 }
             },

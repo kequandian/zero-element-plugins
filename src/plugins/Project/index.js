@@ -31,7 +31,7 @@ export default function Project(props){
                             text:"HoverShadowCart"
                         },
                         {
-                            text:"SelectedCart"
+                            text:"SelectCart"
                         }
                     ]
                 }
