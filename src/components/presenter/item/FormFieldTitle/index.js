@@ -1,8 +1,8 @@
 import React from 'react';
 require('./index.less')
 
-export default function FormFieldTitle({content}){
+export default function FormFieldTitle({content,corner}){
     return (
-        <div className="FormFieldTitle">{content}</div>
+        <div className="FormFieldTitle" style={{borderRadius:`${corner}`}}>{content}</div>
     )
 }

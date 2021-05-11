@@ -15,7 +15,7 @@ require('./index.less')
 // const Seperator=require('@/plugins/testUserSelection/presenter/Seperator')
 export default function PageGridContainer(props){
     // console.log(props)
-    const {children, title,subtitle}=props
+    const {children, title,subtitle,corner}=props
     // console.log(title)
     return React.Children.map(children,child=>{
         return (
@@ -24,7 +24,7 @@ export default function PageGridContainer(props){
             <Container>    
             <Flexbox align="start-with-last-end" direction="row" justify="space-between" >
                 <FormContainerTitle content={title} />
-                <FormFieldTitle content={subtitle}/>
+                <FormFieldTitle corner={corner} content={subtitle}/>
             </Flexbox>
             </Container> 
             </Cart>

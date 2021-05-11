@@ -22,6 +22,7 @@ import ComponentsList from '@/plugins/ComponentsList'
 import FormList from '@/plugins/FormList'
 import Project from '@/plugins/Project'
 import LayoutList from '@/plugins/SelectList/SelectItem/LayoutList'
+import CompositeList from '@/plugins/SelectList/SelectItem/CompositeList'
 
 export default function index(props) {
 
@@ -34,9 +35,9 @@ export default function index(props) {
     //   <Message onItemClickHandle={onItemClickHandle} {...props} />
     // </PageCart>
       // <PageCart>
-        <PageGridContainer title={"邮件"} subtitle={"more"}>
-         <TodoListSandbox {...props}/>
-       </PageGridContainer>
+      //   <PageGridContainer title={"邮件"} subtitle={"more"}>
+      //    <TodoListSandbox {...props}/>
+      //  </PageGridContainer>
       // </PageCart>
     // <TestUserSelection onItemClickHandle={onItemClickHandle} {...props}/>  
 
@@ -47,6 +48,6 @@ export default function index(props) {
       // <PageGridContainer title={"自定义组件"} subtitle={" · · · "}>
       //     <ComponentsList />
       // </PageGridContainer>
-      // <Project />
+      <CompositeList />
     )
 }

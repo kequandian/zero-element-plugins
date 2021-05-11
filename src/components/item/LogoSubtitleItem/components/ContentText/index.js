@@ -24,6 +24,7 @@ export default function ContentText(props){
         layout:{
             xname:'Flexbox',
             props:{
+                align:"column"
             },
             children:[
                 {
