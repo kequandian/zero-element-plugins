@@ -1,13 +1,14 @@
 import React from 'react';
-import ItemIconAction from '@/components/presenter/item/ItemIconAction';
+import ItemAvator from '@/components/presenter/item/ItemAvator';
 import ContentText from  '@/components/item/LogoSubtitleItem/components/ContentText'
 import { AutoComponent } from 'zero-element-boot';
 
 
 export default function Content(props){
 
-    const allComponents={        
-        ItemIconAction
+    const allComponents={    
+        ItemAvator,    
+        ContentText
     };
     const config={
         layout:{
@@ -17,16 +18,28 @@ export default function Content(props){
             },
             children:[
                 {
-                    presenter:"ItemIconAction",
+                    presenter:'ItemAvator',
                     gateway:{
                         xname:"Binding",
                         props:{
                             binding:{
-                                update_time:"update_time"
+                                logo:'url',
                             }
                         }
                     }
-                }
+                },
+                {
+                    presenter:"ContentText",
+                    gateway:{
+                        xname:"Binding",
+                        props:{
+                            binding:{
+                                title:"title",
+                                description:"description"
+                            }
+                        }
+                    }
+                },
             ]
         },
         ...props,

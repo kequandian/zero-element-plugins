@@ -28,7 +28,7 @@ export default function SelectList(props){
                     margin:0
                 }
             },
-            container:"SelectedList"
+            container:"SelectionList"
         },
         items:text
     }

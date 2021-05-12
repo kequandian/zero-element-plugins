@@ -12,5 +12,5 @@ module.exports={
             padding:'10px'
         }
     },
-    container:"SelectedList"
+    container:"SelectionList"
 }

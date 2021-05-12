@@ -25,8 +25,8 @@ export default function LogoSubtitleList(props) {
         layout
     }
     return (
-        <AutoLayout {...config}  onItemClick={() => onhandleClick}>
-            <LogoSubtitleItem  onListItemClick={onListItemClick} />
+        <AutoLayout {...config}  onItemClick={onListItemClick}>
+            <LogoSubtitleItem />
         </AutoLayout>
     )
 }

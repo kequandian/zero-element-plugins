@@ -54,9 +54,9 @@ export default function ContentText(props){
         ...props,
     }
     return (
-        <div className="Content_text">
+        // <div className="Content_text">
             <AutoComponent {...config} allComponents={allComponents} setClick={false}/>
-        </div>
+        // </div>
     )
 }
 

@@ -13,11 +13,13 @@ export default function CompositeList(props){
     }
     return (
         <PageGridContainer title={"复合组件"} subtitle={"· · ·"} corner={"13px"}>
-            <Container>
-            <Flexbox align={"start"} direction={"column"}justify={"start"}>
-                <LogoSubtitleItem {...config}/>
-            </Flexbox>
-            </Container>
+            <div style={{width:"300px"}}>
+                <Container>
+                    <Flexbox align={"start"} direction={"column"}justify={"start"}>
+                        <LogoSubtitleItem {...config}/>
+                    </Flexbox>
+                </Container>
+            </div>
         </PageGridContainer>
     )
 }

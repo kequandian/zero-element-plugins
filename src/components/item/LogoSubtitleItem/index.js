@@ -18,7 +18,6 @@ const presenter=require('@/components/item/LogoSubtitleItem/presenter')
  */
 
 export default function LogoSubtitleItem(props){
-    const { onListItemClick } = props;
     const allComponents={...presenter}
     const config={
         layout,
@@ -26,6 +25,9 @@ export default function LogoSubtitleItem(props){
     }
     return (
         //<AutoComponent onItemClick={onToDoItemClick}  {...config} cartSet={CartSet} allComponents={allComponents}/>
-        <AutoComponent {...config} allComponents={allComponents} onItemClick={onListItemClick}/>
+        
+        <div style={{width:"300px"}}>
+            <AutoComponent {...config} allComponents={allComponents}/>
+        </div>
     )
 }

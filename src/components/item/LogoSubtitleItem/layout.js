@@ -1,18 +1,19 @@
 module.exports={
-    xname:'Itembox',
+    xname:'Flexbox',
     props:{
         align:'start',
-        direction:'row',
-        justify:'start row'
+        direction:'between row',
     },
     children:[
         {
-            presenter:'ItemAvator',
+            presenter:'ContentInfo',
             gateway:{
                 xname:"Binding",
                 props:{
                     binding:{
                         logo:'url',
+                        title:"title",
+                        subtitle:"description",
                     }
                 }
             }
@@ -23,8 +24,6 @@ module.exports={
                 xname:"Binding",
                 props:{
                     binding:{
-                        title:"title",
-                        subtitle:"description",
                         timestamp:"update_time"
                     }
                 }
