@@ -43,8 +43,11 @@ export default function ComponentsList(props){
         items:data
     }
     return (
+        
+        <div className="ComponentsList">
         <AutoLayout {...config}>
             <ComponentsItem />
         </AutoLayout>
+        </div>
     )
 }

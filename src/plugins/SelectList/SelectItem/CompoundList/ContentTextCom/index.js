@@ -1,5 +1,5 @@
 import React from 'react'
-import SelectCompound from '@/plugins/SelectList/SelectItem/CompoundList/SelectCompound'
+import CompoundComponents from '@/plugins/SelectList/SelectItem/CompoundList/CompoundComponents'
 import { AutoLayout } from 'zero-element-boot'
 
 export default function ContentText(props){
@@ -20,21 +20,21 @@ export default function ContentText(props){
                     }
                 }
             },
-            cart:{
-                xname:"SelectedCart",
-                indicator:"SelectIndicatorCart",
-                props:{
-                    padding:0,
-                    margin:"10px"
-                }
-            },
-            container:"SelectionList"
+            // cart:{
+                // xname:"Cart",
+                // indicator:"SelectIndicatorCart",
+            //     props:{
+            //         padding:0,
+            //         margin:"10px"
+            //     }
+            // },
+            container:"PlainList"
         },
         items:content
     }
     return (
         <AutoLayout {...config}>
-            <SelectCompound />
+            <CompoundComponents />
         </AutoLayout>
     )
     

@@ -23,35 +23,38 @@ import FormList from '@/plugins/FormList'
 import Project from '@/plugins/Project'
 import LayoutList from '@/plugins/SelectList/SelectItem/LayoutList'
 import CompositeList from '@/plugins/SelectList/SelectItem/CompositeList'
+import CompoundComponents from '@/plugins/CompoundComponents'
+import ComponentManage from '@/plugins/ComponentManage'
 
 export default function index(props) {
 
-  // const onItemClickHandle = () => {
-  //     console.log('event to dismiss the component')
-  // }
+  const onItemClickHandle = () => {
+    console.log('event to dismiss the component')
+  }
 
   return (
     // <PageCart backgroundColor={"#f0f4f7"}>
     //   <Message onItemClickHandle={onItemClickHandle} {...props} />
     // </PageCart>
-      // <PageCart>
-      //   <PageGridContainer title={"邮件"} subtitle={"more"}>
-      //    <TodoListSandbox {...props}/>
-      //  </PageGridContainer>
-      // </PageCart>
+    // <PageCart>
+    //   <PageGridContainer title={"邮件"} subtitle={"more"}>
+    //    <TodoListSandbox {...props}/>
+    //  </PageGridContainer>
+    // </PageCart>
     // <TestUserSelection onItemClickHandle={onItemClickHandle} {...props}/>  
 
-      //  <TodoListSandbox />
-      //   <Top>
-      //     <QuestionList />
-      //  </Top>
+    // <Top>
+    //   <QuestionList />
+    // </Top>
 
-      // <PageGridContainer title={"自定义组件"} subtitle={" · · · "}>
-      //     <ComponentsList />
-      // </PageGridContainer>
+    // <PageGridContainer title={"自定义组件"} subtitle={" · · · "}>
+    //     <ComponentsList />
+    // </PageGridContainer>
 
-      // <CompositeList />
+    // <CompositeList />
 
-      <TodoListSandbox />
-    )
+    <ComponentManage />
+    // <CompoundComponents />
+    // <Project/>
+  )
 }

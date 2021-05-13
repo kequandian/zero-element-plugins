@@ -1,9 +1,9 @@
 import React from 'react';
 // import layout from '@/plugins/TodoList/designLayout'
 require('./index.less')
-import { AutoComponent} from 'zero-element-boot/lib/components';
+import { AutoComponent } from 'zero-element-boot/lib/components';
 import layout from './layout'
-const presenter=require('@/components/item/LogoSubtitleItem/presenter')
+const presenter = require('@/components/item/LogoSubtitleItem/presenter')
 
 // const CartSet = require('@/components/cart');
 
@@ -17,17 +17,15 @@ const presenter=require('@/components/item/LogoSubtitleItem/presenter')
  * @returns
  */
 
-export default function LogoSubtitleItem(props){
-    const allComponents={...presenter}
-    const config={
+export default function LogoSubtitleItem(props) {
+    const allComponents = { ...presenter }
+    const config = {
         layout,
         ...props
     }
     return (
         //<AutoComponent onItemClick={onToDoItemClick}  {...config} cartSet={CartSet} allComponents={allComponents}/>
-        
-        <div style={{width:"300px"}}>
-            <AutoComponent {...config} allComponents={allComponents}/>
-        </div>
+
+        <AutoComponent {...config} allComponents={allComponents} />
     )
 }

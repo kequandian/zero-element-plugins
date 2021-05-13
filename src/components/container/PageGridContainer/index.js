@@ -22,9 +22,9 @@ export default function PageGridContainer(props){
         <div className="PageGridContainer" style={{}}>
             <Cart padding="4px" linewidth="0px" borderStyle="solid"  fill="#ffffff" >
             <Container>    
-            <Flexbox align="start-with-last-end" direction="row" justify="space-between" >
+            <Flexbox align="start" direction="row" justify="space-between" >
                 <FormContainerTitle content={title} />
-                <FormFieldTitle corner={corner} content={subtitle}/>
+                {/* <FormFieldTitle corner={corner} content={subtitle}/> */}
             </Flexbox>
             </Container> 
             </Cart>

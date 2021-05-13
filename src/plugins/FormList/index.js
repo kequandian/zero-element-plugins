@@ -5,8 +5,9 @@ require('./index.less')
 import SelectCart from 'zero-element-boot/lib/components/cart/SelectCart'
 
 
-export default function FormList(props){
-    const {form}=props
+export default function FormList(props) {
+    const { form } = props
+
     // const commit=[
     //     {
     //         title:"My Energy",
@@ -49,41 +50,41 @@ export default function FormList(props){
     //         account:""
     //     }
     // ]
-    const config={
-        layout:{
-            xname:"Itembox",
-            props:{
-                align:"betweent",
-                direction:"column"
+    const config = {
+        layout: {
+            xname: "Flexbox",
+            props: {
+                align: "between",
+                direction: "column"
             },
-            gateway:{
-                xname:"Binding",
-                props:{
-                    binding:{
-                        title:"title",
-                        account:"account"
+            gateway: {
+                xname: "Binding",
+                props: {
+                    binding: {
+                        title: "title",
+                        account: "account"
                     }
                 }
             },
-            cart:{
-                xname:"ItemCart",
-                indicator: "SelectIndicatorCartab",        
+            cart: {
+                xname: "ItemCart",
+                indicator: "SelectIndicatorCartab",
 
-                props:{
-                    padding:"6px",
-                    lineColor:"#1496BB",
-                    activeLeftLine:"5px",
+                props: {
+                    padding: "6px",
+                    lineColor: "#1496BB",
+                    activeLeftLine: "5px",
                 }
             },
-            container:"SelectionList"
+            container: "SelectionList"
         },
-        items:form
+        items: form
     }
     return (
         <div className="FormList">
-        <AutoLayout {...config}>
-            <FormItem />
-        </AutoLayout>
+            <AutoLayout {...config}>
+                <FormItem />
+            </AutoLayout>
         </div>
     )
 }

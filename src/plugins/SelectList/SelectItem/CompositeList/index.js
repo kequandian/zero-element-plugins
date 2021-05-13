@@ -1,8 +1,9 @@
-import { PageGridContainer } from '@/components/container'
-import React from 'react'
-import Flexbox from 'zero-element-boot/lib/components/layout/Flexbox'
-import Container from 'zero-element-boot/lib/components/container/Container'
-import LogoSubtitleItem from '@/components/item/LogoSubtitleItem'
+import { PageGridContainer } from '@/components/container';
+import React from 'react';
+import Flexbox from 'zero-element-boot/lib/components/layout/Flexbox';
+import HoverShadowCart from 'zero-element-boot/lib/components/cart/HoverShadowCart';
+import Container from 'zero-element-boot/lib/components/container/Container';
+import LogoSubtitleItem from '@/components/item/LogoSubtitleItem';
 
 export default function CompositeList(props){
     const config={
@@ -15,8 +16,10 @@ export default function CompositeList(props){
         <PageGridContainer title={"复合组件"} subtitle={"· · ·"} corner={"13px"}>
             <div style={{width:"300px"}}>
                 <Container>
-                    <Flexbox align={"start"} direction={"column"}justify={"start"}>
-                        <LogoSubtitleItem {...config}/>
+                    <Flexbox align={"start"} direction={"column"} justify={"start"}>
+                        <HoverShadowCart>
+                            <LogoSubtitleItem {...config}/>
+                        </HoverShadowCart>
                     </Flexbox>
                 </Container>
             </div>
