@@ -23,7 +23,7 @@ import FormList from '@/plugins/FormList'
 import Project from '@/plugins/Project'
 import LayoutList from '@/plugins/SelectList/SelectItem/LayoutList'
 import CompositeList from '@/plugins/SelectList/SelectItem/CompositeList'
-import CompoundComponents from '@/plugins/CompoundComponents'
+import CompoundComponents from '@/plugins/ComponentManage/compoments/CompoundComponents'
 import ComponentManage from '@/plugins/ComponentManage'
 
 export default function index(props) {
@@ -54,7 +54,7 @@ export default function index(props) {
     // <CompositeList />
 
     <ComponentManage />
-    // <CompoundComponents />
+    // <LayoutList />
     // <Project/>
   )
 }

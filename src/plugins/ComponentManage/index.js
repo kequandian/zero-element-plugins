@@ -1,8 +1,11 @@
 import React from 'react';
 import { PageGridContainer } from '@/components/container';
 import { AutoComponent } from 'zero-element-boot/lib/components';
-import FormList from '@/plugins/FormList'
-import CartList from "@/plugins/SelectList/SelectItem/CartList"
+import FormList from '@/plugins/FormList';
+import CartList from "@/plugins/SelectList/SelectItem/CartList";
+import LayoutList from "@/plugins/SelectList/SelectItem/LayoutList";
+import CompoundComponents from '@/plugins/ComponentManage/compoments/CompoundComponents';
+import SelectedCart from '@/plugins/ComponentManage/compoments/SelectedCart';
 
 export default function Index(props) {
 
@@ -14,12 +17,12 @@ export default function Index(props) {
                 direction: 'row',
                 justify: "start"
             },
-            cart: {
-                xname: "Cart",
-                props: {
-                    padding: '10px'
-                }
-            },
+            // cart: {
+            //     xname: "Cart",
+            //     props: {
+            //         padding: '10px'
+            //     }
+            // },
         },
     }
 
@@ -59,11 +62,33 @@ export default function Index(props) {
         ]
     }
 
+    const LayoutConfig = {
+        selectionTwo: [
+            {
+                title: "Layout",
+                layoutText: [
+                    {
+                        text: "Flexbox"
+                    },
+                    {
+                        text: "Itembox"
+                    },
+                    {
+                        text: "SelectBox"
+                    }
+                ]
+            }
+        ]
+    }
+
     return (
         <PageGridContainer title={"组件展示"} subtitle={"· · ·"} corner={"13px"}>
             <AutoComponent {...config}>
                 <FormList {...formConfig}/>
                 <CartList {...CartConfig}/>
+                <LayoutList {...LayoutConfig}/>
+                <CompoundComponents />
+                <SelectedCart/>
             </AutoComponent>
         </PageGridContainer>
     )

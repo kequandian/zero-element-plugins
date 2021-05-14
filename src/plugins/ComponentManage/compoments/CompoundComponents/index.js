@@ -10,28 +10,24 @@ export default function Index(props) {
             xname: 'Flexbox',
             props: {
                 align: 'start',
-                direction: 'row',
+                direction: 'column',
                 justify: "start"
             },
-            cart: {
-                xname: "Cart",
+            cart:{
+                xname: 'Cart',
                 props: {
-                    padding: '10px'
-                }
-            },
+                    padding: '10px',
+                    margin: '10px 10px',
+                    shadow: '0 2px 8px rgba(0, 0, 0, 0.06)'
+                },
+            }
         },
     }
 
     return (
-        <PageGridContainer title={"组件展示"} subtitle={"· · ·"} corner={"13px"}>
+        <PageGridContainer title={"复合组件"} bg="#ffffff" showLayoutBorder={true}>
             <AutoComponent {...config}>
-                <LogoSubtitleItem/>
-                
-                <LogoSubtitleItem/>
-                
-                <LogoSubtitleItem/>
-                
-                <LogoSubtitleItem/>
+                <LogoSubtitleItem />
             </AutoComponent>
         </PageGridContainer>
     )

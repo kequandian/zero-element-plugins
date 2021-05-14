@@ -6,24 +6,9 @@ import SelectIndicatorCart from 'zero-element-boot/lib/components/cart/indicator
 import { PageGridContainer } from '@/components/container'
 
 export default function CartList(props) {
+    
     const { selectionOne } = props
 
-    // const commit=[
-    //         {
-    //             title:"Cart",
-    //                 cartText:[
-    //                     {
-    //                         text:"Corner"
-    //                     },
-    //                     {
-    //                         text:"HoverShadowCart"
-    //                     },
-    //                     {
-    //                         text:"SelectedCart"
-    //                     }
-    //                 ]
-    //         }
-    //     ]
     const config = {
         layout: {
             xname: "Flexbox",
@@ -51,12 +36,12 @@ export default function CartList(props) {
         items: selectionOne
     }
     return (
-        <div className="CartList">
-            <PageGridContainer>
+        // <div className="CartList">
+            <PageGridContainer  bg="#ffffff" showLayoutBorder={true}>
                 <AutoLayout {...config}>
                     <CartItem />
                 </AutoLayout>
             </PageGridContainer>
-        </div>
+        // </div>
     )
 }

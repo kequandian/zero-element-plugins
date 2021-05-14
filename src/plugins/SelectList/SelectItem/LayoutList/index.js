@@ -2,25 +2,11 @@ import React from 'react'
 import {AutoLayout} from 'zero-element-boot/lib/components'
 require('./index.less')
 import LayoutItem from '@/plugins/SelectList/SelectItem/LayoutList/LayoutItem'
+import { PageGridContainer } from '@/components/container'
 
 export default function LayoutList(props){
     const {selectionTwo}=props
-    // const commit=[
-    //         {
-    //             title:"Layout",
-    //                 layoutText:[
-    //                     {
-    //                         text:"Flexbox"
-    //                     },
-    //                     {
-    //                         text:"Itembox"
-    //                     },
-    //                     {
-    //                         text:"SelectBox"
-    //                     }
-    //                 ]
-    //         }
-    //     ]
+
         const config={
             layout:{
                 xname:"Flexbox",
@@ -48,10 +34,10 @@ export default function LayoutList(props){
             items:selectionTwo
         }
         return (
-            <div className="LayoutList">
+            <PageGridContainer  bg="#ffffff" showLayoutBorder={true}>
                 <AutoLayout {...config}>
                     <LayoutItem />
                 </AutoLayout>
-            </div>
+            </PageGridContainer>
         )
     }

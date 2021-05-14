@@ -17,18 +17,8 @@ export default forwardRef(function SelectIndicatorCart(props, ref) {
   let { isSelected } = props
 
   const { lineColor = '#4285F4', activeLeftLine = "1px", margin = "10px" } = children.props
-  const [onHover, setOnHover] = useState(false);
 
   return React.Children.map(children, child => {
-
-    const toggleHover = () => {
-      let result = !onHover;
-      if (!title) {
-        result = onHover
-      }
-      setOnHover(result)
-    }
-
 
     const fill = '#ffffff';
     // const margin = '0px';
@@ -40,12 +30,6 @@ export default forwardRef(function SelectIndicatorCart(props, ref) {
     // const lineColor = '#4285F4';
     let bgColor = `${fill}`;
 
-    if (onHover) {
-      bgColor = `${hoverColor}80`;
-    } else {
-      bgColor = `${fill}ff`;
-    }
-
     if (isSelected) {
       bgColor = activeColor;
       linewidth = activeLeftLine;
@@ -53,14 +37,14 @@ export default forwardRef(function SelectIndicatorCart(props, ref) {
 
     return (
       <>
-        <div className={`i-SelectIndicatorCart`}
+        <div className={`i-SelectCart`}
           style={{
             position: 'relative',
             margin: `${margin}`,
             padding: `${padding}`,
-            backgroundColor: `${bgColor}`
+            backgroundColor: `${fill}`,
+            color: `${lineColor}`
           }}
-          onMouseEnter={() => toggleHover()} onMouseLeave={() => toggleHover()}
         >
           {linewidth ? (
             <div style={{
