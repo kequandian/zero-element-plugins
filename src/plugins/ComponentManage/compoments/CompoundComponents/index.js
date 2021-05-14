@@ -18,7 +18,6 @@ export default function Index(props) {
                 props: {
                     padding: '10px',
                     margin: '10px 10px',
-                    shadow: '0 2px 8px rgba(0, 0, 0, 0.06)'
                 },
             }
         },

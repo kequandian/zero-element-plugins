@@ -16,11 +16,10 @@ export default forwardRef(function SelectIndicatorCart(props, ref) {
   const { children, title } = props;
   let { isSelected } = props
 
-  const { lineColor = '#4285F4', activeLeftLine = "1px", margin = "10px" } = children.props
+  const { lineColor = '#4285F4', fill = '#ffffff', activeLeftLine = "1px", margin = "10px" } = children.props;
 
   return React.Children.map(children, child => {
 
-    const fill = '#ffffff';
     // const margin = '0px';
     const padding = '0px'
     let linewidth = '';

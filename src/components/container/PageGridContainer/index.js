@@ -22,7 +22,7 @@ export default function PageGridContainer(props) {
 
     return React.Children.map(children, child => {
         return (
-            <div className={showLayoutBorder? "PageGridContainer": ""} style={{ backgroundColor: `${bg}`, marginBottom: '10px', padding: '0px 10px 10px 10px' }}>
+            <div className={showLayoutBorder ? "PageGridContainer" : ""} style={{ backgroundColor: `${bg}`, marginBottom: '10px', padding: '0px 10px 10px 10px' }}>
                 {title ? (
                     <Container>
                         <Flexbox align="start" direction="row" justify="space-between" >
@@ -31,12 +31,9 @@ export default function PageGridContainer(props) {
                         </Flexbox>
                     </Container>
                 ) : null}
-
-                <div>
-                    <ItemCart padding="0">
-                        {child}
-                    </ItemCart>
-                </div>
+                <ItemCart padding="0">
+                    {child}
+                </ItemCart>
             </div>
         )
     })

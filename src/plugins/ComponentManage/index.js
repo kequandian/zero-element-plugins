@@ -7,6 +7,8 @@ import LayoutList from "@/plugins/SelectList/SelectItem/LayoutList";
 import CompoundComponents from '@/plugins/ComponentManage/compoments/CompoundComponents';
 import SelectedCart from '@/plugins/ComponentManage/compoments/SelectedCart';
 
+require('./index.less')
+
 export default function Index(props) {
 
     const config = {
@@ -84,11 +86,11 @@ export default function Index(props) {
     return (
         <PageGridContainer title={"组件展示"} subtitle={"· · ·"} corner={"13px"}>
             <AutoComponent {...config}>
-                <FormList {...formConfig}/>
-                <CartList {...CartConfig}/>
-                <LayoutList {...LayoutConfig}/>
+            <FormList {...formConfig} />
+                <CartList {...CartConfig} />
+                <LayoutList {...LayoutConfig} />
                 <CompoundComponents />
-                <SelectedCart/>
+                <SelectedCart />
             </AutoComponent>
         </PageGridContainer>
     )
