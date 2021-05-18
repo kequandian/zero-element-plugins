@@ -3,15 +3,28 @@ import { AutoLayout } from 'zero-element-boot/lib/components'
 import FormItem from '@/plugins/FormList/FormItem'
 require('./index.less')
 
-export default function FormList(props) {
-    const { form } = props
+export default function FlexboxLayout(props) {
+    
+    const data = [
+        {
+            title: "子项01",
+            account: "3"
+        },
+        {
+            title: "子项02",
+            account: "2"
+        },
+        {
+            title: "子项03",
+            account: "1"
+        }
+    ]
 
     const config = {
         layout: {
             xname: "Flexbox",
             props: {
-                align: "between",
-                direction: "column"
+                align: "row"
             },
             gateway: {
                 xname: "Binding",
@@ -23,21 +36,22 @@ export default function FormList(props) {
                 }
             },
             cart: {
-                xname: "ItemCart",
-                indicator: "SelectIndicatorCartab",
+                xname: "Cart",
                 props: {
-                    padding: "16px",
-                    lineColor: "#1496BB",
-                    activeLeftLine: "5px",
-                    margin: '0px'
+                    props: {
+                        linewidth: '0',
+                        padding: '0px',
+                        margin: '10px 10px',
+                        shadow: '0 2px 8px rgba(0, 0, 0, 0.06)'
+                    },
                 }
             },
-            container: "SelectionList"
+            container: "PlainList"
         },
-        items: form
+        items: data
     }
     return (
-        <div className="FormList">
+        <div className="plainList">
             <AutoLayout {...config}>
                 <FormItem />
             </AutoLayout>

@@ -1,8 +1,9 @@
 import React from 'react';
+import Container from "zero-element-boot/lib/components/container/Container"
 import { PageGridContainer } from '@/components/container';
 import { AutoComponent } from 'zero-element-boot/lib/components';
-import HightlightCart from '@/components/cart/static/HoverCart/HightlightCart';
 
+import FlexboxLayout from './FlexboxLayout';
 
 export default function Index(props) {
 
@@ -12,14 +13,13 @@ export default function Index(props) {
             props: {
                 align: 'start',
                 direction: 'column',
-                justify: "start",
-                margin: '0 10px'
+                justify: "start"
             },
             cart:{
                 xname: 'Cart',
                 props: {
                     linewidth: '0',
-                    padding: '0',
+                    padding: '0px',
                     margin: '10px 10px',
                     shadow: '0 2px 8px rgba(0, 0, 0, 0.06)'
                 },
@@ -27,15 +27,10 @@ export default function Index(props) {
         },
     }
 
-
     return (
-        <PageGridContainer title={"HoverCart"} bg="#ffffff" showLayoutBorder={true}>
+        <PageGridContainer title={"Flexbox"} bg="#ffffff" showLayoutBorder={true}>
             <AutoComponent {...config}>
-                <div style={{ width: "300px" }}>
-                    <HightlightCart margin='0' fill='#F3F3F3'>
-                        <div  style={{height: '50px', lineHeight:'50px', marginLeft: '10px'}}>HoverCart</div>
-                    </HightlightCart>
-                </div>
+                <FlexboxLayout/>
             </AutoComponent>
         </PageGridContainer>
     )

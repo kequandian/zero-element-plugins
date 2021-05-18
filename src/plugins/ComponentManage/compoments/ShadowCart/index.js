@@ -1,8 +1,11 @@
 import React from 'react';
 import { PageGridContainer } from '@/components/container';
 import { AutoComponent } from 'zero-element-boot/lib/components';
-import HoverShadowCart from 'zero-element-boot/lib/components/cart/HoverShadowCart';
+import HoverShadowCart from '@/components/cart/static/ShadowCart/HoverShadowCart';
 
+import FloatingCartWhite from '@/components/cart/static/ShadowCart/FloatingCartWhite';
+import HoverCartLightWhite from '@/components/cart/static/ShadowCart/HoverCartWhite';
+import DropdownsCartWhite from '@/components/cart/static/ShadowCart/DropdownsCartWhite';
 
 export default function Index(props) {
 
@@ -15,7 +18,7 @@ export default function Index(props) {
                 justify: "start",
                 margin: '0 10px'
             },
-            cart:{
+            cart: {
                 xname: 'Cart',
                 props: {
                     linewidth: '0',
@@ -27,15 +30,30 @@ export default function Index(props) {
         },
     }
 
+    const BodyContent = ({text}) => {
+        return <div style={{ height: '50px', lineHeight: '50px', marginLeft: '10px' }}>{text}</div>
+    }
 
     return (
         <PageGridContainer title={"ShadowCart"} bg="#ffffff" showLayoutBorder={true}>
             <AutoComponent {...config}>
                 <div style={{ width: "300px" }}>
                     <HoverShadowCart margin='0'>
-                        <div  style={{height: '50px', lineHeight:'50px', marginLeft: '10px'}}>HoverShadowCart</div>
+                        <BodyContent text='HoverShadowCart' />
                     </HoverShadowCart>
                 </div>
+                
+                <FloatingCartWhite margin='0'>
+                    <BodyContent text='FloatingCartWhite'/>
+                </FloatingCartWhite>
+                
+                <HoverCartLightWhite margin='0'>
+                    <BodyContent text='HoverCartLightWhite'/>
+                </HoverCartLightWhite>
+                
+                <DropdownsCartWhite margin='0'>
+                    <BodyContent text='DropdownsCartWhite'/>
+                </DropdownsCartWhite>
             </AutoComponent>
         </PageGridContainer>
     )

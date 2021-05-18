@@ -3,7 +3,7 @@ import { PageGridContainer } from '@/components/container';
 import { AutoComponent } from 'zero-element-boot/lib/components';
 // import SelectedCart from '@/components/item/SelectCartItem/Sandbox';
 // import SelectedCartTxtStatic from '@/components/item/SelectedCartTxtStatic/Sandbox';
-import SelectCartOutSideIconItem from '@/components/item/SelectCartOutSideIconItem/Sandbox';
+// import SelectCartOutSideIconItem from '@/components/item/SelectCartOutSideIconItem/Sandbox';
 
 
 import SelectedCart from '@/components/cart/SelectedCart';
@@ -14,6 +14,8 @@ import SelectedRightLineCartBody from '@/components/item/SelectedCartTxtStatic';
 
 import SelectedCartOutSideIcon from '@/components/cart/SelectedCartOutSideIcon';
 import SelectCartOutSideIconBody from '@/components/item/SelectCartOutSideIconItem';
+
+import SelectedCartBorder from '@/components/cart/SelectedCartBorder';
 
 export default function Index(props) {
 
@@ -73,6 +75,10 @@ export default function Index(props) {
                 <SelectedCartOutSideIcon fill={'transparent'} padding='0px' stroke='#2196F3' lineWidth='1px'>
                     <SelectCartOutSideIconBody {...SelectCartOutSideIconBodyConfig} />
                 </SelectedCartOutSideIcon>
+
+                <SelectedCartBorder  fill={'transparent'} padding='0px' stroke='#2196F3' lineWidth='1px'>
+                    <SelectCartOutSideIconBody {...SelectCartOutSideIconBodyConfig} />
+                </SelectedCartBorder>
             </AutoComponent>
         </PageGridContainer>
     )

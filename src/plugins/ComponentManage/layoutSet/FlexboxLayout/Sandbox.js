@@ -3,7 +3,8 @@ import { AutoLayout } from 'zero-element-boot/lib/components'
 import FormItem from '@/plugins/FormList/FormItem'
 require('./index.less')
 
-export default function FormList(props) {
+export default function Sandbox(props) {
+    
     const { form } = props
 
     const config = {
@@ -25,11 +26,11 @@ export default function FormList(props) {
             cart: {
                 xname: "ItemCart",
                 indicator: "SelectIndicatorCartab",
+
                 props: {
-                    padding: "16px",
+                    padding: "6px",
                     lineColor: "#1496BB",
                     activeLeftLine: "5px",
-                    margin: '0px'
                 }
             },
             container: "SelectionList"
