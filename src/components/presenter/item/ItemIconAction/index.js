@@ -28,7 +28,7 @@ export default function ItemIconAction(props) {
         const result =!onClick;
         setDisplay(result ? "none":null)
         setOnClick(result)
-        console.log("11111"+result+display)
+        // console.log("11111"+result+display)
     }
     
     return (

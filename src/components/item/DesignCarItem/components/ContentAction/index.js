@@ -1,6 +1,5 @@
 import React from 'react';
 import ItemIconAction from '@/components/presenter/item/ItemIconAction';
-import ContentText from  '@/components/item/LogoSubtitleItem/components/ContentText'
 import { AutoComponent } from 'zero-element-boot';
 
 
@@ -13,7 +12,7 @@ export default function Content(props){
         layout:{
             xname:'Flexbox',
             props:{
-                align:"start",             
+                align:"align-content-center",             
             },
             children:[
                 {

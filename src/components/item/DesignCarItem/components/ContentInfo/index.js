@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemAvator from '@/components/presenter/item/ItemAvator';
+import ItemImage from '@/components/presenter/item/ItemImage';
 import ContentText from  '@/components/item/DesignCarItem/components/ContentText'
 import { AutoComponent } from 'zero-element-boot';
 
@@ -7,7 +7,7 @@ import { AutoComponent } from 'zero-element-boot';
 export default function Content(props){
 
     const allComponents={    
-        ItemAvator,    
+        ItemImage,    
         ContentText
     };
     const config={
@@ -18,7 +18,7 @@ export default function Content(props){
             },
             children:[
                 {
-                    presenter:'ItemAvator',
+                    presenter:'ItemImage',
                     gateway:{
                         xname:"Binding",
                         props:{

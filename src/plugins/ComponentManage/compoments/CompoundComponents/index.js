@@ -3,6 +3,8 @@ import { PageGridContainer } from '@/components/container';
 import { AutoComponent } from 'zero-element-boot/lib/components';
 import LogoSubtitleItem from '@/components/item/LogoSubtitleItem/Sandbox';
 import DesignCarItem from '@/components/item/DesignCarItem/Sandbox';
+import TxtAndRightImgCartItem from '@/components/item/TxtAndRightImgCartItem/Sandbox';
+import TitleSubtitleImageitem from '@/components/item/TitleSubtitleImageitem/Sandbox';
 
 export default function Index(props) {
 
@@ -29,6 +31,8 @@ export default function Index(props) {
             <AutoComponent {...config}>
                 <LogoSubtitleItem />
                 <DesignCarItem />
+                <TxtAndRightImgCartItem />
+                <TitleSubtitleImageitem />
             </AutoComponent>
         </PageGridContainer>
     )
