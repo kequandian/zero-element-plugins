@@ -5,7 +5,9 @@ import FormList from '@/plugins/FormList';
 import CartList from "@/plugins/ComponentManage/CartList";
 import LayoutList from "@/plugins/SelectList/SelectItem/LayoutList";
 import CompoundComponents from '@/plugins/ComponentManage/compoments/CompoundComponents';
+import ShadowCart from '@/plugins/ComponentManage/compoments/ShadowCart';
 import SelectedCart from '@/plugins/ComponentManage/compoments/SelectedCart';
+import HoverCart from '@/plugins/ComponentManage/compoments/HoverCart';
 
 require('./index.less')
 
@@ -91,11 +93,12 @@ export default function Index(props) {
                 </div>
                 <div style={{flex: "1"}}>
                     <AutoComponent {...config}>
-                        {/* <CartList {...CartConfig} /> */}
                         <CartList />
+                        <ShadowCart />
+                        <HoverCart />
+                        <SelectedCart />
                         <LayoutList {...LayoutConfig} />
                         <CompoundComponents />
-                        <SelectedCart />
                     </AutoComponent>
                 </div>
             </div>
