@@ -13,7 +13,7 @@ export default forwardRef(function SelectedCartOutSideIcon(props, ref) {
    * outline    边界线类型
    */
 
-  const { children, padding = '10px', fill = "#fff",  corner = "3px", stroke = "#000", lineWidth = "0px", outline = "solid" } = props;
+  const { children, padding = '10px', fill = "#fff", corner = "3px", stroke = "#000", lineWidth = "0px", outline = "solid", isSelected: isCartSelect } = props;
 
   return React.Children.map(children, child => {
     const { isSelected } = child.props;
@@ -21,8 +21,11 @@ export default forwardRef(function SelectedCartOutSideIcon(props, ref) {
     // if (isSelected) {
     //   fill = "rgba(135,206,250,0.2)"
     // }
+    
+    const selectedStatus = isCartSelect || isSelected;
 
-    const Display = isSelected ? "block" : "none"
+    const Display = selectedStatus ? "block" : "none";
+
     return (
       <div style={{
         display: 'flex', flexDirection: 'row', alignItems: 'center', position: 'relative', width: '100%', background: `${fill}`
@@ -30,7 +33,7 @@ export default forwardRef(function SelectedCartOutSideIcon(props, ref) {
         <div style={{
           flex: 1,
           borderRadius: `${corner}`,
-          borderColor: `${stroke}`,
+          borderColor: `${selectedStatus ? stroke : '#000'}`,
           borderWidth: `${lineWidth}`,
           borderStyle: `${outline}`,
           padding: `${padding}`

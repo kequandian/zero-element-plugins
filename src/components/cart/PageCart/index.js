@@ -5,7 +5,7 @@ export default forwardRef(function PageCart(props, ref){
 
 
     const {display='flex',alignItems='center',backgroundColor='#D2E9FF' ,children,width='100%',height='1000px',cursor='pointer' ,justifyContent="center"}=props
-    console.log(children)
+    // console.log(children)
 
     const [onHover, setOnHover] = useState(false);
     // const [onDisplay ,setOnDisplay]=useState(true)

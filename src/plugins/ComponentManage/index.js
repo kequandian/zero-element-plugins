@@ -2,7 +2,7 @@ import React from 'react';
 import { PageGridContainer } from '@/components/container';
 import { AutoComponent } from 'zero-element-boot/lib/components';
 import FormList from '@/plugins/FormList';
-import CartList from "@/plugins/SelectList/SelectItem/CartList";
+import CartList from "@/plugins/ComponentManage/CartList";
 import LayoutList from "@/plugins/SelectList/SelectItem/LayoutList";
 import CompoundComponents from '@/plugins/ComponentManage/compoments/CompoundComponents';
 import SelectedCart from '@/plugins/ComponentManage/compoments/SelectedCart';
@@ -45,24 +45,24 @@ export default function Index(props) {
         ]
     }
 
-    const CartConfig = {
-        selectionOne: [
-            {
-                title: "Cart",
-                cartText: [
-                    {
-                        text: "Corner"
-                    },
-                    {
-                        text: "HoverShadowCart"
-                    },
-                    {
-                        text: "SelectCart"
-                    }
-                ]
-            }
-        ]
-    }
+    // const CartConfig = {
+    //     selectionOne: [
+    //         {
+    //             title: "Cart",
+    //             cartText: [
+    //                 {
+    //                     text: "Corner"
+    //                 },
+    //                 {
+    //                     text: "HoverShadowCart"
+    //                 },
+    //                 {
+    //                     text: "SelectCart"
+    //                 }
+    //             ]
+    //         }
+    //     ]
+    // }
 
     const LayoutConfig = {
         selectionTwo: [
@@ -91,7 +91,8 @@ export default function Index(props) {
                 </div>
                 <div style={{flex: "1"}}>
                     <AutoComponent {...config}>
-                        <CartList {...CartConfig} />
+                        {/* <CartList {...CartConfig} /> */}
+                        <CartList />
                         <LayoutList {...LayoutConfig} />
                         <CompoundComponents />
                         <SelectedCart />

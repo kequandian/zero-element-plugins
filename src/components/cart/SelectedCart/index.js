@@ -13,7 +13,7 @@ export default forwardRef(function SelectedCart(props, ref) {
    * outline    边界线类型
    */
 
-  let { children, padding = '10px', fill = "#fff", corner = "3px", stroke = "#000", lineWidth = "0px", outline = "solid" } = props;
+  let { children, padding = '10px', fill = "#fff", corner = "3px", stroke = "#000", lineWidth = "0px", outline = "solid", isSelected: isCartSelect } = props;
 
   // let fill = "#fff";
   // function clickItem(itemIndex){
@@ -26,13 +26,16 @@ export default forwardRef(function SelectedCart(props, ref) {
   //   }
   // }));
   return React.Children.map(children, child => {
+
     const { isSelected } = child.props;
 
-    if (isSelected) {
+    const selectedStatus = isCartSelect || isSelected;
+
+    if (selectedStatus) {
       fill = "rgba(135,206,250,0.2)"
     }
     
-    const Display = isSelected ? "block" : "none"
+    const Display = selectedStatus ? "block" : "none"
     return <div style={{
       background: `${fill}`,
       borderRadius: `${corner}`,

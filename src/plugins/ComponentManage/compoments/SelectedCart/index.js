@@ -9,8 +9,8 @@ import SelectCartOutSideIconItem from '@/components/item/SelectCartOutSideIconIt
 import SelectedCart from '@/components/cart/SelectedCart';
 import SelectedCartBody from '@/components/item/SelectCartItem';
 
-import SelectedCartTxtStatic from '@/components/cart/static/SelectedCart';
-import SelectedCartTxtStaticBody from '@/components/item/SelectedCartTxtStatic';
+import SelectedRightLineCart from '@/components/cart/static/SelectedCart';
+import SelectedRightLineCartBody from '@/components/item/SelectedCartTxtStatic';
 
 import SelectedCartOutSideIcon from '@/components/cart/SelectedCartOutSideIcon';
 import SelectCartOutSideIconBody from '@/components/item/SelectCartOutSideIconItem';
@@ -43,7 +43,7 @@ export default function Index(props) {
         isSelected: true
     }
 
-    const SelectedCartTxtStaticBodyConfig = {
+    const SelectedRightLineCartBodyConfig = {
         title: "Content",
         padding: "0px",
         lineColor: "#1496BB",
@@ -66,9 +66,9 @@ export default function Index(props) {
                         <SelectedCartBody {...SelectedCartBodyConfig} />
                     </SelectedCart>
                 </div>
-                <SelectedCartTxtStatic isSelected={true}>
-                    <SelectedCartTxtStaticBody {...SelectedCartTxtStaticBodyConfig} />
-                </SelectedCartTxtStatic>
+                <SelectedRightLineCart isSelected={true}>
+                    <SelectedRightLineCartBody {...SelectedRightLineCartBodyConfig} />
+                </SelectedRightLineCart>
 
                 <SelectedCartOutSideIcon fill={'transparent'} padding='0px' stroke='#2196F3' lineWidth='1px'>
                     <SelectCartOutSideIconBody {...SelectCartOutSideIconBodyConfig} />
