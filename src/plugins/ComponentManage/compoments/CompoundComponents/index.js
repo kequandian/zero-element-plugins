@@ -2,6 +2,7 @@ import React from 'react';
 import { PageGridContainer } from '@/components/container';
 import { AutoComponent } from 'zero-element-boot/lib/components';
 import LogoSubtitleItem from '@/components/item/LogoSubtitleItem/Sandbox';
+import DesignCarItem from '@/components/item/DesignCarItem/Sandbox';
 
 export default function Index(props) {
 
@@ -27,6 +28,7 @@ export default function Index(props) {
         <PageGridContainer title={"复合组件"} bg="#ffffff" showLayoutBorder={true}>
             <AutoComponent {...config}>
                 <LogoSubtitleItem />
+                <DesignCarItem />
             </AutoComponent>
         </PageGridContainer>
     )

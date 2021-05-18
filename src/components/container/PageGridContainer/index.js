@@ -1,10 +1,10 @@
 import React from 'react';
 import Seperator from '@/plugins/testUserSelection/presenter/Seperator';
-import Flexbox from 'zero-element-boot/lib/components/layout/Flexbox';
 import FormContainerTitle from '@/components/presenter/item/FormContainerTitle'
 import FormFieldTitle from '@/components/presenter/item/FormFieldTitle'
 import Cart from 'zero-element-boot/lib/components/cart/Cart'
 import Container from "zero-element-boot/lib/components/container/Container"
+import Flexbox from 'zero-element-boot/lib/components/layout/Flexbox';
 
 import ItemCart from '@/components/cart/ItemCart';
 

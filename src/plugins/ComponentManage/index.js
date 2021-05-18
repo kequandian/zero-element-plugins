@@ -85,13 +85,20 @@ export default function Index(props) {
 
     return (
         <PageGridContainer title={"组件展示"} subtitle={"· · ·"} corner={"13px"}>
-            <AutoComponent {...config}>
-            <FormList {...formConfig} />
-                <CartList {...CartConfig} />
-                <LayoutList {...LayoutConfig} />
-                <CompoundComponents />
-                <SelectedCart />
-            </AutoComponent>
+            <div style={{display:'flex', flexDirection:'row'}}>
+                <div style={{width: "330px"}}>
+                    <FormList {...formConfig} />
+                </div>
+                <div style={{flex: "1"}}>
+                    <AutoComponent {...config}>
+                        <CartList {...CartConfig} />
+                        <LayoutList {...LayoutConfig} />
+                        <CompoundComponents />
+                        <SelectedCart />
+                    </AutoComponent>
+                </div>
+            </div>
+            
         </PageGridContainer>
     )
 }
