@@ -63,7 +63,7 @@ export default function TestUserSelection(props) {
 
     // const [users, changeUser] = useUaasTestUser({ endpoint, accountToken }, callBack);
 
-    const [data] = useTokenRequest(api);
+    const [data] = useTokenRequest({api});
 
     const config = {
         items: data.length > 0 ? data : [],
