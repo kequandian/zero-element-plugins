@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import { AutoLayout } from 'zero-element-boot/lib/components';
 import QuestionItem from '@/plugins/QuestionList/QuestionItem'
-const promiseAjax=require('../../../lib/utils/request')
+import promiseAjax from 'zero-element-boot/lib/components/utils/request';
 
 export default function QuestionList(props){
     const {items}=props

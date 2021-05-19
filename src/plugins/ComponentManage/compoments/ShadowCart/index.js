@@ -6,6 +6,9 @@ import HoverShadowCart from '@/components/cart/static/ShadowCart/HoverShadowCart
 import FloatingCartWhite from '@/components/cart/static/ShadowCart/FloatingCartWhite';
 import HoverCartLightWhite from '@/components/cart/static/ShadowCart/HoverCartWhite';
 import DropdownsCartWhite from '@/components/cart/static/ShadowCart/DropdownsCartWhite';
+import TrainingCart from '@/components/cart/static/ShadowCart/TrainingCart';
+import BannerLargeBoardCart from '@/components/cart/static/ShadowCart/BannerLargeBoardCart';
+import ArticleDetailBgCart from '@/components/cart/static/ShadowCart/ArticleDetailBgCart';
 
 export default function Index(props) {
 
@@ -24,7 +27,6 @@ export default function Index(props) {
                     linewidth: '0',
                     padding: '0',
                     margin: '10px 10px',
-                    shadow: '0 2px 8px rgba(0, 0, 0, 0.06)'
                 },
             }
         },
@@ -54,6 +56,19 @@ export default function Index(props) {
                 <DropdownsCartWhite margin='0'>
                     <BodyContent text='DropdownsCartWhite'/>
                 </DropdownsCartWhite>
+                
+                <TrainingCart margin='0'>
+                    <BodyContent text='TrainingCart'/>
+                </TrainingCart>
+
+                <BannerLargeBoardCart margin='0'>
+                    <BodyContent text='BannerLargeBoardCart'/>
+                </BannerLargeBoardCart>
+                
+                <ArticleDetailBgCart margin='0'>
+                    <BodyContent text='ArticleDetailBgCart'/>
+                </ArticleDetailBgCart>
+
             </AutoComponent>
         </PageGridContainer>
     )
