@@ -16,15 +16,15 @@ export default forwardRef(function HightlightCart(props, ref) {
 
   const [onHover, setOnHover] = useState(false);
 
-  useImperativeHandle(ref, () => ({
-    getClassName: () => {
-      return `c-HightlightCart`;
-    }
-  }));
+  // useImperativeHandle(ref, () => ({
+  //   getClassName: () => {
+  //     return `c-HightlightCart`;
+  //   }
+  // }));
 
   const toggleHover = () => {
-    // const result = !onHover;
-    // setOnHover(result)
+    const result = !onHover;
+    setOnHover(result)
   }
 
   let bgColor = `${fill}ff`;

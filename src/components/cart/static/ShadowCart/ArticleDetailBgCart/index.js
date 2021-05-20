@@ -22,11 +22,11 @@ export default forwardRef(function Index(props, ref) {
 
   const [onHover, setOnHover] = useState(false);
 
-  useImperativeHandle(ref, () => ({
-    getClassName: () => {
-      return `c-articleDetailBgCart`;
-    }
-  }));
+  // useImperativeHandle(ref, () => ({
+  //   getClassName: () => {
+  //     return `c-articleDetailBgCart`;
+  //   }
+  // }));
 
   const toggleHover = () => {
     // const result = !onHover;

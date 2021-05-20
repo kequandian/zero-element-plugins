@@ -11,9 +11,10 @@ export default forwardRef(function SelectedCartOutSideIcon(props, ref) {
    * stroke     线框色
    * lineWidth  线框粗
    * outline    边界线类型
+   * selectedStroke 选中线框
    */
 
-  const { children, padding = '10px', fill = "#fff", corner = "3px", stroke = "#000", lineWidth = "0px", outline = "solid", isSelected: isCartSelect } = props;
+  const { children, padding = '10px', fill = "#fff", corner = "3px", selectedStroke='#2196F3',  stroke = "#fff", lineWidth = "0px", outline = "solid", isSelected: isCartSelect } = props;
 
   return React.Children.map(children, child => {
     const { isSelected } = child.props;
@@ -33,7 +34,7 @@ export default forwardRef(function SelectedCartOutSideIcon(props, ref) {
         <div style={{
           flex: 1,
           borderRadius: `${corner}`,
-          borderColor: `${selectedStatus ? stroke : '#000'}`,
+          borderColor: `${selectedStatus ? selectedStroke : stroke }`,
           borderWidth: `${lineWidth}`,
           borderStyle: `${outline}`,
           padding: `${padding}`

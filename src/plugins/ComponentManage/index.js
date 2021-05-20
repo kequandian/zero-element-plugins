@@ -8,6 +8,7 @@ import CompoundComponents from '@/plugins/ComponentManage/compoments/CompoundCom
 import SelectedCart from '@/plugins/ComponentManage/compoments/SelectedCart';
 import ShadowCart from '@/plugins/ComponentManage/compoments/ShadowCart';
 import HoverCart from '@/plugins/ComponentManage/compoments/HoverCart';
+import ListComponents from '@/plugins/ComponentManage/compoments/ListComponents';
 
 require('./index.less')
 
@@ -80,6 +81,7 @@ export default function Index(props) {
                         <SelectedCart />
                         <LayoutList {...LayoutConfig} />
                         <CompoundComponents />
+                        <ListComponents/>
                     </AutoComponent>
                 </div>
             </div>
