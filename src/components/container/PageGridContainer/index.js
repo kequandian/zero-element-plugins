@@ -31,6 +31,7 @@ export default function PageGridContainer(props) {
                         </Flexbox>
                     </Container>
                 ) : null}
+                <Seperator lineType="solid"/>
                 <ItemCart padding="0">
                     {child}
                 </ItemCart>

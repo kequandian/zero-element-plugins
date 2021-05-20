@@ -1,5 +1,7 @@
-import PageGridContainer from './PageGridContainer'
+import PageGridContainer from './PageGridContainer';
+import TopImageGridContainer from './TopImageGridContainer';
 
 export {
-    PageGridContainer
+    PageGridContainer,
+    TopImageGridContainer
 }

@@ -1,8 +1,7 @@
-import ItemAvator from '@/components/presenter/item/ItemAvator';
 import ItemImage from '@/components/presenter/item/ItemImage';
-import TextContent from '@/components/presenter/item/TextContent'
+import BoldTextContent from '@/components/presenter/item/BoldTextContent'
 
 export {
-        TextContent,
+        BoldTextContent,
         ItemImage
 }

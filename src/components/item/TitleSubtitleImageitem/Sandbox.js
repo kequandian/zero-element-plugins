@@ -3,6 +3,8 @@ import TitleSubtitleImageitem from '@/components/item/TitleSubtitleImageitem';
 
 export default function Sandbox(props) {
 
+    const { width= '300px' } = props;
+
     const config = {
         title: "Title",
         subtitle: "Subtitle",
@@ -10,7 +12,7 @@ export default function Sandbox(props) {
     }
 
     return (
-        <div style={{ width: "300px" }}>
+        <div style={{ width: `${width}` }}>
             <TitleSubtitleImageitem {...config} />
         </div>
     )

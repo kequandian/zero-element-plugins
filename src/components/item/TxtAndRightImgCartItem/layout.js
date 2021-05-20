@@ -7,7 +7,7 @@ module.exports={
     },
     children:[
         {
-            presenter:'TextContent',
+            presenter:'BoldTextContent',
             gateway:{
                 xname:"Binding",
                 props:{

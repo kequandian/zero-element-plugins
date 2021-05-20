@@ -29,7 +29,8 @@ export default function FormList(props) {
                     padding: "16px",
                     lineColor: "#1496BB",
                     activeLeftLine: "5px",
-                    margin: '0px'
+                    margin: '0px',
+                    stroke: ''
                 }
             },
             container: "SelectionList"

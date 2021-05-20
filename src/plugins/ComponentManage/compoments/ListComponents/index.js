@@ -1,19 +1,17 @@
 import React from 'react';
-import { PageGridContainer } from '@/components/container';
+import { PageGridContainer, TopImageGridContainer } from '@/components/container';
 import { AutoComponent } from 'zero-element-boot/lib/components';
-import Container from "zero-element-boot/lib/components/container/Container"
 import Flexbox from 'zero-element-boot/lib/components/layout/Flexbox';
-import Cart from 'zero-element-boot/lib/components/cart/Cart';
 
 import PlainList from 'zero-element-boot/lib/components/list/PlainList';
-import SelectedList from 'zero-element-boot/lib/components/list/SelectedList';
 import SelectionList from 'zero-element-boot/lib/components/list/SelectionList';
 
+import Cart from 'zero-element-boot/lib/components/cart/Cart';
 import HightlightCart from 'zero-element-boot/lib/components/cart/HightlightCart';
 import SelectedCartOutSideIcon from '@/components/cart/SelectedCartOutSideIcon';
 
 import DesignCarItem from '@/components/item/DesignCarItem/Sandbox';
-import SelectCartOutSideIconBody from '@/components/item/SelectCartOutSideIconItem';
+import TitleSubtitleImageitem from '@/components/item/TitleSubtitleImageitem/Sandbox';
 
 
 const items = [
@@ -85,10 +83,26 @@ export default function Index(props) {
                 <PageGridContainer title={"SelectedList"} bg="#ffffff" showLayoutBorder={true}>
                     <SelectionList {...selectionConfig} >
                         <SelectedCartOutSideIcon fill={'transparent'} padding='0px' selectedStroke='#2196F3' lineWidth='1px'>
-                            <SelectCartOutSideIconBody {...SelectCartOutSideIconBodyConfig} />
+                            <Flexbox align="start" direction="column">
+                                <HightlightCart margin='0px'>
+                                    <DesignCarItem />
+                                </HightlightCart>
+                            </Flexbox>
                         </SelectedCartOutSideIcon>
                     </SelectionList>
                 </PageGridContainer>
+
+                <TopImageGridContainer widthSize={'370px'} imgUrl='https://img.36krcdn.com/20201224/v2_0859a3ca4ddb49b4b8ff878270f07942_img_png' bg="#ffffff" showLayoutBorder={true}>
+                    <PlainList {...plainConfig} >
+                        <Flexbox align="start" direction="column">
+                            <Cart margin='0px' linewidth='0px' padding='15px 10px 10px 10px'>
+                                <TitleSubtitleImageitem width='350px'/>
+                            </Cart>
+                        </Flexbox>
+                    </PlainList>
+                </TopImageGridContainer>
+
+
             </AutoComponent>
         </PageGridContainer>
     )
