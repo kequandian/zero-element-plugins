@@ -12,7 +12,7 @@ require('./index.less')
 
 /**
  * 
- * @param {string} title
+ * @param {string} imgUrl 图片路劲
  * @returns 
  */
 export default function TopImageGridContainer(props) {

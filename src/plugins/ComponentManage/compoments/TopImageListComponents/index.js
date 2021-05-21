@@ -77,8 +77,9 @@ export default function Index(props) {
                             </Flexbox>
                         </PlainList>
                     </TopImageGridContainer>
-
+                    
                 </PageGridContainer>
+
             </AutoComponent>
         </PageGridContainer>
     )
