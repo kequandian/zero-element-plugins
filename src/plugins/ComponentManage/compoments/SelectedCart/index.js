@@ -81,7 +81,7 @@ export default function Index(props) {
                     <SelectCartOutSideIconBody {...SelectCartOutSideIconBodyConfig} />
                 </SelectedCartBorder>
 
-                <SelectedCartOutSideLeftIcon fill={'transparent'} padding='0px' selectedStroke='#1496BBCC' lineWidth='3px'>
+                <SelectedCartOutSideLeftIcon fill={'transparent'} padding='0px' selectedStroke='#1496BB' lineWidth='3px'>
                     <SelectCartOutSideIconBody {...SelectCartOutSideIconBodyConfig} />
                 </SelectedCartOutSideLeftIcon>
 

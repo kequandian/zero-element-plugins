@@ -15,7 +15,7 @@ export default forwardRef(function SelectedCartOutSideIcon(props, ref) {
    * selectedStroke 选中线框
    */
 
-  const { children, padding = '10px', fill = "#fff", corner = "3px", selectedStroke='#1496BBBF',  stroke = "#C3CFD9BF", lineWidth = "3px", outline = "solid", 
+  const { children, padding = '10px', fill = "#fff", corner = "3px", selectedStroke='#1496BB',  stroke = "#C3CFD9BF", lineWidth = "3px", outline = "solid", 
     isSelected: isCartSelect } = props;
 
   return React.Children.map(children, child => {
@@ -23,18 +23,17 @@ export default forwardRef(function SelectedCartOutSideIcon(props, ref) {
 
     const selectedStatus = isCartSelect || isSelected;
 
-    const Display = selectedStatus ? "block" : "none";
-
     return (
       <div style={{
-        display: 'flex', flexDirection: 'row', alignItems: 'center', position: 'relative', width: '100%', background: `${selectedStatus ? `#C3CFD9E6`: `${fill}`}`,
+        display: 'flex', flexDirection: 'row', alignItems: 'center', position: 'relative', width: '100%', background: `${selectedStatus ? `#8ACBDD`: `${fill}`}`,
         borderRadius: `${corner}`,
         borderColor: `${selectedStatus ? selectedStroke : stroke }`,
         borderWidth: `${lineWidth}`,
         borderStyle: `${outline}`,
-        padding: `${padding}`
+        padding: `${padding}`,
+        color: `${selectedStatus ? `#0D3D56`: `#84939F`}`
       }}>
-        <div className="leftIcon" style={{ display: `${Display}` }}>
+        <div className="leftIcon">
           <img src={selectedStatus ? selected: unSelected} color='#1496BBF2'/>
         </div>
         <div style={{

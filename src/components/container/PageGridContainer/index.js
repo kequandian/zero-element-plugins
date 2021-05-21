@@ -32,6 +32,7 @@ export default function PageGridContainer(props) {
                     </Container>
                 ) : null}
                 <Seperator lineType="solid"/>
+                <div style={{marginBottom: '5px'}}></div>
                 <ItemCart padding="0">
                     {child}
                 </ItemCart>
