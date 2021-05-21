@@ -9,6 +9,7 @@ import SelectedCart from '@/plugins/ComponentManage/compoments/SelectedCart';
 import ShadowCart from '@/plugins/ComponentManage/compoments/ShadowCart';
 import HoverCart from '@/plugins/ComponentManage/compoments/HoverCart';
 import ListComponents from '@/plugins/ComponentManage/compoments/ListComponents';
+import TopImageListComponents from '@/plugins/ComponentManage/compoments/TopImageListComponents';
 
 require('./index.less')
 
@@ -70,7 +71,7 @@ export default function Index(props) {
     return (
         <PageGridContainer title={"组件展示"} subtitle={"· · ·"} corner={"13px"}>
             <div style={{display:'flex', flexDirection:'row'}}>
-                <div style={{width: "330px"}}>
+                <div style={{width: '210px', margin: '0 18px 0 10px'}}>
                     <FormList {...formConfig} />
                 </div>
                 <div style={{flex: "1"}}>
@@ -82,6 +83,7 @@ export default function Index(props) {
                         <LayoutList {...LayoutConfig} />
                         <CompoundComponents />
                         <ListComponents/>
+                        <TopImageListComponents/>
                     </AutoComponent>
                 </div>
             </div>

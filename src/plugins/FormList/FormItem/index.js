@@ -44,8 +44,6 @@ export default function FormItem(props){
         ...props
     }
     return (
-        <div className="FormItem">
             <AutoComponent {...config} allComponents={allComponents}/>
-        </div>
     )
 }

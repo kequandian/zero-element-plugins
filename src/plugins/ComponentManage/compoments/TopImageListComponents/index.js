@@ -1,16 +1,13 @@
 import React from 'react';
-import { PageGridContainer } from '@/components/container';
+import { PageGridContainer, TopImageGridContainer } from '@/components/container';
 import { AutoComponent } from 'zero-element-boot/lib/components';
 import Flexbox from 'zero-element-boot/lib/components/layout/Flexbox';
 
 import PlainList from 'zero-element-boot/lib/components/list/PlainList';
-import SelectionList from 'zero-element-boot/lib/components/list/SelectionList';
 
 import Cart from 'zero-element-boot/lib/components/cart/Cart';
-import HightlightCart from 'zero-element-boot/lib/components/cart/HightlightCart';
-import SelectedCartOutSideIcon from '@/components/cart/SelectedCartOutSideIcon';
 
-import DesignCarItem from '@/components/item/DesignCarItem/Sandbox';
+import TitleSubtitleImageitem from '@/components/item/TitleSubtitleImageitem/Sandbox';
 
 
 const items = [
@@ -67,30 +64,21 @@ export default function Index(props) {
 
 
     return (
-        <PageGridContainer title={"列表"} bg="#ffffff" showLayoutBorder={true}>
+        <PageGridContainer title={"列表2"} bg="#ffffff" showLayoutBorder={true}>
             <AutoComponent {...config}>
-                <PageGridContainer title={"PlainList"} bg="#ffffff" showLayoutBorder={true}>
-                    <PlainList {...plainConfig} >
-                        <Flexbox align="start" direction="column">
-                            <HightlightCart fill='#F3F3F3'>
-                                <DesignCarItem />
-                            </HightlightCart>
-                        </Flexbox>
-                    </PlainList>
-                </PageGridContainer>
+                <PageGridContainer title={"TopImageGridContainer"} bg="#ffffff" showLayoutBorder={true}>
 
-                <PageGridContainer title={"SelectedList"} bg="#ffffff" showLayoutBorder={true}>
-                    <SelectionList {...selectionConfig} >
-                        <SelectedCartOutSideIcon fill={'transparent'} padding='0px' selectedStroke='#2196F3' lineWidth='1px'>
+                    <TopImageGridContainer widthSize={'370px'} imgUrl='https://img.36krcdn.com/20201224/v2_0859a3ca4ddb49b4b8ff878270f07942_img_png' bg="#ffffff" showLayoutBorder={true}>
+                        <PlainList {...plainConfig} >
                             <Flexbox align="start" direction="column">
-                                <HightlightCart margin='0px'>
-                                    <DesignCarItem />
-                                </HightlightCart>
+                                <Cart margin='0px' linewidth='0px' padding='15px 10px 10px 10px'>
+                                    <TitleSubtitleImageitem width='350px' />
+                                </Cart>
                             </Flexbox>
-                        </SelectedCartOutSideIcon>
-                    </SelectionList>
-                </PageGridContainer>
+                        </PlainList>
+                    </TopImageGridContainer>
 
+                </PageGridContainer>
             </AutoComponent>
         </PageGridContainer>
     )
