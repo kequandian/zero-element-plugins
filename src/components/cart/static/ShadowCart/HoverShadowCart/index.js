@@ -21,11 +21,11 @@ export default forwardRef(function HoverShadowCart(props, ref) {
 
   const [onHover, setOnHover] = useState(false);
 
-  useImperativeHandle(ref, () => ({
-    getClassName: () => {
-      return `c-HoverShadowCart`;
-    }
-  }));
+  // useImperativeHandle(ref, () => ({
+  //   getClassName: () => {
+  //     return `c-HoverShadowCart`;
+  //   }
+  // }));
 
   const toggleHover = () => {
     // const result = !onHover;

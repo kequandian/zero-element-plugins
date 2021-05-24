@@ -1,7 +1,7 @@
 import React, {useState,useEffect } from 'react'
 import {AutoLayout} from 'zero-element-boot/lib/components'
 import ComponentsItem from '@/plugins/ComponentsList/ComponentsItem'
-const promiseAjax=require('../../../lib/utils/request')
+import promiseAjax from 'zero-element-boot/lib/components/utils/request';
 
 export default function ComponentsList(props){
     const api="/api/ComponentsList"

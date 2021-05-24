@@ -43,20 +43,20 @@ export default function Index(props) {
                 </div>
 
                 <div style={{width: '70px'}}>
-                    <Circle margin='0' padding='16px' corner='35px' fill='#fff' lineWidth='1' stroke='#d0cdcd'>
+                    <Circle margin='0' padding='16px' corner='35px' fill='#fff' lineWidth='1px' stroke='#d0cdcd'>
                         <div  style={{width: '70px', height: '64px', lineHeight:'64px', marginLeft: '10px'}}>Circle</div>
                     </Circle>
                 </div>
                 
-                <Corner margin='0' padding='16px' corner='8px' fill='#fff' lineWidth='1'  stroke='#d0cdcd'>
+                <Corner margin='0' padding='16px' corner='8px' fill='#fff' lineWidth='1px'  stroke='#d0cdcd'>
                     <div  style={{height: '50px', lineHeight:'50px', marginLeft: '10px'}}>Corner</div>
                 </Corner>
 
-                <ItemCart padding="5px" margin='5px'>
+                <ItemCart padding="5px" margin='0px'>
                     <div  style={{height: '50px', lineHeight:'50px'}}>ItemCart</div>
                 </ItemCart>
                 
-                <Rectangle stroke='#d0cdcd'>
+                <Rectangle stroke='#d0cdcd' lineWidth='1px'>
                     <div  style={{height: '50px', lineHeight:'50px', paddingLeft: '10px', background: '#E4F1F5'}}>Rectangle</div>
                 </Rectangle>
 

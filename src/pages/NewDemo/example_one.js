@@ -6,7 +6,7 @@ export default function Index(props) {
 
     const api = '/api/adListaaa';
 
-    //const [data]=useTokenRequest(api);
+    //const [data]=useTokenRequest({api});
 
     const data = {
         text:'I hope you enjoy learning React!',

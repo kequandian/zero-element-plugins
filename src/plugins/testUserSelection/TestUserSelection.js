@@ -35,14 +35,12 @@ import useTokenRequest from 'zero-element-boot/lib/components/hooks/useTokenRequ
 
 export default function TestUserSelection(props) {
 
-    const api = "/api/adm/users/testUserList";
+    const { api = '/api/adm/users/testUserList', onItemClickHandle, setPermsHandle } = props;
 
-    // const { onItemClickHandle, setPermsHandle } = props;
-
-    // const model = useModel('global');
+    const model = useModel('global');
+    const accountToken = getToken();
 
     // // const endpoint = getEndpoint(); http://192.168.3.236:8888
-    // // const accountToken = getToken();
 
     // const endpoint = '';
     // const accountToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJvcmdJZCI6IjEwMDAwMDAwMDAwMDAwMDAxMCIsInVzZXJJZCI6Ijg3NjcwODA4MjQzNzE5NzgzMCIsInVzZXJUeXBlIjoxMDEsImJVc2VyVHlwZSI6IlNZU1RFTSIsInRlbmFudE9yZ0lkIjoxMDAwMDAwMDAwMDAwMDAwMTAsImFjY291bnQiOiJhZG1pbiIsImV4dHJhVXNlclR5cGUiOjEsImlhdCI6MTYwOTgxMzg1MywianRpIjoiODc2NzA4MDgyNDM3MTk3ODMwIiwic3ViIjoiYWRtaW4iLCJleHAiOjE2MTAwNzMwNTN9.hF0JNPRctrtq47flMxTlT4ib-XNNr8btWP_bZ6uB85sxh-HG_Ns_EjtJHPVt5ib9H5dXsuIMg3QA4sbaR6Coiw';
@@ -63,8 +61,24 @@ export default function TestUserSelection(props) {
 
     // const [users, changeUser] = useUaasTestUser({ endpoint, accountToken }, callBack);
 
-    const [data] = useTokenRequest({api});
 
+    const url = `${getEndpoint()}${api}`;
+
+    const callBack = (data) => {
+        if (data) {
+            saveToken({
+                userName: data.name,
+                token: data.accessToken,
+                avatar: data.avatar,
+                remember: true,
+                extra: data.account,
+            })
+            model.queryPerm(true);
+        }
+        onItemClickHandle();
+    }
+
+    const [data, changeData] = useTokenRequest({ api: url, accountToken: accountToken }, callBack);
     const config = {
         items: data.length > 0 ? data : [],
         layout: {
@@ -94,11 +108,12 @@ export default function TestUserSelection(props) {
             container: 'PlainList'
         }
     };
+
     const onClick = (item) => {
-        changeUser(item.id)
+        const id = item.id;
+        const api = `${getEndpoint()}/api/adm/users/getToken/${id}`
+        changeData({id, api})
     }
-    // console.log(config)
-    // console.log("users=",users)
 
     return (
         <AutoLayout {...config} onItemClick={onClick}>

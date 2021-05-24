@@ -18,15 +18,15 @@ export default forwardRef(function Index(props, ref) {
     children, fill = '#ffffff', corner = '4px', stroke = 'solid', linewidth = '1px',
     margin = '6px', padding = '10px', lineColor = '#DFE1E5',  } = props;
 
-    const shadow = '0 0px 2px rgba(0, 0, 0, 0.05)'
+    const shadow = '0 0px 4px rgba(0, 0, 0, 0.06)'
 
   const [onHover, setOnHover] = useState(false);
 
-  useImperativeHandle(ref, () => ({
-    getClassName: () => {
-      return `c-floatingCartWhite`;
-    }
-  }));
+  // useImperativeHandle(ref, () => ({
+  //   getClassName: () => {
+  //     return `c-floatingCartWhite`;
+  //   }
+  // }));
 
   const toggleHover = () => {
     // const result = !onHover;

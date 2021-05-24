@@ -13,7 +13,7 @@ export default forwardRef(function SelectedCart(props, ref) {
    * outline    边界线类型
    */
 
-  let { children, padding = '10px', fill = "#fff", corner = "3px", stroke = "#000", lineWidth = "0px", outline = "solid", isSelected: isCartSelect } = props;
+  let { children, padding = '10px', margin= '10px', fill = "#fff", corner = "3px", stroke = "#000", lineWidth = "0px", outline = "solid", isSelected: isCartSelect } = props;
 
   // let fill = "#fff";
   // function clickItem(itemIndex){
@@ -43,6 +43,7 @@ export default forwardRef(function SelectedCart(props, ref) {
       borderWidth: `${lineWidth}`,
       borderStyle: `${outline}`,
       padding: `${padding}`,
+      margin: `${margin}`,
       position: 'relative'
     }}>
       {/* <div className="right" style={{ display: `${Display}` }}>√</div> */}

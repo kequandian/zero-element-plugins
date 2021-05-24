@@ -13,6 +13,7 @@ import SelectedRightLineCart from '@/components/cart/static/SelectedCart';
 import SelectedRightLineCartBody from '@/components/item/SelectedCartTxtStatic';
 
 import SelectedCartOutSideIcon from '@/components/cart/SelectedCartOutSideIcon';
+import SelectedCartOutSideLeftIcon from '@/components/cart/SelectedCartOutSideLeftIcon';
 import SelectCartOutSideIconBody from '@/components/item/SelectCartOutSideIconItem';
 
 import SelectedCartBorder from '@/components/cart/SelectedCartBorder';
@@ -72,13 +73,18 @@ export default function Index(props) {
                     <SelectedRightLineCartBody {...SelectedRightLineCartBodyConfig} />
                 </SelectedRightLineCart>
 
-                <SelectedCartOutSideIcon fill={'transparent'} padding='0px' stroke='#2196F3' lineWidth='1px'>
+                <SelectedCartOutSideIcon fill={'transparent'} padding='0px' selectedStroke='#2196F3' lineWidth='1px'>
                     <SelectCartOutSideIconBody {...SelectCartOutSideIconBodyConfig} />
                 </SelectedCartOutSideIcon>
 
                 <SelectedCartBorder  fill={'transparent'} padding='0px' stroke='#2196F3' lineWidth='1px'>
                     <SelectCartOutSideIconBody {...SelectCartOutSideIconBodyConfig} />
                 </SelectedCartBorder>
+
+                <SelectedCartOutSideLeftIcon fill={'transparent'} padding='0px' selectedStroke='#1496BB' lineWidth='3px'>
+                    <SelectCartOutSideIconBody {...SelectCartOutSideIconBodyConfig} />
+                </SelectedCartOutSideLeftIcon>
+
             </AutoComponent>
         </PageGridContainer>
     )
