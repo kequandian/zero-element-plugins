@@ -37,7 +37,7 @@ export default function Index(props) {
         form: [
             {
                 title: "头像组件",
-                account: "3"
+                account: "3",
             },
             {
                 title: "标题组件",

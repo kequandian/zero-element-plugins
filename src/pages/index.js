@@ -25,7 +25,11 @@ import LayoutList from '@/plugins/SelectList/SelectItem/LayoutList'
 import CompositeList from '@/plugins/SelectList/SelectItem/CompositeList'
 import CompoundComponents from '@/plugins/ComponentManage/compoments/CompoundComponents'
 import ComponentManage from '@/plugins/ComponentManage'
-// import {Router} from '@/components/Router'
+
+// 调用路由
+import { formConfig } from '@/pages/router.js'
+
+// import { get as getEndpoint } from 'zero-element/lib/utils/request/endpoint';
 
 
 export default function index(props) {
@@ -33,6 +37,8 @@ export default function index(props) {
   const onItemClickHandle = () => {
     console.log('event to dismiss the component')
   }
+
+
 
 
   return (
@@ -48,14 +54,15 @@ export default function index(props) {
     // <Top>
     //   <QuestionList />
     // </Top>
-    <>
-    <Router ></Router>
-    <PageGridContainer title={"自定义组件"} subtitle={" · · · "}>
-        <ComponentsList />
-    </PageGridContainer>
-    </>
     // <CompositeList />
-    // <ComponentManage />
+    <div style={{display:'flex'}}>
+      <div style={{display:'flex', flex:1,flexDirection:'row'}}>
+        <div style={{width: '210px', margin: '0 18px 0 10px'}}>
+          <FormList {...formConfig} />
+        </div>
+      </div>
+        <ComponentManage/>
+    </div>
     // <LayoutList />
     // <Project/>
   )

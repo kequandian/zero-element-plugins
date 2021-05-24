@@ -1,4 +1,5 @@
 import React from 'react'
+import {history} from 'umi'
 import { AutoLayout } from 'zero-element-boot/lib/components'
 import FormItem from '@/plugins/FormList/FormItem'
 require('./index.less')
@@ -39,8 +40,8 @@ export default function FormList(props) {
     }
     return (
         <div className="FormList">
-            <AutoLayout {...config}>
-                <FormItem />
+            <AutoLayout {...config}  onItemClick={(event)=>history.push(event.src)}>
+                <FormItem/>
             </AutoLayout>
         </div>
     )
