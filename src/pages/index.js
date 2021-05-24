@@ -33,27 +33,24 @@ export default function index(props) {
   }
 
   return (
-    // <PageCart backgroundColor={"#f0f4f7"}>
-    //   <Message onItemClickHandle={onItemClickHandle} {...props} />
-    // </PageCart>
+    <PageCart backgroundColor={"#f0f4f7"}>
+      <Message onItemClickHandle={onItemClickHandle} {...props} />
+    </PageCart>
     // <PageCart>
     //   <PageGridContainer title={"邮件"} subtitle={"more"}>
     //    <TodoListSandbox {...props}/>
     //  </PageGridContainer>
     // </PageCart>
     // <TestUserSelection onItemClickHandle={onItemClickHandle} {...props}/>  
-
     // <Top>
     //   <QuestionList />
     // </Top>
-
     // <PageGridContainer title={"自定义组件"} subtitle={" · · · "}>
     //     <ComponentsList />
     // </PageGridContainer>
 
     // <CompositeList />
-
-    <ComponentManage />
+    // <ComponentManage />
     // <LayoutList />
     // <Project/>
   )
