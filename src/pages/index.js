@@ -25,6 +25,8 @@ import LayoutList from '@/plugins/SelectList/SelectItem/LayoutList'
 import CompositeList from '@/plugins/SelectList/SelectItem/CompositeList'
 import CompoundComponents from '@/plugins/ComponentManage/compoments/CompoundComponents'
 import ComponentManage from '@/plugins/ComponentManage'
+// import {Router} from '@/components/Router'
+
 
 export default function index(props) {
 
@@ -32,10 +34,11 @@ export default function index(props) {
     console.log('event to dismiss the component')
   }
 
+
   return (
-    <PageCart backgroundColor={"#f0f4f7"}>
-      <Message onItemClickHandle={onItemClickHandle} {...props} />
-    </PageCart>
+    // <PageCart backgroundColor={"#f0f4f7"}>
+    //   <Message onItemClickHandle={onItemClickHandle} {...props} />
+    // </PageCart>
     // <PageCart>
     //   <PageGridContainer title={"邮件"} subtitle={"more"}>
     //    <TodoListSandbox {...props}/>
@@ -45,10 +48,12 @@ export default function index(props) {
     // <Top>
     //   <QuestionList />
     // </Top>
-    // <PageGridContainer title={"自定义组件"} subtitle={" · · · "}>
-    //     <ComponentsList />
-    // </PageGridContainer>
-
+    <>
+    <Router ></Router>
+    <PageGridContainer title={"自定义组件"} subtitle={" · · · "}>
+        <ComponentsList />
+    </PageGridContainer>
+    </>
     // <CompositeList />
     // <ComponentManage />
     // <LayoutList />
