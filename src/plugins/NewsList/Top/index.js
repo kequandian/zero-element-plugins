@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Tabs } from 'antd';
+// import { Tabs } from 'antd';
 import NewsList from '@/plugins/NewsList'
 import display from '@/components/presenter/item/ItemIconAction'
 require('./index.less')
 
-const { TabPane } = Tabs;
+// const { TabPane } = Tabs;
 export default function callback(key) {
   const onhandleClick=(data)=>{
     // console.log('data = ',data);
