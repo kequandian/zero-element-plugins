@@ -3,7 +3,8 @@ import { PageGridContainer } from '@/components/container';
 import { AutoComponent } from 'zero-element-boot/lib/components';
 import FormList from '@/plugins/FormList';
 import CartList from "@/plugins/ComponentManage/CartList";
-import LayoutList from "@/plugins/SelectList/SelectItem/LayoutList";
+import LayoutList from "@/plugins/ComponentManage/compoments/LayoutList";
+// import LayoutList from "@/plugins/SelectList/SelectItem/LayoutList";
 import CompoundComponents from '@/plugins/ComponentManage/compoments/CompoundComponents';
 import SelectedCart from '@/plugins/ComponentManage/compoments/SelectedCart';
 import ShadowCart from '@/plugins/ComponentManage/compoments/ShadowCart';
@@ -50,25 +51,6 @@ export default function Index(props) {
         ]
     }
 
-    const LayoutConfig = {
-        selectionTwo: [
-            {
-                title: "Layout",
-                layoutText: [
-                    {
-                        text: "Flexbox"
-                    },
-                    {
-                        text: "Itembox"
-                    },
-                    {
-                        text: "SelectBox"
-                    }
-                ]
-            }
-        ]
-    }
-
     return (
         <PageGridContainer title={"组件展示"} subtitle={"· · ·"} corner={"13px"}>
             <div style={{display:'flex', flexDirection:'row'}}>
@@ -81,7 +63,7 @@ export default function Index(props) {
                         <ShadowCart />
                         <HoverCart />
                         <SelectedCart />
-                        <LayoutList {...LayoutConfig} />
+                        <LayoutList />
                         <CompoundComponents />
                         <ListComponents/>
                         <TopImageListComponents/>

@@ -35,13 +35,13 @@ export default function ItemIconAction(props) {
         <div className="TheFinish">
             <div className="TheTime">{update_time}</div>
             
-            <Tooltip placement="top" title={text}>
+            {/* <Tooltip placement="top" title={text}>
                 <div onClick={()=>toggleOnclick(false)} className="TheImage" style={{
                     backgroundImage: `url(${theImageUrl})`
                 }}
                 onMouseEnter={() => toggleHover()} onMouseLeave={() => toggleHover()}>
                 </div>
-            </Tooltip>
+            </Tooltip> */}
         </div>
     )
     
