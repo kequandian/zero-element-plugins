@@ -74,15 +74,16 @@ export default function TestUserSelection(props) {
                 extra: data.account,
             })
             model.queryPerm(true);
+            onItemClickHandle();
         }
-        onItemClickHandle();
     }
 
-    const [data, changeData] = useTokenRequest({ api: url, accountToken: accountToken }, callBack);
+    const [data, setData, changeData] = useTokenRequest({ api: url, accountToken: accountToken }, callBack);
+
     const config = {
         items: data.length > 0 ? data : [],
         layout: {
-            xname: 'Flexbox',
+            xname: 'Itembox',
             props: {
                 align: 'start',
                 direction: 'column',
@@ -102,7 +103,8 @@ export default function TestUserSelection(props) {
             cart: {
                 xname: 'ItemCart',
                 props: {
-                    padding: '10px',
+                    margin: '0px',
+                    stroke:''
                 }
             },
             container: 'PlainList'
@@ -117,7 +119,7 @@ export default function TestUserSelection(props) {
 
     return (
         <AutoLayout {...config} onItemClick={onClick}>
-            <UserItem />
+            <UserItem/>
         </AutoLayout>
     )
 

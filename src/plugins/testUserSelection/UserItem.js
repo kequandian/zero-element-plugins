@@ -58,7 +58,7 @@ export default function UserItem(props) {
   };
   return (
     <div>
-      <AutoLayout {...config} allComponents={allComponents}  />
+      <AutoLayout {...config} allComponents={allComponents} />
     </div>
   )
 
