@@ -5,6 +5,7 @@ import { AutoComponent } from 'zero-element-boot/lib/components';
 //boot
 import Wrap from 'zero-element-boot/lib/components/layout/Wrap';
 import Stack from 'zero-element-boot/lib/components/layout/Stack';
+import Round from 'zero-element-boot/lib/components/layout/Round';
 import ColorBlock from '@/components/colorBlock';
 
 export default function Index(props) {
@@ -48,16 +49,23 @@ export default function Index(props) {
 
                     <PageGridContainer title={"Stack"} bg="#ffffff" showLayoutBorder={true}>
                         <AutoComponent {...config}>
-                            <Stack spacing={10}>
+                            <Stack spacing={15}>
                                 <ColorBlock bg="#FEB2B2" txt={'item1'} margin={'0px'} />
                                 <ColorBlock bg="#9AE6B4" txt={'item2'} margin={'0px'} />
                                 <ColorBlock bg="#90CDF4" txt={'item3'} margin={'0px'} />
-                                <ColorBlock bg="#FF6347" txt={'item4'} margin={'0px'} />
-                                <ColorBlock bg="#A3A3A3" txt={'item5'} margin={'0px'} />
-                                <ColorBlock bg="#90CDF4" txt={'item6'} margin={'0px'} />
                             </Stack>
                         </AutoComponent>
                     </PageGridContainer>
+
+                    <PageGridContainer title={"Round"} bg="#ffffff" showLayoutBorder={true}>
+                        <AutoComponent {...config}>
+                            <Round>
+                                <ColorBlock bg="#FEB2B2" txt={'item1'} margin={'0px'} />
+                                <ColorBlock bg="#9AE6B4" txt={'item2'} margin={'0px'} />
+                            </Round>
+                        </AutoComponent>
+                    </PageGridContainer>
+
                 </div>
             </AutoComponent>
         </PageGridContainer>
