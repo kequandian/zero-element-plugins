@@ -5,9 +5,9 @@ require('./index.less')
  * @param {string} url 图片路径
  * @returns
  */
-export default function ItemImage({url}){
+export default function Image({url}){
     return (
-        <div className="ItemImage">
+        <div className="imagePortrait">
             <img src={url}/>
         </div>
     )

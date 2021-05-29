@@ -1,8 +1,7 @@
 module.exports={
     xname:'Flexbox',
     props:{
-        align:'start',
-        direction:'between row',
+        align:'between',
     },
     children:[
         {

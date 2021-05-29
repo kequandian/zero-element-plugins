@@ -12,6 +12,7 @@ import HoverCart from '@/plugins/ComponentManage/compoments/HoverCart';
 import ListComponents from '@/plugins/ComponentManage/compoments/ListComponents';
 import TopImageListComponents from '@/plugins/ComponentManage/compoments/TopImageListComponents';
 import PhoneListComponents from '@/plugins/ComponentManage/compoments/PhoneListComponents';
+import PhoneItemListComponents from '@/plugins/ComponentManage/compoments/PhoneItemListComponents';
 
 require('./index.less')
 
@@ -68,6 +69,7 @@ export default function Index(props) {
                         <ListComponents/>
                         <TopImageListComponents/>
                         <PhoneListComponents/>
+                        <PhoneItemListComponents/>
                     </AutoComponent>
                 </div>
             </div>

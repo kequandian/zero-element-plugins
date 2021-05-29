@@ -3,12 +3,12 @@ import React from 'react';
 require('./index.less')
 import { AutoComponent } from 'zero-element-boot/lib/components';
 import layout from './layout'
-const presenter = require('@/components/item/TitleSubtitleImageitem/presenter')
+const presenter = require('@/components/item/phone/TxtAndLeftImgItem/presenter')
 
 // const CartSet = require('@/components/cart');
 
 
-export default function TitleSubtitleImageitem(props) {
+export default function TxtAndLeftImgItem(props) {
     const allComponents = { ...presenter }
     const config = {
         layout,

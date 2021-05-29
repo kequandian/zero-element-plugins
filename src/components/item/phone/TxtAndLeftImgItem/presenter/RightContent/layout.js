@@ -1,29 +1,28 @@
 module.exports={
     xname:'Flexbox',
     props:{
-        align:'between',
+        align:'start',
+        direction: 'column'
     },
     children:[
         {
-            presenter:'ContentInfo',
+            presenter:'ItemImage',
             gateway:{
                 xname:"Binding",
                 props:{
                     binding:{
                         logo:'url',
-                        title:"title",
-                        subtitle:"description",
                     }
                 }
             }
         },
         {
-            presenter:'ContentAction',
+            presenter:'RightContent',
             gateway:{
                 xname:"Binding",
                 props:{
                     binding:{
-                        timestamp:"update_time"
+                        title:"content",
                     }
                 }
             }
