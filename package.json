@@ -15,7 +15,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "zero-element": "^1.0.0",
-    "zero-element-boot": "git://github.com/kequandian/zero-element-boot.git#pattern"
+    "zero-element-boot": "github:kequandian/zero-element-boot"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.13.0",
